@@ -38,7 +38,6 @@ const DaxLogo = () => (
     </svg>
 );
 
-
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
