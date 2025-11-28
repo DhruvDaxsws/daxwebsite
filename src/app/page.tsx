@@ -27,7 +27,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-white/70 dark:bg-black/50"></div>
         </div>
-        <div className="container px-4 md:px-6 relative">
+        <div className="container mx-auto px-4 md:px-6 relative">
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
@@ -48,7 +48,7 @@ export default function Home() {
 
        {/* Why should I do it? Section */}
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6 text-center">
+        <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-accent dark:text-white">Why should I do it?</h2>
             <p className="max-w-3xl mx-auto mt-4 text-muted-foreground md:text-xl">
             ERP is expensive, time-consuming and ERP vendors are arrogant. As Empathetic ERP Partners, we redefine the narrative. With your dedicated ERP implementation experts and trusted support, our approach turns ERP from a burden into a strategic asset. We don't just fix problems; we empower people who drive business success.
@@ -58,7 +58,7 @@ export default function Home() {
       
        {/* Metrics Section */}
       <section className="w-full pb-12 md:pb-24 lg:pb-32">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-accent dark:text-white">Why should I do it with DAX?</h2>
                 <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-lg">
@@ -85,7 +85,7 @@ export default function Home() {
 
       {/* Featured ERP Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-accent">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {featuredImage && (
                     <Image 
@@ -111,7 +111,7 @@ export default function Home() {
 
       {/* Recent Articles Section */}
       <section id="case-studies" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Recent articles</h2>
@@ -152,7 +152,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 border-t">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+        <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
               Ready to Transform Your Business?
