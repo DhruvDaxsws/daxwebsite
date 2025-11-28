@@ -1,10 +1,10 @@
 import { Activity, BarChart3, Briefcase, Users, Bot, Rocket, Target, Zap, Smile, BookOpen, UserCheck, BriefcaseBusiness, Settings, Award } from 'lucide-react';
 
 export const NAV_LINKS = [
-  { href: '/services', label: 'Services' },
-  { href: '/case-studies', label: 'Case Studies' },
-  { href: '/team', label: 'Our Team' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/implementation', label: 'Implementation' },
+  { href: '/integration', label: 'Integration' },
+  { href: '/government', label: 'Government' },
+  { href: '/pricing', label: 'Pricing' },
 ];
 
 export const SERVICES = [
