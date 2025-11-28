@@ -43,8 +43,8 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-zinc-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-zinc-900/60">
-      <div className="container mx-auto flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-zinc-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-zinc-900/60">
+      <div className="container mx-auto flex h-[108px] items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2">
             <DaxLogo />
