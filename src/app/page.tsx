@@ -109,47 +109,6 @@ export default function Home() {
           </div>
       </section>
 
-      {/* Recent Articles Section */}
-      <section id="case-studies" className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Recent articles</h2>
-            </div>
-          </div>
-          <div className="mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12">
-            {caseStudyImages.map((study) => (
-              <Card key={study.title} className="overflow-hidden group">
-                <div className="overflow-hidden">
-                {study.image && (
-                  <Image
-                    src={study.image.imageUrl}
-                    alt={study.image.description}
-                    data-ai-hint={study.image.imageHint}
-                    width={600}
-                    height={340}
-                    className="aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                )}
-                </div>
-                <CardHeader>
-                  <p className="text-xs text-primary font-semibold">{study.client.toUpperCase()}</p>
-                  <CardTitle className="font-headline text-lg mt-1">{study.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground line-clamp-3">{study.summary}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-           <div className="text-center mt-12">
-              <Button asChild variant="outline">
-                <Link href="/case-studies">View All Articles <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-            </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 border-t">
         <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
