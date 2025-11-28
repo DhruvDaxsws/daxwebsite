@@ -43,7 +43,7 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container mx-auto flex h-[108px] items-center justify-between px-4 lg:px-6">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2">
@@ -56,7 +56,10 @@ export default function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex flex-col items-end gap-2">
+            <Button asChild size="sm">
+                <Link href="/contact">QUICK FIX PACKAGES</Link>
+            </Button>
             <nav className="flex items-center gap-4 text-sm font-medium">
                 {NAV_LINKS.map((link) => (
                 <Link
@@ -71,9 +74,6 @@ export default function Header() {
                 </Link>
                 ))}
             </nav>
-            <Button asChild size="sm">
-                <Link href="/contact">QUICK FIX PACKAGES</Link>
-            </Button>
         </div>
 
 
