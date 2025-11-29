@@ -10,9 +10,6 @@ export default function Footer() {
       <div className="container mx-auto py-12">
         <div className="grid gap-8 md:grid-cols-12">
           <div className="space-y-4 md:col-span-3">
-             <div className="pl-2">
-                <Image src="/ms-logo-footer.png" alt="Microsoft Partner" width={160} height={50} />
-            </div>
             <Link href="/" className="flex items-center space-x-2">
               <DaxLogo className="fill-accent-foreground" />
             </Link>
