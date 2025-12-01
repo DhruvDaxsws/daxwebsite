@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-2">
               <DaxLogoWhite />
             </Link>
-            <div className="flex flex-col items-start gap-2 pt-4">
+            <div className="flex flex-col items-start gap-8 pt-4">
                 <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
                 <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
             </div>
