@@ -8,12 +8,12 @@ export default function Footer() {
   return (
     <footer className="bg-accent text-accent-foreground">
       <div className="container mx-auto px-4 py-12 md:px-6">
-        <div className="grid gap-8 md:grid-cols-12">
+        <div className="grid gap-4 md:grid-cols-12">
           <div className="space-y-4 md:col-span-3">
             <Link href="/" className="flex items-center space-x-2">
               <DaxLogoWhite />
             </Link>
-            <div className="flex flex-col items-start gap-4 pt-4">
+            <div className="flex flex-col items-start gap-8 pt-4">
                 <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
                 <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
             </div>
@@ -31,12 +31,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="font-medium font-headline">Subscription Services</h4>
-               <ul className="mt-4 space-y-2 text-sm text-gray-400">
-                <li><Link href="#" className="hover:text-white">Microsoft 365</Link></li>
-                <li><Link href="#" className="hover:text-white">Microsoft Copilot</Link></li>
-              </ul>
-              <h4 className="font-medium font-headline mt-6">Quick Links</h4>
+              <h4 className="font-medium font-headline">Quick Links</h4>
                <ul className="mt-4 space-y-2 text-sm text-gray-400">
                 <li><Link href="#" className="hover:text-white">About Us</Link></li>
                 <li><Link href="/team" className="hover:text-white">Our Team</Link></li>
@@ -67,6 +62,11 @@ export default function Footer() {
                         <Link href={link.href} className="hover:text-white">{link.label}</Link>
                     </li>
                 ))}
+              </ul>
+              <h4 className="font-medium font-headline mt-6">Subscription Services</h4>
+               <ul className="mt-4 space-y-2 text-sm text-gray-400">
+                <li><Link href="#" className="hover:text-white">Microsoft 365</Link></li>
+                <li><Link href="#" className="hover:text-white">Microsoft Copilot</Link></li>
               </ul>
             </div>
           </div>
