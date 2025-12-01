@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NAV_LINKS, RESOURCE_CENTER_LINKS } from '@/lib/content';
+import { RESOURCE_CENTER_LINKS } from '@/lib/content';
 import Image from 'next/image';
 import { Facebook, Linkedin, Twitter } from 'lucide-react';
 import DaxLogoWhite from '../icons/dax-logo-white';
@@ -13,6 +13,10 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-2">
               <DaxLogoWhite />
             </Link>
+            <div className="flex flex-col items-start gap-2 pt-4">
+                <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
+                <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-9 md:grid-cols-4">
             <div>
