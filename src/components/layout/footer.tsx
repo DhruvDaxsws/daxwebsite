@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NAV_LINKS } from '@/lib/content';
+import { NAV_LINKS, RESOURCE_CENTER_LINKS } from '@/lib/content';
 import Image from 'next/image';
 import { Facebook, Linkedin, Twitter } from 'lucide-react';
 import DaxLogoWhite from '../icons/dax-logo-white';
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-12">
           <div className="space-y-4 md:col-span-3">
             <Link href="/" className="flex items-center space-x-2">
-              <DaxLogoWhite className="fill-white" />
+              <DaxLogoWhite />
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-9 md:grid-cols-4">
@@ -56,9 +56,9 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="font-medium font-headline">Company</h4>
+              <h4 className="font-medium font-headline">Resource Center</h4>
               <ul className="mt-4 space-y-2 text-sm text-gray-400">
-                {NAV_LINKS.map((link) => (
+                {RESOURCE_CENTER_LINKS.map((link) => (
                     <li key={link.href}>
                         <Link href={link.href} className="hover:text-white">{link.label}</Link>
                     </li>

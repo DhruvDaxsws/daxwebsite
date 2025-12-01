@@ -7,6 +7,13 @@ export const NAV_LINKS = [
   { href: '/pricing', label: 'Pricing' },
 ];
 
+export const RESOURCE_CENTER_LINKS = [
+    { href: '/resource-center', label: 'Resource Center' },
+    { href: '/empathetic-erp', label: 'Empathetic ERP' },
+    { href: '/case-studies', label: 'Case Studies' },
+    { href: '/blog', label: 'Blog' },
+];
+
 export const SERVICES = [
   {
     icon: Activity,
