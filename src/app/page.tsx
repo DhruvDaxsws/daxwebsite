@@ -1,10 +1,12 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CASE_STUDIES, METRICS } from '@/lib/content';
 import { ArrowRight } from 'lucide-react';
+import { CountUp } from '@/components/count-up';
 
 export default function Home() {
   const caseStudyImages = CASE_STUDIES.map(cs => ({
@@ -74,7 +76,9 @@ export default function Home() {
                         </div>
                         </CardHeader>
                         <CardContent className="p-0 mt-4">
-                        <p className="text-4xl font-bold font-headline text-accent dark:text-white">{metric.value}</p>
+                        <p className="text-4xl font-bold font-headline text-accent dark:text-white">
+                          <CountUp end={parseInt(metric.value)} suffix={metric.value.includes('+') ? '+' : ''} />
+                        </p>
                         <p className="text-sm text-muted-foreground mt-2">{metric.label}</p>
                         </CardContent>
                     </Card>
