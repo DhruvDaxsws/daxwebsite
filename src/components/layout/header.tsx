@@ -18,26 +18,26 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container mx-auto flex h-[108px] items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center space-x-2">
-            <DaxLogo />
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link href="/" className="flex items-center space-x-2">
+              <DaxLogo />
+            </Link>
+            <div className="lg:hidden flex items-start gap-2">
+                <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
+                <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
+            </div>
+          </div>
           <div className="h-8 border-l border-gray-300 hidden lg:block"></div>
           <div className="hidden lg:flex items-start gap-2">
             <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
             <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
           </div>
         </div>
-
-        {/* Desktop and Mobile Badges */}
-        <div className="lg:hidden flex flex-col items-start gap-2">
-            <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
-            <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
-        </div>
         
         {/* Desktop Menu */}
         <div className="hidden lg:flex flex-col items-end gap-2">
             <div className="flex items-center gap-2">
-                <Button asChild size="sm" variant="outline">
+                <Button asChild size="sm">
                     <Link href="/case-studies">CASE STUDIES<ArrowRight /></Link>
                 </Button>
                 <Button asChild size="sm">
