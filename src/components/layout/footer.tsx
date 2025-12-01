@@ -40,7 +40,7 @@ export default function Footer() {
                 <li><Link href="#" className="hover:text-white">Careers</Link></li>
                 <li><Link href="#" className="hover:text-white">Our Core Values</Link></li>
                 <li><Link href="#" className="hover:text-white">Sitemap</Link></li>
-                <li><Link href="#" className="hovertext-white">Employee Login</Link></li>
+                <li><Link href="#" className="hover:text-white">Employee Login</Link></li>
               </ul>
             </div>
              <div>
@@ -48,7 +48,11 @@ export default function Footer() {
               <ul className="mt-4 space-y-2 text-sm text-gray-400">
                 <li><Link href="#" className="hover:text-white">Microsoft Dynamics 365</Link></li>
                 <li><Link href="#" className="hover:text-white">Application Managed Services</Link></li>
-                <li><Link href="#" className="hover:text-white">Quick-Fix Packages</Link></li>
+                <li><Link href="#" className="hover:text-white">Performance Tuning</Link></li>
+                <li><Link href="#" className="hover:text-white">AX 2012 to Dynamics 365 Upgrade Services</Link></li>
+                <li><Link href="#" className="hover:text-white">System Optimization</Link></li>
+                <li><Link href="#" className="hover:text-white">Continuous Enhancements</Link></li>
+                <li><Link href="#" className="hover:text-white">Microsoft Dynamics 365 Business Central</Link></li>
               </ul>
             </div>
             <div>
