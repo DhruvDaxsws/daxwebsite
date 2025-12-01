@@ -22,7 +22,7 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-2">
               <DaxLogo className="h-[25px] sm:h-[32.5px] md:h-[50px]" />
             </Link>
-            <div className="lg:hidden flex flex-col items-start gap-2">
+            <div className="lg:hidden flex items-center gap-2">
                 <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={70} height={8} className="h-auto w-[70px] sm:w-[91px] md:hidden" />
                 <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={70} height={8} className="h-auto w-[70px] sm:w-[91px] md:hidden" />
             </div>
