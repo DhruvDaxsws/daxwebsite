@@ -53,11 +53,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Dax Software Solutions. All rights reserved.</p>
+            <p className="text-sm">&copy; {new Date().getFullYear()} Dax Software Solutions. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-                <Link href="#" className="text-gray-500 hover:text-white"><Facebook size={20} /></Link>
-                <Link href="#" className="text-gray-500 hover:text-white"><Twitter size={20} /></Link>
-                <Link href="#" className="text-gray-500 hover:text-white"><Linkedin size={20} /></Link>
+                <Link href="#" className="hover:opacity-80"><Facebook size={20} /></Link>
+                <Link href="#" className="hover:opacity-80"><Twitter size={20} /></Link>
+                <Link href="#" className="hover:opacity-80"><Linkedin size={20} /></Link>
             </div>
         </div>
       </div>
