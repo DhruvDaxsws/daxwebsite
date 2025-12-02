@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react';
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TEAM_MEMBERS } from "@/lib/content";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const TABS = {
     'global-team': 'Global Team',
@@ -47,6 +47,39 @@ const LEADERSHIP = [
 
 export default function AboutUsPage() {
     const [activeTab, setActiveTab] = useState('global-team');
+    const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-110px 0px -50% 0px', // Adjust top margin to account for sticky header
+            threshold: 0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveTab(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        Object.keys(TABS).forEach(id => {
+            const el = document.getElementById(id);
+            if(el) {
+                sectionRefs.current[id] = el;
+                observer.observe(el);
+            }
+        });
+        
+        return () => {
+             Object.values(sectionRefs.current).forEach(el => {
+                if (el) {
+                    observer.unobserve(el);
+                }
+            });
+        };
+    }, []);
 
     const leadershipImages = LEADERSHIP.map(l => ({
         ...l,
@@ -74,7 +107,10 @@ export default function AboutUsPage() {
                 {Object.entries(TABS).map(([key, value]) => (
                      <button 
                         key={key}
-                        onClick={() => document.getElementById(key)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                        onClick={() => {
+                            setActiveTab(key);
+                            document.getElementById(key)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }}
                         className={`py-4 px-2 sm:px-6 text-center font-medium text-sm sm:text-base border-b-4 transition-colors ${
                             activeTab === key
                                 ? 'border-primary text-primary'
