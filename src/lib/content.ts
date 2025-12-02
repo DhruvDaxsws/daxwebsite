@@ -46,10 +46,18 @@ export const SERVICES = [
 ];
 
 export const TEAM_MEMBERS = [
-    { name: 'Alice Johnson', role: 'Founder & CEO', imageId: 'team-member-1', bio: 'With over 20 years of experience in strategic consulting, Alice leads our team with a passion for innovation and client success.' },
-    { name: 'Bob Williams', role: 'Head of Strategy', imageId: 'team-member-2', bio: 'Bob is a master of market dynamics and corporate strategy, helping businesses navigate complex challenges with confidence.' },
-    { name: 'Charlie Brown', role: 'Lead Analyst', imageId: 'team-member-3', bio: 'Charlie\'s analytical prowess turns raw data into actionable insights, driving informed decision-making for our clients.' },
-    { name: 'Diana Miller', role: 'Operations Expert', imageId: 'team-member-4', bio: 'Diana specializes in optimizing business processes for maximum efficiency and scalability.' },
+    { name: 'Sanjeev Munjal', role: 'Founder & Managing Partner', imageId: 'leadership-1' },
+    { name: 'Munish Sethi', role: 'Founder & Managing Partner', imageId: 'leadership-2' },
+    { name: 'Puneet Nasa', role: 'Managing Partner', imageId: 'leadership-3' },
+    { name: 'Anuj Rastogi', role: 'Senior Technical Architect', imageId: 'team-member-5' },
+    { name: 'Vijaya Bhaskar Sanyela', role: 'Dynamics 365 Technical Architect', imageId: 'team-member-6' },
+    { name: 'Gajendiran Govindraj', role: 'Dynamics 365 Technical Architect', imageId: 'team-member-7' },
+    { name: 'Vikas Mehta', role: 'Dynamics 365 Technical Architect', imageId: 'team-member-8' },
+    { name: 'Mohit Khanna', role: 'Functional Solution Architect', imageId: 'team-member-9' },
+    { name: 'Ashish Srivastava', role: 'Technical Architect', imageId: 'team-member-10' },
+    { name: 'Tamil Magal Radhakrishnan', role: 'Technical Architect', imageId: 'team-member-11' },
+    { name: 'Raghu Ram', role: 'Functional Production Consultant', imageId: 'team-member-12' },
+    { name: 'Hung Phan', role: 'Dynamics 365 F&O Technical Consultant', imageId: 'team-member-13' },
 ];
 
 export const CASE_STUDIES = [
