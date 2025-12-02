@@ -190,10 +190,10 @@ export default function AboutUsPage() {
             </div>
         </section>
 
-         <section className="w-full py-12 md:py-24 lg:py-32 bg-accent">
+         <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
             <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
                 <div className="space-y-3">
-                    <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight text-white">
+                    <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight text-accent">
                         Join our team of global Dynamics 365 experts!
                     </h2>
                 </div>
