@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -28,7 +29,7 @@ export default function Header() {
             </div>
           </div>
           <div className="h-8 border-l border-gray-300 hidden lg:block"></div>
-          <div className="hidden md:flex items-start gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <Image src="/home/microsoft-badge.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
             <Image src="/home/microsoft-badge-2.svg" alt="Microsoft Solutions Partner" width={140} height={16} />
           </div>
@@ -38,10 +39,10 @@ export default function Header() {
         <div className="hidden lg:flex flex-col items-end gap-2">
             <div className="flex items-center gap-2">
                 <Button asChild size="sm">
-                    <Link href="/case-studies">CASE STUDIES</Link>
+                    <Link href="/case-studies">CASE STUDIES<ArrowRight /></Link>
                 </Button>
                 <Button asChild size="sm">
-                    <Link href="/contact">QUICK FIX PACKAGES</Link>
+                    <Link href="/contact">QUICK FIX PACKAGES<ArrowRight /></Link>
                 </Button>
             </div>
             <nav className="flex items-center gap-4 text-sm font-medium">
@@ -50,7 +51,7 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                    'transition-colors hover:text-primary',
+                    'transition-colors hover:text-primary capitalize',
                     pathname === link.href ? 'text-primary' : 'text-foreground/80'
                     )}
                 >
@@ -84,7 +85,7 @@ export default function Header() {
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={cn(
-                                'text-lg font-medium transition-colors hover:text-primary',
+                                'text-lg font-medium transition-colors hover:text-primary capitalize',
                                 pathname === link.href ? 'text-primary' : 'text-foreground'
                                 )}
                             >
