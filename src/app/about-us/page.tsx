@@ -57,12 +57,12 @@ export default function AboutUsPage() {
 
   return (
     <div className="bg-background">
-      <section className="w-full py-16 md:py-24 bg-accent text-accent-foreground">
+      <section className="w-full py-16 md:py-24 bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-headline">
                 Microsoft Solution Partner with <span className="text-primary">20+ years</span> of industry experience in ERP and CRM
             </h1>
-            <p className="mt-6 max-w-4xl mx-auto text-lg text-gray-300">
+            <p className="mt-6 max-w-4xl mx-auto text-lg text-muted-foreground">
                 Microsoft Dynamics | Power Apps | Salesforce | ERP Consulting | Managed Services | Microsoft Licensing
             </p>
         </div>
