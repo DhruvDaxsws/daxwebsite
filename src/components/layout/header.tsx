@@ -42,7 +42,7 @@ export default function Header() {
                     <Link href="/case-studies">CASE STUDIES<ArrowRight /></Link>
                 </Button>
                 <Button asChild size="sm" variant="primary-outline">
-                    <Link href="/pricing">QUICK FIX PACKAGES<ArrowRight /></Link>
+                    <Link href="/empathetic-erp">EMPATHETIC ERP<ArrowRight /></Link>
                 </Button>
             </div>
             <nav className="flex items-center gap-4 text-sm font-medium">
@@ -98,7 +98,7 @@ export default function Header() {
                                 <Link href="/case-studies" onClick={() => setMobileMenuOpen(false)}>CASE STUDIES<ArrowRight /></Link>
                             </Button>
                             <Button asChild className="w-full" variant="primary-outline">
-                                <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>QUICK FIX PACKAGES<ArrowRight /></Link>
+                                <Link href="/empathetic-erp" onClick={() => setMobileMenuOpen(false)}>EMPATHETIC ERP<ArrowRight /></Link>
                             </Button>
                         </div>
                     </div>
