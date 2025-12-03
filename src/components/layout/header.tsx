@@ -73,11 +73,9 @@ export default function Header() {
                 </SheetTrigger>
                 <SheetContent side="right">
                     <div className="flex flex-col h-full">
-                        <div className="flex items-center justify-between border-b pb-2">
-                             <Link href="/" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
-                                <DaxLogo />
-                            </Link>
-                        </div>
+                        <Link href="/" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
+                            <DaxLogo />
+                        </Link>
                         <nav className="flex flex-col gap-4 mt-8">
                             {NAV_LINKS.map((link) => (
                             <Link
