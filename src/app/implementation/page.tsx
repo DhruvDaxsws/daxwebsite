@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -107,7 +108,7 @@ export default function ImplementationPage() {
 
   return (
     <div className="bg-background text-foreground">
-      <section className="bg-secondary/50 text-secondary-foreground py-16 md:py-24">
+      <section className="bg-secondary/50 py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">Dynamics 365 Implementation</h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -175,11 +176,11 @@ export default function ImplementationPage() {
               <div className="text-center mb-12">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">Which Dynamics 365 Solution is Right for You?</h2>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-col gap-8 max-w-4xl mx-auto">
                   {implementationImages.map(option => (
-                      <Card key={option.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                      <Card key={option.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col md:flex-row">
                           {option.image && 
-                            <div className="relative h-56 w-full">
+                            <div className="relative h-56 w-full md:w-1/3 flex-shrink-0">
                                 <Image
                                     src={option.image.imageUrl}
                                     alt={option.image.description}
@@ -189,7 +190,7 @@ export default function ImplementationPage() {
                                 />
                             </div>
                           }
-                          <CardContent className="p-6">
+                          <CardContent className="p-6 flex flex-col justify-center">
                               <h3 className="text-xl font-bold font-headline">{option.title}</h3>
                               <p className="mt-2 text-muted-foreground">{option.description}</p>
                           </CardContent>
@@ -247,3 +248,4 @@ export default function ImplementationPage() {
     </div>
   );
 }
+
