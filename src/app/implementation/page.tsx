@@ -239,7 +239,7 @@ export default function ImplementationPage() {
                     <p className="text-sm font-bold tracking-widest text-primary">CASE STUDY</p>
                     <h2 className="font-headline text-3xl font-bold mt-2">D365 F&O Implementation for the largest Cannabis Company in Medical Usage</h2>
                     <p className="mt-4 text-lg">A deep dive into our successful Dynamics 365 Finance & Operations implementation, navigating complex regulatory compliance for a leader in the medical cannabis industry.</p>
-                    <Button asChild variant="primary-outline" className="mt-6 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground hover:text-accent">
+                    <Button asChild variant="primary-outline" className="mt-6">
                         <Link href="#">READ MORE<ArrowRight /></Link>
                     </Button>
                 </div>
