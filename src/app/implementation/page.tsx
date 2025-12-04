@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { ArrowRight, CheckCircle, Clock, GanttChartSquare, Layers, Rocket } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArrowRight } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const IMPLEMENTATION_PHASES = [
@@ -12,26 +13,31 @@ const IMPLEMENTATION_PHASES = [
     title: 'Requirements and Planning',
     description:
       'Our expert consultants conduct a deep-dive analysis of your current processes. We prepare comprehensive project documentation, including a Statement of Work (SOW), conduct fit-gap analysis, and prepare a detailed environment specification to lay a solid foundation for your project.',
+    id: 'phase-1',
   },
   {
     title: 'Configuration and Set-up',
     description:
       'The DAX team designs the solution architecture and develops detailed Functional, Technical, and Solution Design Documents. We finalize data migration designs, configure standard modules, write custom code for any gaps, and perform rigorous testing.',
+    id: 'phase-2',
   },
   {
     title: 'Data Migration and Testing',
     description:
       'We securely migrate your data to the new system. Our process includes comprehensive unit testing, integration testing, and User Acceptance Testing (UAT) to ensure all functionalities work as expected. We also conduct performance and security evaluations.',
+    id: 'phase-3',
   },
   {
     title: 'Training and Deployment',
     description:
       'A production environment is meticulously set up and final data is migrated. We run user tests, provide extensive user training to ensure a smooth transition, and perform a final go-live check before deployment.',
+    id: 'phase-4',
   },
   {
     title: 'Monitoring and Support',
     description:
       'Post-deployment, we focus on resolving any pending issues and finalizing all project documentation. Our team conducts knowledge transfer sessions, reviews system performance, and offers ongoing support to ensure your continued success.',
+    id: 'phase-5',
   },
 ];
 
@@ -101,7 +107,7 @@ export default function ImplementationPage() {
 
   return (
     <div className="bg-background text-foreground">
-      <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
+      <section className="bg-secondary/50 text-secondary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">Dynamics 365 Implementation</h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -135,33 +141,25 @@ export default function ImplementationPage() {
                 Our structured 5-phase approach ensures a seamless and successful Dynamics 365 implementation from start to finish.
             </p>
           </div>
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 top-8 bottom-8 w-0.5 bg-primary/20 hidden md:block" aria-hidden="true"></div>
-
-            {IMPLEMENTATION_PHASES.map((phase, index) => (
-              <div key={index} className="relative mb-12">
-                <div className="md:flex items-center md:even:flex-row-reverse">
-                  <div className="md:w-5/12">
-                    <div className="text-center md:text-left md:odd:text-right p-6 rounded-lg bg-card shadow-md">
-                      <p className="text-sm font-semibold text-primary">PHASE {index + 1}</p>
-                      <h3 className="text-xl font-bold font-headline mt-2">{phase.title}</h3>
-                      <p className="mt-3 text-muted-foreground">{phase.description}</p>
-                    </div>
-                  </div>
-                  <div className="md:w-2/12 flex justify-center">
-                    <div className="relative my-4 md:my-0">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold z-10">{index + 1}</div>
-                      </div>
-                       <div className="w-12 h-12 rounded-full bg-primary/20 animate-pulse"></div>
-                    </div>
-                  </div>
-                  <div className="md:w-5/12"></div>
-                </div>
-              </div>
+          <Tabs defaultValue={IMPLEMENTATION_PHASES[0].id} className="w-full">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 h-auto">
+              {IMPLEMENTATION_PHASES.map((phase, index) => (
+                <TabsTrigger key={phase.id} value={phase.id} className="flex flex-col gap-2 p-3 whitespace-normal">
+                    <span className="text-sm font-semibold text-primary">PHASE {index + 1}</span>
+                    <span className="font-headline text-base">{phase.title}</span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+             {IMPLEMENTATION_PHASES.map((phase) => (
+                <TabsContent key={phase.id} value={phase.id}>
+                    <Card className="mt-6">
+                        <CardContent className="p-6">
+                             <p className="text-muted-foreground text-center">{phase.description}</p>
+                        </CardContent>
+                    </Card>
+                </TabsContent>
             ))}
-          </div>
+          </Tabs>
         </div>
       </section>
 
