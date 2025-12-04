@@ -123,7 +123,7 @@ export default function IntegrationPage() {
           </div>
       </section>
       
-      <section className="w-full py-16 md:py-24 bg-accent">
+      <section className="w-full py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {caseStudyImage && (
@@ -136,9 +136,9 @@ export default function IntegrationPage() {
                         className="rounded-lg shadow-2xl mx-auto"
                     />
                 )}
-                <div className="text-accent-foreground">
+                <div className="text-secondary-foreground">
                     <p className="text-sm font-bold tracking-widest text-primary uppercase">Featured Case Study</p>
-                    <h2 className="font-headline text-3xl font-bold mt-2">Dell Boomi Integration</h2>
+                    <h2 className="font-headline text-3xl font-bold mt-2 text-accent">Dell Boomi Integration</h2>
                     <p className="mt-4 text-lg">
                         Looking for integrations? Can I engage Dell Boomi for new integration projects? How exactly does Dell Boomi help with integrations? This case study unravels how Dell Boomi transforms integration projects, answering all your questions.
                     </p>
