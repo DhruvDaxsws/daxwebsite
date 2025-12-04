@@ -101,10 +101,10 @@ export default function ImplementationPage() {
 
   return (
     <div className="bg-background text-foreground">
-      <section className="bg-accent text-accent-foreground py-16 md:py-24">
+      <section className="bg-secondary text-secondary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">Dynamics 365 Implementation</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-300">
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
             YOUR TRUSTED PARTNER FOR DYNAMICS 365 SUCCESS
           </p>
         </div>
