@@ -62,118 +62,89 @@ export const TEAM_MEMBERS = [
 
 export const CASE_STUDIES = [
     {
-        title: 'A Practical View of Dynamics 365 Integration for Modern Organizations',
-        client: 'DynamicsCon',
-        imageId: 'case-study-1',
-        summary: 'In today\'s fast-paced business environment, organizations often rely on multiple software systems.',
-        challenge: 'GlobalMart was facing stiff competition from online-native retailers and struggling with an outdated legacy IT infrastructure. Customer engagement was low, and operational costs were high.',
-        solution: 'Our team developed a multi-phase digital transformation strategy. This included migrating to a cloud-based infrastructure, implementing a new e-commerce platform with personalized customer experiences, and automating key supply chain processes.',
-        outcome: 'Achieved a 40% year-over-year increase in online sales. Reduced operational costs by 25% through automation. Customer satisfaction scores improved by 35%.',
-        icons: [Rocket, Zap, Target]
+        title: 'OCR (Optical Character Recognition) for Vendor Invoice Automation',
+        summary: 'Research shows that companies using OCR for automated data entry from invoices process 25-60% more invoices than companies using manual data entry.',
+        imageId: 'case-study-1'
     },
     {
-        title: 'Cloud ERP vs. On-Premise: Why Dynamics 365\'s Cloud Model Wins',
-        client: 'ERP Insights',
-        imageId: 'case-study-2',
-        summary: 'Introduction: The Shift from Legacy ERP to Cloud. For decades, businesses depended on on-premise...',
-        challenge: 'InnovateIO had a groundbreaking product but lacked a clear strategy for entering a crowded market. They needed to identify the right target audience and differentiate themselves from established players.',
-        solution: 'We conducted extensive market research to identify a niche audience segment. We then developed a go-to-market strategy that focused on content marketing, strategic partnerships, and a freemium pricing model to drive user acquisition.',
-        outcome: 'Successfully acquired 10,000 active users in 6 months. Achieved a 15% conversion rate from free to paid plans. Established InnovateIO as a key player in their niche.',
-        icons: [BarChart3, Users, Target]
+        title: 'D365 F&O Implementation/Manages Support for a leading Fast Food Manufacturer and Retail Company',
+        summary: 'D365 F&O offers a comprehensive suite of features for managing all aspects of a retail business, including finance, supply chain management, manufacturing, project management, and customer relationship management (CRM).',
+        imageId: 'case-study-2'
     },
     {
-        title: 'Data-Driven Insights: Using Power BI with Dynamics 365 for Analytics',
-        client: 'BI Weekly',
-        imageId: 'case-study-3',
-        summary: 'Turning Overwhelm Data into Real-Time Intelligence. Every day, businesses generate vast amounts of data.',
-        challenge: 'SwiftLogistics was struggling with inefficient routing, high fuel consumption, and manual dispatch processes that led to delays and errors.',
-        solution: 'Our solution involved developing a custom AI platform that optimized delivery routes in real-time, automated the dispatch process, and provided predictive maintenance alerts for their fleet. The platform integrated with their existing TMS.',
-        outcome: 'Reduced average delivery times by 30%. Cut fuel costs by 15% through optimized routing. Eliminated 95% of manual dispatching errors.',
-        icons: [Bot, Rocket, Zap]
+        title: 'Post Go-Live Stabilization and Managed Services for a Leading Hydroponics Company',
+        summary: 'Managed services can help businesses reduce IT costs by 20-40% by offloading the management of applications to a specialized provider. Learn how one of the kleading Hydroponics company optimised it AMS costs with DAX.',
+        imageId: 'case-study-3'
     },
     {
-        title: 'D365 PSA Managed Support Services for a Leading Aviation Company',
-        client: 'Aviation Leader',
-        imageId: 'case-study-5',
-        summary: 'Explore how we provided D365 PSA managed support services, ensuring smooth operations for a leading aviation company.',
+        title: 'D365 F&O Managed Support Service for a Leading Real Estate Company',
+        summary: 'By leveraging DAX\'s AMS, real estate companies can gain a competitive advantage by reducing IT costs, improving application performance, and enhancing customer experience.',
+        imageId: 'case-study-4'
     },
     {
-        title: 'D365 Field Service Implementation & D365 Transformation for a Global OEM',
-        client: 'Global OEM',
-        imageId: 'case-study-6',
-        summary: 'Learn about our D365 Field Service implementation and transformation for a global original equipment manufacturer.',
+        title: 'D365 Field Service integrated with F&O Implementation for a US Based Systems Integrator',
+        summary: 'Dynamics 365 Field Service is a leading cloud-based field service management (FSM) solution, with over 200,000 organizations using it worldwid. Learn how it turn out to be a great solution for of the organizations.',
+        imageId: 'case-study-5'
     },
     {
         title: 'Implementation of Dynamics 365 Business Central',
-        client: 'Mid-Sized Retailer',
-        imageId: 'case-study-7',
-        summary: 'Discover our successful implementation of Dynamics 365 Business Central for a mid-sized retail company, improving their efficiency.',
+        summary: 'Business Central has experienced rapid growth since its launch in 2018, with over 70,000 customers worldwide and a growing partner ecosystem. Discover how DAX implemented Business Central for one of our critical client.',
+        imageId: 'case-study-6'
     },
     {
-        title: 'D365 Field Service Implementation & D365 Transformation for a Drug-testing Service Provider',
-        client: 'Service Provider',
-        imageId: 'case-study-8',
-        summary: 'A case study on our D365 Field Service implementation for a leading drug-testing service provider, enhancing their field operations.',
+        title: 'D365 Field Service integrated with F&O Implementation for a Security System Service Provider',
+        summary: 'Dynamics 365 Field Service empowers field technicians to be more efficient. Learn how a security system provider improved its field operations with this module.',
+        imageId: 'case-study-7'
     },
     {
-        title: 'Power Apps & Portal for an LA-based Non-Profit Organization',
-        client: 'LA Non-Profit',
-        imageId: 'case-study-9',
-        summary: 'See how we utilized Power Apps and Portal to create a solution for a Los Angeles-based non-profit organization.',
+        title: 'Power Apps Portal Solution for a US based Non-Profit Organization',
+        summary: 'Power Apps is a low-code platform, enabling anyone with minimal coding experience to create custom business applications. Learn how it helped NGO workers to save cost ans time.',
+        imageId: 'case-study-8'
     },
     {
-        title: 'Detailed Assessment, Functional & Technical Fit Gap for K-12 school district',
-        client: 'K-12 School District',
-        imageId: 'case-study-10',
-        summary: 'An in-depth assessment and analysis for a K-12 school district to ensure a perfect fit with their new system.',
-    },
-     {
-        title: 'AX 2012 to D365 F&O implementation for an import and distribution food ingredients company',
-        client: 'Food Ingredients Co.',
-        imageId: 'case-study-11',
-        summary: 'Upgrading from AX 2012 to Dynamics 365 Finance & Operations for a food ingredients import and distribution company.',
+        title: 'Model Driven Power Apps based Solution for Education Business',
+        summary: 'Create adaptive learning apps that cater to individual student needs and learning styles via power Apps! Develop more such interesting apps via power apps with DAX\'s help.',
+        imageId: 'case-study-9'
     },
     {
-        title: 'CFO-approved tool to address Incurred Cost Submission (ICE) for Government Contractors',
-        client: 'Government Contractor',
-        imageId: 'case-study-12',
-        summary: 'A CFO-approved tool for Incurred Cost Submission, tailored for government contractors to ensure compliance and accuracy.',
-    },
-     {
-        title: 'D365 Implementation solution for a leading IT Services Company',
-        client: 'IT Services Leader',
-        imageId: 'case-study-13',
-        summary: 'Our comprehensive D365 implementation solution for a leading IT services company, streamlining their business processes.',
+        title: 'D365 F&O Implementation for the largest Cannabis Company in Medical Usage',
+        summary: 'The cannabis industry is subject to a complex and ever-evolving regulatory landscape. D365 F&O helps cannabis businesses to comply with these regulations by providing features for track-and-trace, labeling, and reporting.',
+        imageId: 'case-study-10'
     },
     {
-        title: 'End-to-End Business Integration',
-        client: 'Manufacturing Inc.',
-        imageId: 'case-study-14',
-        summary: 'A complete end-to-end business integration solution for a manufacturing company, connecting all their critical systems.',
+        title: 'CRM Upgrade for a diversified Financial Services Organization',
+        summary: 'CRM provide a wealth of customer data, enabling financial institutions to gain insights into customer behavior, preferences, and financial needs. Learn how CRM Upgrade landed this organization ahead of its competitors.',
+        imageId: 'case-study-11'
     },
     {
-        title: 'Seamless implementation and integrations with Dynamics 365',
-        client: 'Tech Innovator',
-        imageId: 'case-study-15',
-        summary: 'We provided a seamless implementation and integration of Dynamics 365 for a tech innovator, enhancing their capabilities.',
+        title: 'CRM Implementation for a leading IT Services Company',
+        summary: 'CRM is proven to drive business growth, with companies that implement CRM experiencing an average sales increase of 12% and a customer retention rate increase of 27%. Learn more about how this IT Services organization improved reduced its operation costs via right CRM Implementation partner.',
+        imageId: 'case-study-12'
     },
     {
-        title: 'Strategic planning & process standardization for a multi-billion-dollar enterprise',
-        client: 'Global Enterprise',
-        imageId: 'case-study-16',
-        summary: 'Our strategic planning and process standardization helped a multi-billion-dollar enterprise achieve new levels of efficiency.',
+        title: 'Dell Boomi Integration',
+        summary: 'Looking for integrations? Can I engage Dell Boomi for my integration projects? How exactly Dell Boomi helps with integrations? This case study unravels how Dell Boomi transforms integration projects, answering all your questions.',
+        imageId: 'case-study-13'
     },
     {
-        title: 'AX 2012 to D365 F&O migration for a leading furniture management company',
-        client: 'Furniture Co.',
-        imageId: 'case-study-17',
-        summary: 'Migrating a leading furniture management company from AX 2012 to Dynamics 365 Finance & Operations.',
+        title: 'Salesforce Implementations and Integrations with Dynamics 365',
+        summary: 'Salesforce and Dynamics 365 represent two leading cloud-based enterprise software platforms, and their integration has become increasingly popular among businesses seeking to unify their customer relationship management (CRM) and enterprise resource planning (ERP). Want to learn how it\'s done?',
+        imageId: 'case-study-14'
     },
     {
-        title: 'Streamlining existing D365 Finance and Operations',
-        client: 'Financial Firm',
-        imageId: 'case-study-18',
-        summary: 'How we streamlined and optimized the existing Dynamics 365 Finance and Operations for a major financial firm.',
+        title: 'Implementation of PTO Functionality for one of the major security solutions providers',
+        summary: 'Know how the implementation of PTO functionality streamlined processes, reduced administrative workload by 40%.',
+        imageId: 'case-study-15'
+    },
+    {
+        title: 'CRM Implementation For A Leading Security System Management Company',
+        summary: 'Specialized in crafting security solutions tailored to specific needs, serving government, education, and more.',
+        imageId: 'case-study-16'
+    },
+    {
+        title: 'Electronic Invoicing using D365 Finance and Operations',
+        summary: 'Optimize your billing process with Electronic Invoicing in D365 Finance and Operations, ensuring automation, compliance, and efficiency.',
+        imageId: 'case-study-17'
     }
 ];
 

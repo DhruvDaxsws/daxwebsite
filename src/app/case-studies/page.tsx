@@ -21,7 +21,7 @@ export default function CaseStudiesPage() {
               Case Studies
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                DISCOVER HOW WE'VE PARTNERED WITH CLIENTS TO ACHIEVE REMARKABLE RESULTS.
+                Explore how we've helped businesses achieve remarkable results through our innovative solutions.
             </p>
         </div>
       </section>
@@ -29,26 +29,24 @@ export default function CaseStudiesPage() {
       <div className="container mx-auto px-4 py-12 md:py-24">
         <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
           {caseStudyImages.map((study, index) => (
-            <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card rounded-[24px] flex flex-col">
-              <div className="grid md:grid-cols-12 items-stretch h-full">
-                {study.image && (
-                    <div className="md:col-span-4 relative h-48 md:h-full w-full">
-                        <Image
-                            src={study.image.imageUrl}
-                            alt={study.image.description}
-                            data-ai-hint={study.image.imageHint}
-                            fill
-                            className="object-cover md:rounded-l-2xl md:rounded-r-none rounded-t-2xl"
-                        />
-                    </div>
-                )}
-                <div className="md:col-span-8 p-12 flex flex-col">
-                  <h2 className="text-xl font-bold font-headline">{study.title}</h2>
-                   <p className="mt-4 text-muted-foreground flex-grow">{study.summary}</p>
-                   <Button asChild className="mt-6 self-start">
-                        <Link href="#">READ MORE<ArrowRight /></Link>
-                    </Button>
-                </div>
+            <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card rounded-[24px] flex flex-col md:flex-row h-full">
+              {study.image && (
+                  <div className="md:w-1/3 relative h-48 md:h-auto w-full flex-shrink-0">
+                      <Image
+                          src={study.image.imageUrl}
+                          alt={study.image.description}
+                          data-ai-hint={study.image.imageHint}
+                          fill
+                          className="object-cover"
+                      />
+                  </div>
+              )}
+              <div className="md:w-2/3 p-12 flex flex-col">
+                <h2 className="text-xl font-bold font-headline">{study.title}</h2>
+                 <p className="mt-4 text-muted-foreground flex-grow">{study.summary}</p>
+                 <Button asChild className="mt-6 self-start">
+                      <Link href="#">LEARN MORE<ArrowRight /></Link>
+                  </Button>
               </div>
             </Card>
           ))}
