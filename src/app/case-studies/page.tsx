@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -26,22 +27,22 @@ export default function CaseStudiesPage() {
       </section>
 
       <div className="container mx-auto px-4 py-12 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
           {caseStudyImages.map((study, index) => (
-            <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card p-4 rounded-[24px]">
-              <div className="flex flex-col h-full">
+            <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card rounded-[24px]">
+              <div className="grid md:grid-cols-12 items-center">
                 {study.image && (
-                    <div className="relative h-48 w-full">
+                    <div className="md:col-span-4 relative h-48 md:h-full w-full">
                         <Image
                             src={study.image.imageUrl}
                             alt={study.image.description}
                             data-ai-hint={study.image.imageHint}
                             fill
-                            className="object-cover rounded-xl"
+                            className="object-cover md:rounded-l-2xl md:rounded-r-none rounded-t-2xl"
                         />
                     </div>
                 )}
-                <div className="pt-6 flex flex-col flex-grow">
+                <div className="md:col-span-8 p-6 flex flex-col flex-grow">
                   <h2 className="text-xl font-bold font-headline">{study.title}</h2>
                    <p className="mt-4 text-muted-foreground flex-grow">{study.summary}</p>
                    <Button asChild className="mt-6 self-start">
