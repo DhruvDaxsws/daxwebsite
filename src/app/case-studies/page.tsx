@@ -29,8 +29,8 @@ export default function CaseStudiesPage() {
       <div className="container mx-auto px-4 py-12 md:py-24">
         <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
           {caseStudyImages.map((study, index) => (
-            <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card rounded-[24px]">
-              <div className="grid md:grid-cols-12 items-center">
+            <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card rounded-[24px] flex flex-col">
+              <div className="grid md:grid-cols-12 items-stretch h-full">
                 {study.image && (
                     <div className="md:col-span-4 relative h-48 md:h-full w-full">
                         <Image
@@ -42,7 +42,7 @@ export default function CaseStudiesPage() {
                         />
                     </div>
                 )}
-                <div className="md:col-span-8 p-12 flex flex-col flex-grow">
+                <div className="md:col-span-8 p-12 flex flex-col">
                   <h2 className="text-xl font-bold font-headline">{study.title}</h2>
                    <p className="mt-4 text-muted-foreground flex-grow">{study.summary}</p>
                    <Button asChild className="mt-6 self-start">
