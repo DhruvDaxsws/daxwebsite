@@ -21,7 +21,7 @@
     {
       "id": "case-study-3",
       "description": "A dashboard on a computer screen showing Power BI analytics and charts related to Dynamics 365.",
-      "imageUrl": "https://images.unsplash.com/photo-1663769599443-26f307ef0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UG93ZXIlMjBCSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjQzMjM5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1663769599443-26f307ef0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UG93ZXIlMjBCSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjQzMjM5Nzh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "Power BI dashboard"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "case-study-6",
       "description": "Close-up of a hand interacting with a futuristic digital interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1545231159-36d9938c3b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaWdpdGFsJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NDUwMjc0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1545231159-36d9938c3b0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaWdpdGFsJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NDUwMjc0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "digital interface"
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "case-study-8",
       "description": "A scientist in a lab coat looking at a holographic interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1645210355325-e0dd9b90e91d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzY2llbnRpc3QlMjBob2xvZ3JhbXxlbnwwfHx8fDE3NjQ1NjkzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1645210355325-e0dd9b90e91d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzY2llbnRpc3QlMjBob2xvZ3JhbXxlbnwwfHx8fDE3NjQ1NjkzNjJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "scientist hologram"
     },
     {
@@ -104,8 +104,8 @@
     },
     {
       "id": "case-study-17",
-      "description": "A person interacting with a complex robotic arm interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1701120285820-976b36f4e5a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb2JvdGljJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2NDU2OTM2Mnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "description": "An image for the Electronic Invoicing case study.",
+      "imageUrl": "/case-studies/electronic-invoicing-case-study.png",
       "imageHint": "robotic interface"
     },
     {
@@ -123,7 +123,7 @@
     {
       "id": "leadership-1",
       "description": "Portrait of Sanjeev Munjal",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDcyMjI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDcyMjI0OHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man smiling"
     },
     {
@@ -201,7 +201,7 @@
     {
       "id": "global-team",
       "description": "A diverse group of colleagues holding up a sign with a world map on it.",
-      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnbG9iYWwlMjB0ZWFtfGVufDB8fHx8MTc2NDcyMzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnbG9iYWwlMjB0ZWFtfGVufDB8fHx8MTc2NDcyMzE1OHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "global team"
     },
     {
