@@ -93,13 +93,13 @@
     {
       "id": "case-study-15",
       "description": "A person touching a screen with a network of user icons.",
-      "imageUrl": "https://images.unsplash.com/photo-1758179762184-56f01a206ddc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1c2VyJTIwbmV0d29ya3xlbnwwfHx8fDE3NjQ1NjkzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758179762184-56f01a206ddc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx1c2VyJTIwbmV0d29ya3xlbnwwfHx8fDE3NjQ1NjkzNjJ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "user network"
     },
     {
       "id": "case-study-16",
       "description": "A person interacting with a secure data interface on a tablet.",
-      "imageUrl": "https://images.unsplash.com/photo-1667372283536-a832e74401c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZWN1cmUlMjBkYXRhfGVufDB8fHx8MTc2NDUzMjAzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1667372283536-a832e74401c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZWN1cmUlMjBkYXRhfGVufDB8fHx8MTc2NDUzMjAzNnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "secure data"
     },
     {
@@ -171,7 +171,7 @@
     {
       "id": "team-member-10",
       "description": "Portrait of Ashish Srivastava",
-      "imageUrl": "https://images.unsplash.com/photo-1520479225224-bdda1d3b23e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2NDI5MjQ4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1520479225224-bdda1d3b23e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMXx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2NDI5MjQ4M3ww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man"
     },
     {
@@ -219,7 +219,7 @@
     {
       "id": "rollouts",
       "description": "A person interacting with a holographic world map showing connected locations.",
-      "imageUrl": "https://images.unsplash.com/photo-1639893993223-954c225023c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBuZXR3b3JrJTIwaG9sb2dyYW18ZW58MHx8fHwxNzY1MzU5NzIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1639893993223-954c225023c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBuZXR3b3JrJTIwaG9sb2dyYW18ZW58MHx8fHwxNzY1MzU5NzIxZww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global network hologram"
     },
     {
@@ -266,9 +266,57 @@
     },
     {
       "id": "guide-download",
-      "description": "Stylized image of a guide book titled Reduced Resistance.",
-      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-reduced-resistance-guide.png",
+      "description": "Stylized image of a generic guide book.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-common-guide.png",
       "imageHint": "guide book"
+    },
+    {
+      "id": "guide-chapter-1",
+      "description": "Stylized image of a guide book for Chapter 1: Understanding User Needs.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-1-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-2",
+      "description": "Stylized image of a guide book for Chapter 2: Stakeholder Engagement.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-2-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-3",
+      "description": "Stylized image of a guide book for Chapter 3: Communication.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-3-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-4",
+      "description": "Stylized image of a guide book for Chapter 4: Change Management.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-4-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-5",
+      "description": "Stylized image of a guide book for Chapter 5: User Adoption.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-5-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-6",
+      "description": "Stylized image of a guide book for Chapter 6: Problem Solving.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-6-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-7",
+      "description": "Stylized image of a guide book for Chapter 7: Feedback and Continuous Improvement.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-chapter-7-guide.png",
+      "imageHint": "guide book chapter"
+    },
+    {
+      "id": "guide-chapter-8",
+      "description": "Stylized image of a guide book for Chapter 8: Reduced Resistance.",
+      "imageUrl": "https://storage.googleapis.com/stey-tmp-images/dax-reduced-resistance-guide.png",
+      "imageHint": "guide book chapter"
     }
   ]
 }

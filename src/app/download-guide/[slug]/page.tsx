@@ -1,38 +1,75 @@
 
 'use client';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import { notFound, useParams } from 'next/navigation';
+import { useParams, notFound } from 'next/navigation';
 import React from 'react';
+import Script from 'next/script';
 
-const CHAPTERS = [
-    { id: 'chapter-1', title: 'Understanding User Needs' },
-    { id: 'chapter-2', title: 'Stakeholder Engagement' },
-    { id: 'chapter-3', title: 'Communication' },
-    { id: 'chapter-4', title: 'Change Management' },
-    { id: 'chapter-5', title: 'User Adoption' },
-    { id: 'chapter-6', title: 'Problem Solving' },
-    { id: 'chapter-7', title: 'Feedback and Continuous Improvement' },
-    { id: 'chapter-8', title: 'Reduced Resistance' },
+const CHAPTER_DATA = [
+    { 
+        id: 'chapter-1', 
+        title: 'Understanding User Needs',
+        imageId: 'guide-chapter-1',
+        formId: '1b1ff00d-78c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/1b1ff00d-78c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-2', 
+        title: 'Stakeholder Engagement',
+        imageId: 'guide-chapter-2',
+        formId: 'e498b52c-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/e498b52c-79c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-3', 
+        title: 'Communication',
+        imageId: 'guide-chapter-3',
+        formId: 'f736ec4e-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/f736ec4e-79c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-4', 
+        title: 'Change Management',
+        imageId: 'guide-chapter-4',
+        formId: 'fcdeec7e-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/fcdeec7e-79c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-5', 
+        title: 'User Adoption',
+        imageId: 'guide-chapter-5',
+        formId: '596e3c9e-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/596e3c9e-79c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-6', 
+        title: 'Problem Solving',
+        imageId: 'guide-chapter-6',
+        formId: '2808c1b0-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2808c1b0-79c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-7', 
+        title: 'Feedback and Continuous Improvement',
+        imageId: 'guide-chapter-7',
+        formId: 'f00d5ec5-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/f00d5ec5-79c0-f011-bbd3-6045bd020834'
+    },
+    { 
+        id: 'chapter-8', 
+        title: 'Reduced Resistance',
+        imageId: 'guide-chapter-8',
+        formId: '826657d8-79c0-f011-bbd3-6045bd020834',
+        cachedFormUrl: 'https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/826657d8-79c0-f011-bbd3-6045bd020834'
+    },
 ];
 
 export default function DownloadGuidePage() {
   const params = useParams();
   const slug = params.slug as string;
-  const chapter = CHAPTERS.find((c) => c.id === slug);
-  const image = PlaceHolderImages.find(img => img.id === 'guide-download');
+  const chapter = CHAPTER_DATA.find((c) => c.id === slug);
+  const image = PlaceHolderImages.find(img => img.id === chapter?.imageId);
 
   if (!chapter) {
     notFound();
@@ -43,86 +80,18 @@ export default function DownloadGuidePage() {
       <div className="container mx-auto px-4 py-12 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
+            <p className="text-lg text-muted-foreground">Get your Empathetic ERP Guide for</p>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline mb-8">
-              Get your Empathetic ERP Guide for <br />
               <span className="text-primary">{chapter.title}</span>
             </h1>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="first-name">First Name <span className="text-red-500">*</span></Label>
-                  <Input id="first-name" name="first-name" required />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="last-name">Last Name <span className="text-red-500">*</span></Label>
-                  <Input id="last-name" name="last-name" required />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email <span className="text-red-500">*</span></Label>
-                <Input id="email" name="email" type="email" required />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="company-name">Company Name</Label>
-                <Input id="company-name" name="company-name" />
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="country-code">Country Code</Label>
-                  <Select name="country-code" defaultValue="us">
-                    <SelectTrigger id="country-code">
-                      <SelectValue placeholder="Select a country" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="us">United States (+1)</SelectItem>
-                      <SelectItem value="ca">Canada (+1)</SelectItem>
-                      <SelectItem value="gb">United Kingdom (+44)</SelectItem>
-                      <SelectItem value="in">India (+91)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone-number">Phone Number</Label>
-                  <Input id="phone-number" name="phone-number" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="extension">Extension</Label>
-                  <Input id="extension" name="extension" />
-                </div>
-              </div>
-              
-              <div className="text-xs text-muted-foreground space-y-4">
-                  <p>DAX Software Solutions, Inc is committed to protecting and respecting your privacy, and we’ll only use your personal information to administer your account and to provide the products and services you requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you</p>
-              </div>
-
-              <div className="flex items-start space-x-2">
-                <Checkbox id="communications" />
-                <Label htmlFor="communications" className="text-xs text-muted-foreground font-normal">
-                  I agree to receive other communications from DAX Software Solutions, Inc.
-                </Label>
-              </div>
-              <div className="text-xs text-muted-foreground space-y-4">
-                 <p>You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy.</p>
-                 <p>By clicking submit below, you consent to allow DAX Software Solutions, Inc to store and process the personal information submitted above to provide you the content requested.</p>
-              </div>
-
-              <Card className="p-4 bg-secondary/30">
-                <Label htmlFor="captcha">Enter the characters you see <span className="text-red-500">*</span></Label>
-                 <div className="flex justify-between items-center mt-2">
-                    <div>
-                        <a href="#" className="text-xs text-primary hover:underline">New</a> | <a href="#" className="text-xs text-primary hover:underline">Audio</a>
-                    </div>
-                    {/* Placeholder for CAPTCHA image */}
-                    <div className="w-32 h-12 bg-gray-300 flex items-center justify-center">
-                        <p className="text-lg font-bold tracking-widest text-gray-600">JRG</p>
-                        <p className="text-lg font-bold tracking-widest text-gray-600 -skew-x-12">WXV</p>
-                    </div>
-                </div>
-                 <Input id="captcha" name="captcha" className="mt-2" required/>
-              </Card>
-
-              <Button type="submit" size="lg">Submit</Button>
-            </form>
+            <div>
+              <div
+                data-form-id={chapter.formId}
+                data-form-api-url="https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms"
+                data-cached-form-url={chapter.cachedFormUrl}
+              ></div>
+              <Script src="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/usa/FormLoader/FormLoader.bundle.js"></Script>
+            </div>
           </div>
           <div className="hidden md:flex items-center justify-center">
              {image && (
