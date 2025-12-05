@@ -27,7 +27,7 @@ export default function CaseStudiesPage() {
       </section>
 
       <div className="container mx-auto px-4 py-12 md:py-24">
-        <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
           {caseStudyImages.map((study, index) => (
             <Card key={study.title} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl dark:bg-card rounded-[24px]">
               <div className="grid md:grid-cols-12 items-center">
