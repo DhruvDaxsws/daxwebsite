@@ -31,15 +31,17 @@ export default function DownloadGuideLandingPage() {
                         <p className="mb-8 text-muted-foreground">Select the eBook of your choice.</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {CHAPTERS.map(chapter => (
-                                <Button key={chapter.id} asChild variant="primary-outline" size="lg" className="text-center h-auto py-4">
+                                <Button key={chapter.id} asChild variant="primary-outline" size="lg" className="text-center h-auto py-4 flex items-center justify-center">
                                     <Link href={`/download-guide/${chapter.id}`}>
-                                        {chapter.title.split(' ').map((word, i, arr) => (
-                                            <React.Fragment key={i}>
-                                                {word}
-                                                {arr.length > 2 && i === Math.floor(arr.length / 2) -1 && <br />}
-                                                {i < arr.length - 1 && ' '}
-                                            </React.Fragment>
-                                        ))}
+                                        <span className="h-[40px] flex items-center justify-center">
+                                            {chapter.title.split(' ').map((word, i, arr) => (
+                                                <React.Fragment key={i}>
+                                                    {word}
+                                                    {arr.length > 2 && i === Math.floor(arr.length / 2) -1 && <br />}
+                                                    {i < arr.length - 1 && ' '}
+                                                </React.Fragment>
+                                            ))}
+                                        </span>
                                     </Link>
                                 </Button>
                             ))}
