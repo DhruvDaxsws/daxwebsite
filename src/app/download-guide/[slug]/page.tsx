@@ -14,7 +14,8 @@ import {
 } from '@/components/ui/select';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
+import React from 'react';
 
 const CHAPTERS = [
     { id: 'chapter-1', title: 'Understanding User Needs' },
@@ -27,8 +28,10 @@ const CHAPTERS = [
     { id: 'chapter-8', title: 'Reduced Resistance' },
 ];
 
-export default function DownloadGuidePage({ params }: { params: { slug: string } }) {
-  const chapter = CHAPTERS.find((c) => c.id === params.slug);
+export default function DownloadGuidePage() {
+  const params = useParams();
+  const slug = params.slug as string;
+  const chapter = CHAPTERS.find((c) => c.id === slug);
   const image = PlaceHolderImages.find(img => img.id === 'guide-download');
 
   if (!chapter) {
@@ -138,4 +141,3 @@ export default function DownloadGuidePage({ params }: { params: { slug: string }
     </div>
   );
 }
-
