@@ -140,7 +140,11 @@ export default function EmpatheticErpPage() {
                                         className="text-muted-foreground space-y-4"
                                         dangerouslySetInnerHTML={{ __html: chapter.content.replace(/\* \*(.*?)\* \*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>') }}
                                     />
-                                    <Button variant="link" className="px-0 mt-4">UNLOCK FULL GUIDE <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                                    <Button asChild variant="link" className="px-0 mt-4">
+                                        <Link href={`/download-guide/${chapter.id}`}>
+                                            UNLOCK FULL GUIDE <ArrowRight className="ml-2 h-4 w-4" />
+                                        </Link>
+                                    </Button>
                                 </Card>
                             ))}
                         </div>
