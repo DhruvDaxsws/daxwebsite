@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
@@ -132,28 +133,26 @@ export default function EmpatheticErpPage() {
                         </div>
 
                         <aside className="relative">
-                            <div className="sticky top-32">
-                                <Card className="p-6">
-                                    <h3 className="text-lg font-bold font-headline mb-4">Empathy</h3>
-                                    <nav>
-                                        <ul className="space-y-2">
-                                            {CHAPTERS.map(chapter => (
-                                                <li key={chapter.id}>
-                                                    <a 
-                                                        href={`#${chapter.id}`}
-                                                        onClick={(e) => handleLinkClick(chapter.id, e)}
-                                                        className={cn(
-                                                            'block text-sm text-muted-foreground transition-colors hover:text-primary',
-                                                            activeChapter === chapter.id && 'text-primary font-semibold'
-                                                        )}
-                                                    >
-                                                        {chapter.title}
-                                                    </a>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </nav>
-                                </Card>
+                            <div className="sticky top-32 p-6">
+                                <h3 className="text-lg font-bold font-headline mb-4">Empathy</h3>
+                                <nav>
+                                    <ul className="space-y-2">
+                                        {CHAPTERS.map(chapter => (
+                                            <li key={chapter.id}>
+                                                <a 
+                                                    href={`#${chapter.id}`}
+                                                    onClick={(e) => handleLinkClick(chapter.id, e)}
+                                                    className={cn(
+                                                        'block text-sm text-muted-foreground transition-colors hover:text-primary',
+                                                        activeChapter === chapter.id && 'text-primary font-semibold'
+                                                    )}
+                                                >
+                                                    {chapter.title}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </nav>
                             </div>
                         </aside>
                     </div>
