@@ -6,9 +6,8 @@ import { CASE_STUDIES } from '@/lib/content';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check } from 'lucide-react';
 
 type CaseStudyPageProps = {
   params: {
@@ -58,8 +57,54 @@ function renderContent(content: string) {
                         </div>
                     );
                  }
+              } else if (line.includes('[CTA-BLOCK]')) {
+                  renderedElements.push(
+                    <Card key="cta-block" className="bg-secondary/50 my-12">
+                        <CardContent className="p-8 md:p-12 text-center">
+                            <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Looking for OCR solutions for automated data entry?</h3>
+                            <p className="mt-2 text-lg text-muted-foreground">With 20+ years of industry experience in ERP and CRM, DAX is proficient in crafting tailored solutions to meet the needs of businesses.</p>
+                            <Button asChild size="lg" className="mt-6">
+                                <Link href="/contact">Contact Us</Link>
+                            </Button>
+                        </CardContent>
+                    </Card>
+                  );
+              } else if (line.includes('[OCR-OVERVIEW-IMAGE]')) {
+                  const ocrOverviewImage = PlaceHolderImages.find(p => p.id === 'ocr-overview-image');
+                  if (ocrOverviewImage) {
+                       renderedElements.push(
+                        <div key="ocr-overview-image" className="md:w-2/5 flex items-center justify-center">
+                            <Image src={ocrOverviewImage.imageUrl} alt={ocrOverviewImage.description} data-ai-hint={ocrOverviewImage.imageHint} width={400} height={300} className="rounded-lg shadow-lg" />
+                        </div>
+                       );
+                  }
+              } else if (line.includes('[OCR-SOLUTION-IMAGE]')) {
+                  const ocrSolutionImage = PlaceHolderImages.find(p => p.id === 'ocr-solution-image');
+                  if (ocrSolutionImage) {
+                       renderedElements.push(
+                        <div key="ocr-solution-image" className="my-8">
+                            <Image src={ocrSolutionImage.imageUrl} alt={ocrSolutionImage.description} data-ai-hint={ocrSolutionImage.imageHint} width={1200} height={400} className="mx-auto" />
+                        </div>
+                       );
+                  }
               } else {
-                renderedElements.push(<p key={i}>{line}</p>);
+                const overviewMatch = renderedElements.findIndex(el => (el as React.ReactElement)?.key === 'ocr-overview-image');
+                if (overviewMatch !== -1) {
+                    const imageElement = renderedElements.splice(overviewMatch, 1)[0];
+                    const overviewContent = <p key={i} className="text-muted-foreground">{line}</p>;
+                    const overviewWrapper = (
+                        <div key="overview-wrapper" className="flex flex-col md:flex-row gap-8 items-start">
+                           <div className="md:w-3/5 space-y-4">
+                             {overviewContent}
+                           </div>
+                           {imageElement}
+                        </div>
+                    );
+                    renderedElements.splice(overviewMatch-1, 0, overviewWrapper);
+
+                } else {
+                    renderedElements.push(<p key={i} className="text-muted-foreground">{line}</p>);
+                }
               }
             }
         }
@@ -69,7 +114,6 @@ function renderContent(content: string) {
 
     return renderedElements;
 }
-
 
 export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = params;
@@ -81,6 +125,40 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
   const image = PlaceHolderImages.find((img) => img.id === study.imageId);
 
+  // Special layout for OCR case study
+  if (slug === 'ocr-vendor-invoice-automation') {
+    return (
+       <div className="bg-background">
+        <section className="w-full py-12 md:py-20 lg:py-24 bg-accent text-accent-foreground">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <p className="font-semibold text-primary">Case Study</p>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline mt-2 max-w-4xl mx-auto">
+              {study.title}
+            </h1>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-300">
+              {study.summary}
+            </p>
+          </div>
+        </section>
+        <main className="py-16 md:py-24">
+            <div className="container mx-auto px-4 max-w-5xl">
+                <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-headline prose-h2:text-accent dark:prose-h2:text-white prose-h3:text-accent dark:prose-h3:text-white prose-h3:text-2xl prose-h3:mb-4 space-y-6">
+                    {renderContent(study.details)}
+                </div>
+
+                <div className="text-center mt-16">
+                     <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Want to know more?</h3>
+                      <Button asChild size="lg" className="mt-4">
+                        <Link href="/contact">Contact Us</Link>
+                    </Button>
+                </div>
+            </div>
+        </main>
+      </div>
+    )
+  }
+
+  // Default layout for other case studies
   return (
     <div className="bg-background">
       <section className="w-full py-12 md:py-20 lg:py-24 bg-secondary">

@@ -66,7 +66,25 @@ export const CASE_STUDIES = [
         title: 'OCR (Optical Character Recognition) for Vendor Invoice Automation',
         slug: 'ocr-vendor-invoice-automation',
         summary: 'Research shows that companies using OCR for automated data entry from invoices process 25-60% more invoices than companies using manual data entry.',
-        details: 'We implemented an OCR solution that automates vendor invoice processing, reducing manual data entry and errors. This solution integrates with Dynamics 365 to streamline the accounts payable workflow, resulting in faster payment cycles and improved vendor relationships. Our client saw a 40% increase in invoice processing efficiency within the first three months.',
+        details: `### Overview
+Recognizing the value of innovative technologies, Dax made a strategic decision to integrate Microsoft’s OCR (Optical Character Recognition) functionality into its existing suite of business applications. This move aimed to simplify document processing, automate data extraction, and drive digital transformation for its clients.
+[OCR-OVERVIEW-IMAGE]
+### Business Pain Points
+Prior to implementing OCR, business faced several key challenges:
+- Manual Data Entry Overload: Excessive manual data entry consumed valuable time and resources, hindering productivity, and creating room for errors.
+- Inefficient Paper-Based Processes: Traditional paper interactions and document handling slowed down operations, leading to delays and decreased efficiency.
+- Data Inaccuracy and Integrity Concerns: Transcription errors and inconsistencies compromised data integrity, impacting decision-making and jeopardizing business outcomes.
+- There are too many resources in the AP department, and it is hard to manage them.
+[CTA-BLOCK]
+### Solution
+Dax meticulously worked to integrate Microsoft’s OCR functionality into its software solutions, ensuring seamless integration with various business applications. Leveraging the power of AI (Artificial Intelligence) and machine learning, the OCR system was trained to recognize and extract relevant data points from a wide range of documents, regardless of format, template, or layout.
+[OCR-SOLUTION-IMAGE]
+### Benefits
+- Substantial time and effort savings: By automating data extraction from paper-based documents you can cut down your invoice processing time by 50%.
+- Seamless Integration: OCR technology can be seamlessly integrated with various ERP (Enterprise Resource Planning) software, including SAP, Oracle, and D365 F&O (Dynamics 365 Finance and Operations). If there is no inbuilt connector, a custom connector can be added on demand.
+- Enhanced Accuracy and Data Integrity: OCR enhanced the performance of multiple processes like AP, AR, Manufacturing via consistent data extraction, eliminating transcription errors, and enhancing data integrity.
+- Amplified Productivity and Scalability: Automating manual work, employees became efficient, leading to increased productivity. Additionally, the OCR functionality allowed for easy scalability, enabling organizations to handle growing document volumes.
+- Cost Reduction: By automating paper-based processes, companies experienced a reduction in operational costs, making up their ROI (Return on Investment) to 80% on this project.`,
         imageId: 'case-study-1'
     },
     {
@@ -256,7 +274,7 @@ export const CASE_STUDIES = [
 - Open Items which were not closed before securing sign off by stakeholders
 - Potential Delays in receiving in API from Government Portal which in turn was impacting receiving API from
 `,
-        imageId: 'case-study-17'
+        imageId: 'ocr-case-study'
     }
 ];
 

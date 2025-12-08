@@ -21,7 +21,7 @@
     {
       "id": "case-study-3",
       "description": "A dashboard on a computer screen showing Power BI analytics and charts related to Dynamics 365.",
-      "imageUrl": "https://images.unsplash.com/photo-1663769599443-26f307ef0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UG93ZXIlMjBCSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjQzMjM5Nzh8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1663769599443-26f307ef0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UG93ZXIlMjBCSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjQzMjM5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Power BI dashboard"
     },
     {
@@ -57,19 +57,19 @@
     {
       "id": "case-study-9",
       "description": "A group of volunteers packing boxes with supplies.",
-      "imageUrl": "https://images.unsplash.com/photo-1720038561037-430fe0f20224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dm9sdW50ZWVycyUyMHBhY2tpbmd8ZW58MHx8fHwxNzY0NTY5MzYzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1720038561037-430fe0f20224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dm9sdW50ZWVycyUyMHBhY2tpbmd8ZW58MHx8fHwxNzY0NTY5MzYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "volunteers packing"
     },
     {
       "id": "case-study-10",
       "description": "A teacher helping students in a classroom with computers.",
-      "imageUrl": "https://images.unsplash.com/photo-1660351174962-e2a1fbb9af09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWFjaGVyJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzY0NTE3Mzg5fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1660351174962-e2a1fbb9af09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZWFjaGVyJTIwc3R1ZGVudHN8ZW58MHx8fHwxNzY0NTE3Mzg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "teacher students"
     },
     {
       "id": "case-study-11",
       "description": "Close up of cannabis leaves and oil.",
-      "imageUrl": "https://images.unsplash.com/photo-1617101814530-fbc023773e73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW5uYWJpcyUyMG9pbHxlbnwwfHx8fDE3NjQ1NDIxNTF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617101814530-fbc023773e73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYW5uYWJpcyUyMG9pbHxlbnwwfHx8fDE3NjQ1NDIxNTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cannabis oil"
     },
     {
@@ -121,21 +121,27 @@
       "imageHint": "futuristic keyboard"
     },
     {
+      "id": "ocr-case-study",
+      "description": "An image for the OCR case study.",
+      "imageUrl": "public/case-studies/electronic-invoicing-case-study.png",
+      "imageHint": "person using phone"
+    },
+    {
       "id": "leadership-1",
       "description": "Portrait of Sanjeev Munjal",
-      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDcyMjI0OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDcyMjI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man smiling"
     },
     {
       "id": "leadership-2",
       "description": "Portrait of Munish Sethi",
-      "imageUrl": "https://images.unsplash.com/photo-1566753323558-f4e0952af115?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBnbGFzc2VzfGVufDB8fHx8MTc2NDcyMjI0OHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1566753323558-f4e0952af115?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBnbGFzc2VzfGVufDB8fHx8MTc2NDcyMjI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man glasses"
     },
     {
       "id": "leadership-3",
       "description": "Portrait of Puneet Nasa",
-      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzY0MjkyNDgzfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzY0MjkyNDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man"
     },
     {
@@ -153,7 +159,7 @@
     {
       "id": "team-member-6",
       "description": "Portrait of Vijaya Bhaskar Sanyela",
-      "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzY0NTgxMDMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzY0NTgxMDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man"
     },
     {
@@ -183,19 +189,19 @@
     {
       "id": "team-member-11",
       "description": "Portrait of Tamil Magal Radhakrishnan",
-      "imageUrl": "https://images.unsplash.com/photo-1542596594-649ed6e668a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjQyMTY2MjZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542596594-649ed6e668a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjQyMTY2MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional woman"
     },
     {
       "id": "team-member-12",
       "description": "Portrait of Raghu Ram",
-      "imageUrl": "https://images.unsplash.com/photo-1605499923819-65a8b03ea131?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2NDI5MjQ4M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1605499923819-65a8b03ea131?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2NDI5MjQ4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man"
     },
     {
       "id": "team-member-13",
       "description": "Portrait of Hung Phan",
-      "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2NDI5MjQ4M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxM3x8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fHx8MTc2NDI5MjQ4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man"
     },
     {
@@ -323,6 +329,18 @@
       "description": "Stylized image of a guide book for Chapter 8: Reduced Resistance.",
       "imageUrl": "/books/chapter-8.png",
       "imageHint": "guide book chapter"
+    },
+    {
+      "id": "ocr-overview-image",
+      "description": "Person using a phone to scan a document.",
+      "imageUrl": "https://images.unsplash.com/photo-1698778873722-fabe04c35547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjB1c2luZyUyMHBob25lJTIwdG8lMjBzY2FuJTIwZG9jdW1lbnR8ZW58MHx8fHwxNzY1NDk1Nzc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone scan document"
+    },
+    {
+      "id": "ocr-solution-image",
+      "description": "Diagram of the OCR solution flow.",
+      "imageUrl": "/case-studies/ocr-flow.png",
+      "imageHint": "flow diagram"
     }
   ]
 }
