@@ -198,7 +198,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-       <section className="w-full py-16 md:py-24 bg-accent">
+       <section className="w-full py-16 md:py-24 bg-accent/90">
             <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
                 <div className="space-y-3">
                     <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight text-accent-foreground">
@@ -215,5 +215,3 @@ export default function PricingPage() {
     </div>
   );
 }
-
-    
