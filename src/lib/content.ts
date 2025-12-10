@@ -261,7 +261,7 @@ lead ERP was carried out
 contact information
 - Lines - contains Item, quantity, price, tax etc
 - Payload Request - On posting of transaction, payload request is
-generated which transfers data to D365FO
+generated which transfers data to D356FO
 - Response
 #### Monitoring of data
 - Creation of Repository - Log form was created in Accounts Receivable and Accounts Payable module
