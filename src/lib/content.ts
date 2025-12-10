@@ -70,7 +70,7 @@ export const CASE_STUDIES = [
 Recognizing the value of innovative technologies, Dax made a strategic decision to integrate Microsoft’s OCR (Optical Character Recognition) functionality into its existing suite of business applications. This move aimed to simplify document processing, automate data extraction, and drive digital transformation for its clients.
 [OCR-OVERVIEW-IMAGE]
 ### Business Pain Points
-Prior to implementing OCR, business faced several key challenges:
+hello baby
 - Manual Data Entry Overload: Excessive manual data entry consumed valuable time and resources, hindering productivity, and creating room for errors.
 - Inefficient Paper-Based Processes: Traditional paper interactions and document handling slowed down operations, leading to delays and decreased efficiency.
 - Data Inaccuracy and Integrity Concerns: Transcription errors and inconsistencies compromised data integrity, impacting decision-making and jeopardizing business outcomes.
@@ -233,7 +233,7 @@ document number, tax types, classification codes
 ### Validation from Middleware to Government Portal
 - Customer/Vendor - TIN number validation
 - E-invoice and Consolidation status check
-- E- Invoice status submission and response
+- E-Invoice status submission and response
 ### Design
 - Implementation of Middleware for receipt of data from multiple data sources
 - From Lead ERP to Middleware
