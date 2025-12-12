@@ -9,7 +9,7 @@
     {
       "id": "case-study-1",
       "description": "Person using a phone to scan a document.",
-      "imageUrl": "/case-studies/electronic-invoicing-case-study.png",
+      "imageUrl": "/case-studies/ocr.jpeg",
       "imageHint": "phone scan document"
     },
     {
@@ -115,9 +115,9 @@
       "imageHint": "futuristic keyboard"
     },
     {
-      "id": "ocr-case-study",
+      "id": "case-study-19",
       "description": "A person using a laptop with a Dynamics 365 logo visible, in an office setting.",
-      "imageUrl": "/case-studies/ocr.jpeg",
+      "imageUrl": "/case-studies/electronic-invoicing-case-study.png",
       "imageHint": "Dynamics 365"
     },
     {
