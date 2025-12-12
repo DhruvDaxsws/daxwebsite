@@ -20,9 +20,9 @@
     },
     {
       "id": "case-study-3",
-      "description": "A dashboard on a computer screen showing Power BI analytics and charts related to Dynamics 365.",
-      "imageUrl": "https://images.unsplash.com/photo-1663769599443-26f307ef0ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8UG93ZXIlMjBCSSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NjQzMjM5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Power BI dashboard"
+      "description": "A lush hydroponics setup with leafy greens growing under artificial light.",
+      "imageUrl": "/case-studies/hydroponic.jpeg",
+      "imageHint": "hydroponics setup"
     },
     {
       "id": "case-study-4",
