@@ -32,9 +32,9 @@
     },
     {
       "id": "case-study-5",
-      "description": "Cityscape at dusk.",
-      "imageUrl": "https://images.unsplash.com/photo-1623263947330-0feb3ee7f53c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaXR5c2NhcGUlMjBkdXNrfGVufDB8fHx8MTc2NDU1ODM1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cityscape dusk"
+      "description": "A systems integrator technician working on a server rack.",
+      "imageUrl": "/case-studies/us-based-integrator.jpeg",
+      "imageHint": "systems integrator"
     },
     {
       "id": "case-study-6",
