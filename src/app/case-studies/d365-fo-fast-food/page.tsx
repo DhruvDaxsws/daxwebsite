@@ -35,8 +35,23 @@ export default function CaseStudyPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-headline prose-h2:text-accent dark:prose-h2:text-white prose-h3:text-accent dark:prose-h3:text-white prose-h3:text-2xl prose-h3:mb-4 space-y-6">
             
-            <h3 className="text-2xl font-bold font-headline mt-8 mb-4">Overview</h3>
-            <p className="text-muted-foreground">The company is one of the biggest Manufacture and Retail companies that produces Coffee beans and sells Coffee and Tea through its retail stores in the United States, Malaysia, and Singapore.</p>
+            <div className="grid md:grid-cols-2 gap-12 items-center not-prose">
+                <div className="space-y-4">
+                    <h3 className="text-2xl font-bold font-headline mt-8 mb-4 prose">Overview</h3>
+                    <p className="text-muted-foreground">The company is one of the biggest Manufacture and Retail companies that produces Coffee beans and sells Coffee and Tea through its retail stores in the United States, Malaysia, and Singapore.</p>
+                </div>
+                {image && (
+                    <div className="relative h-64 w-full">
+                        <Image 
+                            src={image.imageUrl}
+                            alt={image.description}
+                            data-ai-hint={image.imageHint}
+                            fill
+                            className="rounded-lg shadow-lg object-cover"
+                        />
+                    </div>
+                )}
+            </div>
             
             <h3 className="text-2xl font-bold font-headline mt-8 mb-4">Business Pain Points</h3>
             <ul className="space-y-3">
@@ -62,7 +77,7 @@ export default function CaseStudyPage() {
                 </li>
             </ul>
 
-            <Card className="bg-secondary/50 my-12">
+            <Card className="bg-secondary/50 my-12 not-prose">
                 <CardContent className="p-8 md:p-12 text-center">
                     <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Looking for support with Dynamics 365 implementation or managed services?</h3>
                     <p className="mt-2 text-lg text-muted-foreground">With 20+ years of industry experience in ERP and CRM, DAX is proficient in crafting tailored solutions to meet the needs of businesses.</p>
@@ -150,4 +165,3 @@ export default function CaseStudyPage() {
       </main>
     </div>
   );
-}
