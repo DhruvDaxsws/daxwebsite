@@ -1,3 +1,4 @@
+
 'use client';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -151,16 +152,20 @@ export default function CaseStudyPage() {
                 </li>
                  <li className="flex items-start gap-3">
                     <Check className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
-                    <span className="text-muted-foreground text-base">Monthly inventory and financial closing done in time without issues.</span>
+                    <span className="text-muted-foreground text-base">Monthly Inventory and financial closing done in time without issues.</span>
                 </li>
             </ul>
           </div>
 
-            <div className="text-center mt-16">
-                 <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Want to know more?</h3>
-                  <Button asChild size="lg" className="mt-4">
-                    <Link href="/contact">Contact Us</Link>
-                </Button>
+            <div className="not-prose mt-16">
+                <Card>
+                    <CardContent className="p-8 md:p-12 text-center">
+                        <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Want to know more?</h3>
+                        <Button asChild size="lg" className="mt-4">
+                            <Link href="/contact">Contact Us</Link>
+                        </Button>
+                    </CardContent>
+                </Card>
             </div>
              <div className="mt-12 text-center">
                 <Button asChild variant="outline">
@@ -175,3 +180,5 @@ export default function CaseStudyPage() {
     </div>
   );
 }
+
+    
