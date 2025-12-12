@@ -157,7 +157,6 @@ export default function CaseStudyPage() {
                 </li>
             </ul>
           </div>
-
             <div className="not-prose mt-16">
                 <Card>
                     <CardContent className="p-8 md:p-12 text-center">

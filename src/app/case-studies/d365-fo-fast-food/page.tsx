@@ -147,13 +147,16 @@ export default function CaseStudyPage() {
                 </li>
             </ul>
           </div>
-
-            <div className="text-center mt-16">
-                 <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Want to know more?</h3>
-                  <Button asChild size="lg" className="mt-4">
-                    <Link href="/contact">Contact Us</Link>
-                </Button>
-            </div>
+          <div className="not-prose mt-16">
+              <Card>
+                  <CardContent className="p-8 md:p-12 text-center">
+                       <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Want to know more?</h3>
+                        <Button asChild size="lg" className="mt-4">
+                          <Link href="/contact">Contact Us</Link>
+                      </Button>
+                  </CardContent>
+              </Card>
+          </div>
         </div>
       </main>
     </div>
