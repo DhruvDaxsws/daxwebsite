@@ -156,6 +156,16 @@ export default function CaseStudyPage() {
               <li className="flex items-start gap-3"><Check className="h-5 w-5 mt-1 text-primary flex-shrink-0" /><span className="text-muted-foreground text-base">Potential Delays in receiving in API from Government Portal which in turn was impacting receiving API from</span></li>
             </ul>
           </div>
+          <div className="not-prose mt-16">
+            <Card>
+              <CardContent className="p-8 md:p-12 text-center">
+                <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Want to know more?</h3>
+                <Button asChild size="lg" className="mt-4">
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
     </div>
