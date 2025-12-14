@@ -122,7 +122,7 @@ export default function PricingPage() {
                    Simply share your concerns, and DAX will analyze, create a winning plan, and provide a comprehensive end-to-end solution. With included training, Post Go-Live support, and on-the-go enhancements, we're dedicated to bring you ahead on track asap.
                 </p>
                 <Button asChild size="lg" className="mt-6">
-                    <Link href="#">LEARN MORE</Link>
+                    <Link href="/quick-fix-packages">LEARN MORE</Link>
                 </Button>
             </Card>
         </div>
