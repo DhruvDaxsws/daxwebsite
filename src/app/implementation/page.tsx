@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowRight } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { CASE_STUDIES } from '@/lib/content';
 
 const IMPLEMENTATION_PHASES = [
   {
@@ -103,7 +104,8 @@ export default function ImplementationPage() {
         ...opt,
         image: PlaceHolderImages.find(img => img.id === opt.imageId)
     }));
-    const caseStudyImage = PlaceHolderImages.find(img => img.id === 'case-study-11');
+    const caseStudy = CASE_STUDIES.find(cs => cs.slug === 'd365-fo-cannabis');
+    const caseStudyImage = PlaceHolderImages.find(img => img.id === caseStudy?.imageId);
 
 
   return (
@@ -222,10 +224,10 @@ export default function ImplementationPage() {
             </div>
       </section>
 
-      <section className="w-full py-16 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                {caseStudyImage && (
+      {caseStudy && caseStudyImage && (
+        <section className="w-full py-16 md:py-24 bg-secondary">
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
                     <Image 
                         src={caseStudyImage.imageUrl}
                         alt={caseStudyImage.description}
@@ -234,18 +236,18 @@ export default function ImplementationPage() {
                         height={350}
                         className="rounded-lg shadow-2xl mx-auto"
                     />
-                )}
-                <div className="text-secondary-foreground">
-                    <p className="text-sm font-bold tracking-widest text-primary">CASE STUDY</p>
-                    <h2 className="font-headline text-3xl font-bold mt-2">D365 F&O Implementation for the largest Cannabis Company in Medical Usage</h2>
-                    <p className="mt-4 text-lg">A deep dive into our successful Dynamics 365 Finance & Operations implementation, navigating complex regulatory compliance for a leader in the medical cannabis industry.</p>
-                    <Button asChild variant="primary-outline" className="mt-6">
-                        <Link href="#">READ MORE<ArrowRight /></Link>
-                    </Button>
+                  <div className="text-secondary-foreground">
+                      <p className="text-sm font-bold tracking-widest text-primary">CASE STUDY</p>
+                      <h2 className="font-headline text-3xl font-bold mt-2">{caseStudy.title}</h2>
+                      <p className="mt-4 text-lg">{caseStudy.summary}</p>
+                      <Button asChild variant="primary-outline" className="mt-6">
+                          <Link href={`/case-studies/${caseStudy.slug}`}>READ MORE<ArrowRight /></Link>
+                      </Button>
+                  </div>
                 </div>
-              </div>
-          </div>
-      </section>
+            </div>
+        </section>
+      )}
 
     </div>
   );

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight, Check } from 'lucide-react';
+import { CASE_STUDIES } from '@/lib/content';
 
 const INTEGRATION_PLATFORMS = [
   {
@@ -62,7 +63,8 @@ export default function IntegrationPage() {
         image: PlaceHolderImages.find(img => img.id === platform.imageId)
     }));
 
-    const caseStudyImage = PlaceHolderImages.find(img => img.id === 'dell-boomi-case-study');
+    const caseStudy = CASE_STUDIES.find(cs => cs.slug === 'dell-boomi-integration');
+    const caseStudyImage = PlaceHolderImages.find(img => img.id === caseStudy?.imageId);
 
   return (
     <div className="bg-background text-foreground">
@@ -123,32 +125,32 @@ export default function IntegrationPage() {
           </div>
       </section>
       
-      <section className="w-full py-16 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                {caseStudyImage && (
-                    <Image 
-                        src={caseStudyImage.imageUrl}
-                        alt={caseStudyImage.description}
-                        data-ai-hint={caseStudyImage.imageHint}
-                        width={550}
-                        height={350}
-                        className="rounded-lg shadow-2xl mx-auto"
-                    />
-                )}
-                <div className="text-secondary-foreground">
-                    <p className="text-sm font-bold tracking-widest text-primary uppercase">Featured Case Study</p>
-                    <h2 className="font-headline text-3xl font-bold mt-2 text-accent">Dell Boomi Integration</h2>
-                    <p className="mt-4 text-lg">
-                        Looking for integrations? Can I engage Dell Boomi for new integration projects? How exactly does Dell Boomi help with integrations? This case study unravels how Dell Boomi transforms integration projects, answering all your questions.
-                    </p>
-                    <Button asChild variant="default" className="mt-6">
-                        <Link href="#">READ MORE<ArrowRight /></Link>
-                    </Button>
+      {caseStudy && caseStudyImage && (
+        <section className="w-full py-16 md:py-24 bg-secondary">
+            <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <Image 
+                      src={caseStudyImage.imageUrl}
+                      alt={caseStudyImage.description}
+                      data-ai-hint={caseStudyImage.imageHint}
+                      width={550}
+                      height={350}
+                      className="rounded-lg shadow-2xl mx-auto"
+                  />
+                  <div className="text-secondary-foreground">
+                      <p className="text-sm font-bold tracking-widest text-primary uppercase">Featured Case Study</p>
+                      <h2 className="font-headline text-3xl font-bold mt-2 text-accent">{caseStudy.title}</h2>
+                      <p className="mt-4 text-lg">
+                          {caseStudy.summary}
+                      </p>
+                      <Button asChild variant="default" className="mt-6">
+                          <Link href={`/case-studies/${caseStudy.slug}`}>READ MORE<ArrowRight /></Link>
+                      </Button>
+                  </div>
                 </div>
-              </div>
-          </div>
-      </section>
+            </div>
+        </section>
+      )}
 
     </div>
   );

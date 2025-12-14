@@ -39,7 +39,7 @@ export default function CaseStudyPage() {
               <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-headline prose-h2:text-accent dark:prose-h2:text-white prose-h3:text-accent dark:prose-h3:text-white prose-h3:text-2xl prose-h3:mb-4 space-y-6">
                   
                   <h3 className="text-2xl font-bold font-headline mt-8 mb-4">Overview</h3>
-                  <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex flex-col md:flex-row gap-8 items-start not-prose">
                       <div className="md:w-3/5 space-y-4">
                           <p className="text-muted-foreground">Recognizing the value of innovative technologies, Dax made a strategic decision to integrate Microsoft’s OCR (Optical Character Recognition) functionality into its existing suite of business applications. This move aimed to simplify document processing, automate data extraction, and drive digital transformation for its clients.</p>
                       </div>
@@ -71,7 +71,7 @@ export default function CaseStudyPage() {
                       </li>
                   </ul>
 
-                  <Card className="bg-secondary/50 my-12">
+                  <Card className="bg-secondary/50 my-12 not-prose">
                       <CardContent className="p-8 md:p-12 text-center">
                           <h3 className="text-2xl font-bold font-headline text-accent dark:text-white">Looking for OCR solutions for automated data entry?</h3>
                           <p className="mt-2 text-lg text-muted-foreground">With 20+ years of industry experience in ERP and CRM, DAX is proficient in crafting tailored solutions to meet the needs of businesses.</p>
@@ -84,7 +84,7 @@ export default function CaseStudyPage() {
                   <h3 className="text-2xl font-bold font-headline mt-8 mb-4">Solution</h3>
                   <p className="text-muted-foreground">Dax meticulously worked to integrate Microsoft’s OCR functionality into its software solutions, ensuring seamless integration with various business applications. Leveraging the power of AI (Artificial Intelligence) and machine learning, the OCR system was trained to recognize and extract relevant data points from a wide range of documents, regardless of format, template, or layout.</p>
                    {ocrSolutionImage && (
-                      <div className="my-8">
+                      <div className="my-8 not-prose">
                           <Image src={ocrSolutionImage.imageUrl} alt={ocrSolutionImage.description} data-ai-hint={ocrSolutionImage.imageHint} width={1200} height={400} className="mx-auto" />
                       </div>
                   )}
