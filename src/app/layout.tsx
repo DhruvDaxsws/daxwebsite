@@ -24,6 +24,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="dns-prefetch" href="https://cxppusa1formui01cdnsa01-endpoint.azureedge.net" />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         <div className="flex min-h-screen flex-col">
