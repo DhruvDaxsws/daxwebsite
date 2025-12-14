@@ -66,10 +66,10 @@ export default function ContactPage() {
       </section>
 
       <div className="container mx-auto px-4 py-12 md:py-24">
-        <Card className="p-8 md:p-12 shadow-xl border-t-4 border-primary">
+        <Card className="p-8 md:p-12 shadow-xl">
             <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-8">
-                     <h2 className="text-3xl font-bold font-headline text-accent dark:text-white border-b-2 border-primary pb-2">How can we help you</h2>
+                     <h2 className="text-3xl font-bold font-headline text-accent dark:text-white pb-2">How can we help you</h2>
                      <ContactInfoItem icon={MapPin} title="Our Location">
                         <p>DAX Software Solutions Inc. 6303 Owensmouth Ave, 10th floor, Woodland Hills, CA 91367</p>
                     </ContactInfoItem>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     </ContactInfoItem>
                 </div>
                 <div>
-                    <h2 className="text-3xl font-bold font-headline text-accent dark:text-white border-b-2 border-primary pb-2 mb-8">Get in Touch</h2>
+                    <h2 className="text-3xl font-bold font-headline text-accent dark:text-white pb-2 mb-8">Get in Touch</h2>
                     <div
                         data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
                         data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
