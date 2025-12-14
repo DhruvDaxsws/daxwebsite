@@ -96,15 +96,7 @@ export default function ContactPage() {
       </div>
       
       <div className="w-full h-[500px]">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.766755106511!2d-118.5900557847831!3d34.15231588057861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29c158f49f649%3A0x854a8a514436894a!2sDAX%20Software%20Solutions%20Inc.!5e0!3m2!1sen!2sus!4v1689104031641!5m2!1sen!2sus"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.4804347283452!2d-118.6023208!3d34.1851992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29c1f87851d43%3A0x8f5b9f4e278a6a0b!2sDAX%20Software%20Solutions%20Inc.!5e0!3m2!1sen!2sin!4v1765705552947!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   );
