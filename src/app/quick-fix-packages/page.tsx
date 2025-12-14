@@ -9,42 +9,42 @@ const QUICK_FIX_PACKAGES = [
     {
         title: "Data Migration",
         description: "Explore DAX's swift data solutions",
-        href: "#"
+        slug: "data-migration"
     },
     {
         title: "Integration Failures",
         description: "Start with DAX Rapid Integration Rescue strategy",
-        href: "#"
+        slug: "integration-failures"
     },
     {
         title: "Performance Bottlenecks",
         description: "Receive a performance health checkup report from DAX",
-        href: "#"
+        slug: "performance-bottlenecks"
     },
     {
         title: "Custom Code Bugs",
         description: "Implement future proof standard coding practices",
-        href: "#"
+        slug: "custom-code-bugs"
     },
     {
         title: "Broken Implementations",
         description: "Experience DAX's Empathetic Support System.",
-        href: "#"
+        slug: "broken-implementations"
     },
     {
         title: "Reporting Error",
         description: "Eliminate Reporting Errors and access pre-built reports to save time.",
-        href: "#"
+        slug: "reporting-error"
     },
     {
         title: "Challenges with System Upgrades",
         description: "Unlock smooth upgrade process with zero downtime",
-        href: "#"
+        slug: "challenges-with-system-upgrades"
     },
     {
         title: "ERP Cost Overruns",
         description: "Optimize Licensing Post-Assessment by DAX.",
-        href: "#"
+        slug: "erp-cost-overruns"
     }
 ];
 
@@ -88,7 +88,7 @@ export default function QuickFixPackagesPage() {
                             <p className="text-muted-foreground">{pkg.description}</p>
                         </div>
                         <Button asChild variant="default" className="mt-6 w-full">
-                            <Link href={pkg.href}>QUICK FIX <ArrowRight /></Link>
+                            <Link href={`/quick-fix-packages/${pkg.slug}`}>QUICK FIX <ArrowRight /></Link>
                         </Button>
                     </Card>
                 ))}
