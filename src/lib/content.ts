@@ -47,18 +47,18 @@ export const SERVICES = [
 ];
 
 export const TEAM_MEMBERS = [
-    { name: 'Sanjeev Munjal', role: 'Founder & Managing Partner', imageId: 'leadership-1' },
-    { name: 'Munish Sethi', role: 'Founder & Managing Partner', imageId: 'leadership-2' },
-    { name: 'Puneet Nasa', role: 'Managing Partner', imageId: 'leadership-3' },
-    { name: 'Anuj Rastogi', role: 'Senior Technical Architect', imageId: 'team-member-5' },
-    { name: 'Vijaya Bhaskar Sanyela', role: 'Dynamics 365 Technical Architect', imageId: 'team-member-6' },
-    { name: 'Gajendiran Govindraj', role: 'Dynamics 365 Technical Architect', imageId: 'team-member-7' },
-    { name: 'Vikas Mehta', role: 'Dynamics 365 Technical Architect', imageId: 'team-member-8' },
-    { name: 'Mohit Khanna', role: 'Functional Solution Architect', imageId: 'team-member-9' },
-    { name: 'Ashish Srivastava', role: 'Technical Architect', imageId: 'team-member-10' },
-    { name: 'Tamil Magal Radhakrishnan', role: 'Technical Architect', imageId: 'team-member-11' },
-    { name: 'Raghu Ram', role: 'Functional Production Consultant', imageId: 'team-member-12' },
-    { name: 'Hung Phan', role: 'Dynamics 365 F&O Technical Consultant', imageId: 'team-member-13' },
+    { name: 'Sanjeev Munjal', role: 'Founder & Managing Partner', imageId: 'sanjeev' },
+    { name: 'Munish Sethi', role: 'Founder & Managing Partner', imageId: 'munish' },
+    { name: 'Puneet Nasa', role: 'Managing Partner', imageId: 'puneet' },
+    { name: 'Anuj Rastogi', role: 'Senior Technical Architect', imageId: 'anuj-rastogi' },
+    { name: 'Vijaya Bhaskar Sanyela', role: 'Dynamics 365 Technical Architect', imageId: 'vijaya-bhaskar-sanyela' },
+    { name: 'Gajendiran Govindraj', role: 'Dynamics 365 Technical Architect', imageId: 'gajendiran-govindraj' },
+    { name: 'Vikas Mehta', role: 'Dynamics 365 Technical Architect', imageId: 'vikas-mehta' },
+    { name: 'Mohit Khanna', role: 'Functional Solution Architect', imageId: 'mohit-khanna' },
+    { name: 'Ashish Srivastava', role: 'Technical Architect', imageId: 'ashish-srivastava' },
+    { name: 'Tamil Magal Radhakrishnan', role: 'Technical Architect', imageId: 'tamilmagal-radhakrishnan' },
+    { name: 'Raghu Ram', role: 'Functional Production Consultant', imageId: 'raghu-ram' },
+    { name: 'Hung Phan', role: 'Dynamics 365 F&O Technical Consultant', imageId: 'hung-phan' },
 ];
 
 export const CASE_STUDIES = [

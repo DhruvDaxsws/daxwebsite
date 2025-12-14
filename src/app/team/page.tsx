@@ -1,17 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TEAM_MEMBERS } from "@/lib/content";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-
 
 export default function TeamPage() {
-    const teamImages = TEAM_MEMBERS.map(tm => ({
-        ...tm,
-        image: PlaceHolderImages.find(img => img.id === tm.imageId)
-    }));
 
   return (
     <div className="bg-background">
@@ -28,16 +22,17 @@ export default function TeamPage() {
 
       <div className="container mx-auto px-4 py-12 md:py-24">
         <Card className="p-8 md:p-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
-            {teamImages.map((member) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {TEAM_MEMBERS.map((member) => (
                 <div key={member.name} className="text-center flex flex-col items-center">
-                    <Avatar className="h-32 w-32 border-4 border-primary/20 mb-4">
-                        {member.image && (
-                            <AvatarImage src={member.image.imageUrl} alt={member.name} data-ai-hint={member.image.imageHint} />
-                        )}
-                    <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                    </Avatar>
-                    <h3 className="text-xl font-bold font-headline">{member.name}</h3>
+                    <Image 
+                        width="100" 
+                        height="100" 
+                        className="rounded-full mb-4" 
+                        src={`/assets/images/${member.imageId}.png`}
+                        alt={member.name} 
+                    />
+                    <h4 className="text-xl font-bold font-headline">{member.name}</h4>
                     <p className="text-md text-primary">{member.role}</p>
                 </div>
             ))}
