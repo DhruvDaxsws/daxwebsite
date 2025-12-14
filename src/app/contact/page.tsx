@@ -47,9 +47,9 @@ export default function ContactPage() {
         </p>
       </div>
       
-      <div className="mt-16 grid gap-12 md:grid-cols-2">
+      <div className="mt-16 grid gap-12 grid-cols-1">
         <Card className="p-8">
-          <h2 className="text-2xl font-bold mb-6 font-headline">Contact Form</h2>
+          <h2 className="text-2xl font-bold mb-6 font-headline text-center">Contact Form</h2>
             <div
                 data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
                 data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
