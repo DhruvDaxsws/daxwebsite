@@ -13,7 +13,7 @@ export default function Home() {
     ...cs,
     image: PlaceHolderImages.find(img => img.id === cs.imageId)
   }));
-  const featuredImage = PlaceHolderImages.find(img => img.id === 'case-study-4');
+  const featuredImage = PlaceHolderImages.find(img => img.id === 'featured-erp-cta');
 
   return (
     <div className="flex flex-col bg-background">
@@ -134,3 +134,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
