@@ -67,7 +67,7 @@ const SERVICE_DETAILS = [
 ];
 
 export default function ApplicationManagedServicesPage() {
-    const heroImage = PlaceHolderImages.find(img => img.id === 'application-managed-services');
+    
     const plugin = React.useRef(
         Autoplay({ delay: 3000, stopOnInteraction: true })
     );
@@ -130,7 +130,7 @@ export default function ApplicationManagedServicesPage() {
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
             <h2 className="text-center text-3xl font-bold font-headline mb-12">Dynamics 365 Application Managed Services by DAX</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
                 {SERVICE_DETAILS.map(service => (
                     <Card key={service.title} className="p-6">
                         <CardContent className="p-0">
