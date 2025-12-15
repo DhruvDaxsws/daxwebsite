@@ -74,7 +74,7 @@ export default function PerformanceTuningPage() {
         </div>
       </section>
       
-      <section className="w-full py-16 md:py-24 bg-accent text-accent-foreground">
+      <section className="w-full py-16 md:py-24 bg-secondary text-accent">
         <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
                 <h2 className="font-headline text-3xl font-bold tracking-tighter md:text-4xl/tight">
@@ -82,7 +82,7 @@ export default function PerformanceTuningPage() {
                 </h2>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
-                <Button asChild size="lg" variant="primary-outline">
+                <Button asChild size="lg" variant="default">
                     <Link href="/contact">Contact Us</Link>
                 </Button>
             </div>
@@ -91,3 +91,4 @@ export default function PerformanceTuningPage() {
     </div>
   );
 }
+
