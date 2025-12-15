@@ -121,7 +121,7 @@ export default function ContinuousEnhancementsPage() {
 
       <section className="sticky top-[108px] z-30 bg-card-foreground/5 backdrop-blur-lg py-4 shadow-md">
         <div className="container mx-auto px-4">
-            <div className="flex justify-center gap-2 flex-wrap">
+            <div className="flex justify-center gap-2">
                 {ENHANCEMENT_SECTIONS.map(section => (
                     <Button 
                         key={section.id} 
@@ -135,7 +135,7 @@ export default function ContinuousEnhancementsPage() {
                                 : "bg-white text-primary border-primary hover:bg-white hover:text-accent hover:border-accent"
                         )}
                     >
-                        <span className="flex-wrap whitespace-normal">
+                        <span className="whitespace-normal">
                           {section.title.split(' ').map((word, i, arr) => (
                               <React.Fragment key={i}>
                                   {word}
