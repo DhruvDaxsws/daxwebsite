@@ -150,9 +150,9 @@ export default function ContinuousEnhancementsPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-accent text-accent-foreground">
+      <section className="py-12 md:py-16 bg-secondary text-accent">
         <div className="container mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-white">Experiencing issues with a broken or failed implementation?</h2>
+            <h2 className="text-xl font-semibold">Experiencing issues with a broken or failed implementation?</h2>
             <Button asChild className="mt-4">
                 <Link href="/quick-fix-packages">Quick-Fix Packages</Link>
             </Button>
