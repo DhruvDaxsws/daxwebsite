@@ -54,10 +54,12 @@ export default function SystemOptimizationPage() {
   const [activeSection, setActiveSection] = useState(OPTIMIZATION_SECTIONS[0].id);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  const scrollToSection = (id: string) => {
+  const handleLinkClick = (id: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
-        const yOffset = -120;
+        const yOffset = -120; // to account for sticky header
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -118,13 +120,13 @@ export default function SystemOptimizationPage() {
 
       <section className="sticky top-[108px] z-30 bg-card-foreground/5 backdrop-blur-lg py-4 shadow-md">
         <div className="container mx-auto px-4">
-             <div className="grid grid-cols-3 justify-center gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-6 justify-center gap-2">
                 {OPTIMIZATION_SECTIONS.map(section => (
                     <Button 
                         key={section.id} 
                         variant={activeSection === section.id ? 'default' : 'primary-outline'}
                         size="sm" 
-                        onClick={() => scrollToSection(section.id)} 
+                        onClick={(e) => handleLinkClick(section.id, e)}
                         className={cn(
                             "text-xs h-auto py-2 transition-all",
                             activeSection !== section.id && "bg-white text-primary border-primary hover:bg-white hover:text-accent hover:border-accent"
@@ -175,7 +177,7 @@ export default function SystemOptimizationPage() {
       </section>
       
        {caseStudy && caseStudyImage && (
-        <section className="w-full py-16 md:py-24 bg-accent">
+        <section className="w-full py-16 md:py-24 bg-secondary">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <Image 
@@ -186,11 +188,13 @@ export default function SystemOptimizationPage() {
                         height={350}
                         className="rounded-lg shadow-2xl mx-auto"
                     />
-                  <div className="text-accent-foreground">
+                  <div className="text-secondary-foreground">
                       <p className="text-sm font-bold tracking-widest text-primary uppercase">Featured Case Study</p>
-                      <h2 className="font-headline text-3xl font-bold mt-2">{caseStudy.title}</h2>
-                      <p className="mt-4 text-lg">{caseStudy.summary}</p>
-                      <Button asChild variant="primary-outline" className="mt-6">
+                      <h2 className="font-headline text-3xl font-bold mt-2 text-accent">{caseStudy.title}</h2>
+                      <p className="mt-4 text-lg">
+                          Managed services can help businesses reduce IT costs by 20-40% by offloading the management of applications to a specialized provider. Learn how one of the kleading Hydroponics company optimised it AMS costs with DAX.
+                      </p>
+                      <Button asChild variant="default" className="mt-6">
                           <Link href={`/case-studies/${caseStudy.slug}`}>READ MORE<ArrowRight /></Link>
                       </Button>
                   </div>
