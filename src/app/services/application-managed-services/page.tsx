@@ -227,10 +227,10 @@ export default function ApplicationManagedServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-accent text-accent-foreground">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-headline">Ready for choosing us as your application managed support partner?</h2>
-            <Button asChild size="lg" variant="primary-outline" className="mt-6">
+            <h2 className="text-3xl font-bold font-headline text-accent">Ready for choosing us as your application managed support partner?</h2>
+            <Button asChild size="lg" className="mt-6">
                 <Link href="/contact">Let's Connect</Link>
             </Button>
         </div>
