@@ -33,53 +33,6 @@ const SUPPORT_PROCESS = [
     }
 ];
 
-const WHY_DAX_ITEMS = [
-    {
-        title: "Certified Microsoft Partner",
-        description: "We are certified Microsoft partners and well versed in resolving Dynamics 365 F&O, Business Central, CE/CRM, Power Platform or SFDC, Dell Boomi, 3rd Party integration issues."
-    },
-    {
-        title: "Experienced Consultants",
-        description: "Average experience of Dax team is 12+ years under guidance of senior architects having experience of around 20+ years."
-    },
-    {
-        title: "One Stop Shop",
-        description: "Along with supporting Dynamics 365 ERP, we are well versed in Digital Transformation, Website development, Product dev, SFDC, and more."
-    },
-    {
-        title: "Global Team and 24/7 Support Help Desk",
-        description: "Onshore-Offshore model to ensure full coverage."
-    },
-    {
-        title: "Business Trainings",
-        description: "All the trainings and business support documents provided for future reference."
-    },
-    {
-        title: "Continuously Innovating",
-        description: "We innovate constantly to bring the latest technology to resolve issues and keep you one step ahead of competitors."
-    },
-    {
-        title: "Case Studies",
-        description: "We learn and conquer. Access our case studies here (blog)."
-    },
-    {
-        title: "Flexible Pricing",
-        description: "We don’t force businesses into annual commitments or contracts. We have flexible pricing contracts based on business requirements and suitability."
-    },
-    {
-        title: "Resource Allocation",
-        description: "We allocate resources as per industry type, resource experience, business region, and criticality of the application. We take feedback from businesses regarding resources and bring improvement in our services."
-    },
-    {
-        title: "Speed of Delivery",
-        description: "Expedite the project delivery as team is available offshore and onshore. We overlap with customer timezone while operating on 24/7 support delivery model."
-    },
-    {
-        title: "Cost Saving",
-        description: "Since project delivery is faster and solutions from experience Dynamics Consultants are made configurable, you can save more time and money."
-    }
-];
-
 const SERVICE_DETAILS = [
     {
         icon: Phone,
@@ -173,27 +126,6 @@ export default function ApplicationManagedServicesPage() {
               ))}
             </CarouselContent>
           </Carousel>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-secondary/30">
-        <div className="container mx-auto px-4">
-            <h2 className="text-center text-3xl font-bold font-headline mb-12">Why is DAX the right Dynamics 365 Managed Support Partner?</h2>
-            <Card>
-                <CardContent className="p-8 md:p-12">
-                    <ul className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                        {WHY_DAX_ITEMS.map(item => (
-                            <li key={item.title} className="flex items-start gap-3">
-                                <Check className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
-                                <div>
-                                    <h4 className="font-bold">{item.title}</h4>
-                                    <p className="text-muted-foreground text-sm">{item.description}</p>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </CardContent>
-            </Card>
         </div>
       </section>
 
