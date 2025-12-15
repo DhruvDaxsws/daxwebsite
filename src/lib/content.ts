@@ -6,7 +6,6 @@ export const NAV_LINKS = [
   { href: '/integration', label: 'Integration' },
   { href: '/government', label: 'Government' },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/services/microsoft-365', label: 'Microsoft 365' },
   { href: '/services/microsoft-copilot', label: 'Copilot' },
 ];
 
