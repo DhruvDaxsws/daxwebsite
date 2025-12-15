@@ -118,7 +118,7 @@ export default function SystemOptimizationPage() {
 
       <section className="sticky top-[108px] z-30 bg-card-foreground/5 backdrop-blur-lg py-4 shadow-md">
         <div className="container mx-auto px-4">
-            <div className="grid grid-cols-3 justify-center gap-2">
+             <div className="grid grid-cols-3 justify-center gap-2">
                 {OPTIMIZATION_SECTIONS.map(section => (
                     <Button 
                         key={section.id} 
@@ -127,7 +127,7 @@ export default function SystemOptimizationPage() {
                         onClick={() => scrollToSection(section.id)} 
                         className={cn(
                             "text-xs h-auto py-2 transition-all",
-                            activeSection !== section.id && "bg-transparent text-primary border-primary hover:bg-primary/10"
+                            activeSection !== section.id && "bg-white text-primary border-primary hover:bg-primary/10"
                         )}
                     >
                         {section.title}
