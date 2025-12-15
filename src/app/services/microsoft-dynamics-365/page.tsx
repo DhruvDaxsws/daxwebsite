@@ -1,9 +1,10 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, CheckCircle, Shield, Handshake, Clock, Users, Wrench, Package } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Handshake, Clock, Users, Wrench, Package, Award } from 'lucide-react';
 import {
   Briefcase,
   GitCommit,
