@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
 
       <main className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-            <div className="prose prose-lg max-w-4xl mx-auto dark:prose-invert prose-headings:font-headline prose-h2:text-accent dark:prose-h2:text-white prose-h2:text-2xl prose-h2:mb-4 prose-h3:font-headline prose-h3:text-xl prose-p:text-muted-foreground prose-li:text-muted-foreground">
+            <div className="prose prose-lg max-w-4xl mx-auto dark:prose-invert prose-headings:font-headline prose-h2:text-accent dark:prose-h2:text-white prose-h2:text-2xl prose-h2:mb-4 prose-h3:font-headline prose-h3:text-xl prose-p:text-muted-foreground prose-li:text-muted-foreground prose-p:mb-6 prose-ul:mb-6 prose-h2:mt-12 prose-h2:first:mt-0 prose-h3:mt-8">
                 
                 <h2>Purpose</h2>
                 <p>This Privacy Policy applies to the information Dax Software Solutions, Inc. and its subsidiaries (collectively, “Dax Software Solutions,” “we,” “us,” or “our”) collects, including through our website or other online products and services (“Site”).</p>
