@@ -203,26 +203,6 @@ export default function AX2012ToD365UpgradePage() {
                     </Accordion>
                 </div>
             </section>
-
-             <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4">
-                    <Card className="bg-accent text-accent-foreground p-8 max-w-4xl mx-auto">
-                        <div className="grid md:grid-cols-3 items-center gap-8">
-                             <div className="md:col-span-1 flex justify-center">
-                                 <Newspaper className="w-24 h-24" />
-                            </div>
-                            <div className="md:col-span-2">
-                                <p className="text-sm uppercase tracking-widest">BLOG</p>
-                                <h3 className="text-xl font-bold font-headline mt-2">Reasons to upgrade to Microsoft D365 F&O from D365 AX 2012</h3>
-                                <p className="text-gray-300 mt-2 text-sm">Microsoft released Dynamics 365 for operations in 2016, its cloud-based ERP (Enterprise Resource Planning) solution, against its older AX 2012 version. In 2017, Microsoft renamed it as Dynamics 365 for Finance and Operations...</p>
-                                <Button asChild variant="link" className="text-white px-0 mt-4">
-                                    <Link href="#">READ MORE <ArrowRight /></Link>
-                                </Button>
-                            </div>
-                        </div>
-                    </Card>
-                </div>
-            </section>
         </div>
     );
 }
