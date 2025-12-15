@@ -6,6 +6,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check, Phone, Settings, Users, ArrowRight, TrendingUp, Search, Handshake, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import * as React from 'react';
 
 const SUPPORT_PROCESS = [
     {
@@ -112,6 +115,9 @@ const SERVICE_DETAILS = [
 
 export default function ApplicationManagedServicesPage() {
     const heroImage = PlaceHolderImages.find(img => img.id === 'application-managed-services');
+    const plugin = React.useRef(
+        Autoplay({ delay: 3000, stopOnInteraction: true })
+    );
 
   return (
     <div className="bg-background">
@@ -139,19 +145,34 @@ export default function ApplicationManagedServicesPage() {
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SUPPORT_PROCESS.map((step, index) => (
-              <Card key={step.title} className="flex flex-col text-center p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-0 flex-grow flex flex-col items-center">
-                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">
-                    {index + 1}
+          <Carousel
+            plugins={[plugin.current]}
+            className="w-full"
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+          >
+            <CarouselContent>
+              {SUPPORT_PROCESS.map((step, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                    <Card className="flex flex-col text-center p-6 shadow-lg hover:shadow-xl transition-shadow h-full">
+                      <CardContent className="p-0 flex-grow flex flex-col items-center">
+                        <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">
+                          {index + 1}
+                        </div>
+                        <h3 className="text-lg font-bold font-headline mb-2">{step.title}</h3>
+                        <p className="text-muted-foreground text-sm flex-grow">{step.description}</p>
+                      </CardContent>
+                    </Card>
                   </div>
-                  <h3 className="text-lg font-bold font-headline mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm flex-grow">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
