@@ -76,17 +76,6 @@ export default function ApplicationManagedServicesPage() {
     <div className="bg-background">
       <section className="bg-accent text-accent-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-            {heroImage && (
-                <div className="relative h-48 w-full max-w-lg mx-auto mb-8">
-                    <Image 
-                        src={heroImage.imageUrl}
-                        alt={heroImage.description}
-                        data-ai-hint={heroImage.imageHint}
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            )}
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
             Dynamics 365 Application Managed Services
           </h1>
