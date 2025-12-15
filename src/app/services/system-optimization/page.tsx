@@ -9,6 +9,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CASE_STUDIES } from '@/lib/content';
 import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
+import React from 'react';
 
 const OPTIMIZATION_SECTIONS = [
   {
@@ -118,52 +119,40 @@ export default function SystemOptimizationPage() {
         </div>
       </section>
 
-      <section className="sticky top-[108px] z-30 bg-card-foreground/5 backdrop-blur-lg py-4 shadow-md">
+       <section className="sticky top-[108px] z-30 bg-card-foreground/5 backdrop-blur-lg py-4 shadow-md">
         <div className="container mx-auto px-4">
-            <div className="flex flex-col items-center gap-2">
-                <div className="flex justify-center gap-2 flex-wrap">
-                    {OPTIMIZATION_SECTIONS.slice(0, 4).map(section => (
-                        <Button 
-                            key={section.id} 
-                            variant="primary-outline"
-                            size="sm" 
-                            onClick={(e) => handleLinkClick(section.id, e)}
-                             className={cn(
-                                "text-xs h-auto py-2 transition-all",
-                                activeSection === section.id 
-                                    ? "bg-primary text-primary-foreground" 
-                                    : "bg-white text-primary border-primary hover:bg-white hover:text-accent hover:border-accent"
-                            )}
-                        >
-                            {section.title}
-                        </Button>
-                    ))}
-                </div>
-                <div className="flex justify-center gap-2 flex-wrap">
-                    {OPTIMIZATION_SECTIONS.slice(4).map(section => (
-                        <Button 
-                            key={section.id} 
-                            variant="primary-outline"
-                            size="sm" 
-                            onClick={(e) => handleLinkClick(section.id, e)}
-                           className={cn(
-                                "text-xs h-auto py-2 transition-all",
-                                activeSection === section.id 
-                                    ? "bg-primary text-primary-foreground" 
-                                    : "bg-white text-primary border-primary hover:bg-white hover:text-accent hover:border-accent"
-                            )}
-                        >
-                            {section.title}
-                        </Button>
-                    ))}
-                </div>
+            <div className="flex justify-center gap-2 flex-wrap">
+                {OPTIMIZATION_SECTIONS.map(section => (
+                    <Button 
+                        key={section.id} 
+                        variant="primary-outline"
+                        size="sm" 
+                        onClick={(e) => handleLinkClick(section.id, e)}
+                        className={cn(
+                            "text-xs h-auto py-2 transition-all flex-1 basis-auto",
+                            activeSection === section.id 
+                                ? "bg-primary text-primary-foreground" 
+                                : "bg-white text-primary border-primary hover:bg-white hover:text-accent hover:border-accent"
+                        )}
+                    >
+                        <span className="flex-wrap whitespace-normal">
+                          {section.title.split(' ').map((word, i, arr) => (
+                              <React.Fragment key={i}>
+                                  {word}
+                                  {arr.length > 2 && i === Math.floor(arr.length / 2) -1 && <br />}
+                                  {i < arr.length - 1 && ' '}
+                              </React.Fragment>
+                          ))}
+                        </span>
+                    </Button>
+                ))}
             </div>
         </div>
       </section>
 
       <section className="py-12 md:py-16 bg-secondary">
         <div className="container mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-accent">Experiencing issues with a broken or failed implementation?</h2>
+            <h2 className="text-xl font-semibold text-accent dark:text-white">Experiencing issues with a broken or failed implementation?</h2>
             <Button asChild className="mt-4">
                 <Link href="/quick-fix-packages">Quick-Fix Packages</Link>
             </Button>
