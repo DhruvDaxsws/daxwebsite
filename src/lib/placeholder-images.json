@@ -411,37 +411,37 @@
     {
       "id": "enhancement-post-implementation",
       "description": "A businessman analyzing charts on a futuristic transparent screen in a modern office.",
-      "imageUrl": "/post-implementation-assessment.jpg",
+      "imageUrl": "/con-ech-1.jpg",
       "imageHint": "business analysis"
     },
     {
       "id": "enhancement-module-expansion",
       "description": "A group of professionals collaborating around a futuristic holographic interface showing business modules.",
-      "imageUrl": "/module-feature-expansion.jpg",
+      "imageUrl": "/con-ech-2.jpg",
       "imageHint": "team collaboration"
     },
     {
       "id": "enhancement-custom-development",
       "description": "A female developer coding on a laptop with holographic code snippets floating around her.",
-      "imageUrl": "/custom-development.jpg",
+      "imageUrl": "/con-ech-3.jpg",
       "imageHint": "developer coding"
     },
     {
       "id": "enhancement-global-expansion",
       "description": "A diverse team in a conference room looking at a holographic globe with network connections.",
-      "imageUrl": "/global-expansion-deployment.jpg",
+      "imageUrl": "/con-ech-4.jpg",
       "imageHint": "global business"
     },
     {
       "id": "enhancement-security-compliance",
       "description": "A security expert interacting with a digital interface showing a shield and checkmarks.",
-      "imageUrl": "/security-compliance-updates.jpg",
+      "imageUrl": "/con-ech-5.jpg",
       "imageHint": "cyber security"
     },
     {
       "id": "enhancement-performance-monitoring",
       "description": "Two professionals analyzing performance dashboards on a large screen in a modern office.",
-      "imageUrl": "/performance-monitoring-support.jpg",
+      "imageUrl": "/con-ech-6.jpg",
       "imageHint": "performance dashboard"
     }
   ]
