@@ -82,32 +82,32 @@ const SECURITY_FEATURES = [
 
 const APP_INTEGRATIONS = [
     {
-        icon: '/m365-icons/microsoft-copilot.svg',
+        icon: '/microsoft-copilot.svg',
         name: 'Microsoft Copilot',
         description: 'Turbo Speed Task Execution'
     },
     {
-        icon: '/m365-icons/microsoft-teams.svg',
+        icon: '/microsoft-teams-icon.svg',
         name: 'Microsoft Teams',
         description: 'Keep Track of Conversations in real time and summarize effortlessly.'
     },
     {
-        icon: '/m365-icons/microsoft-word.svg',
+        icon: '/microsoft-word-icon.svg',
         name: 'Word',
         description: 'Create, Refine, Summarize: Your Document Trifecta.'
     },
     {
-        icon: '/m365-icons/microsoft-outlook.svg',
+        icon: '/microsoft-outlook-icon.svg',
         name: 'Outlook',
         description: 'Efficient Inbox Management, Prompt Response Generation.'
     },
     {
-        icon: '/m365-icons/microsoft-powerpoint.svg',
+        icon: '/microsoft-powerpoint-icon.svg',
         name: 'PowerPoint',
         description: 'Bring Ideas to Life with Captivating Presentations.'
     },
     {
-        icon: '/m365-icons/microsoft-excel.svg',
+        icon: '/microsoft-excel-icon.svg',
         name: 'Excel',
         description: 'Gain Lucrative Insights through Advanced Data Analysis.'
     }
@@ -242,7 +242,7 @@ export default function MicrosoftCopilotPage() {
           <h2 className="text-center text-3xl font-bold font-headline mb-12">AI-Powered Support at Your Fingertips</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {AI_FEATURES.map((feature) => (
-              <Card key={feature.title} className="p-6 text-center">
+              <Card key={feature.title} className="p-6 text-center bg-card">
                 <CardContent className="p-0 flex flex-col items-center gap-4">
                   <div className="bg-primary/10 rounded-full p-3">
                     <feature.icon className="w-8 h-8 text-primary" />
@@ -255,7 +255,7 @@ export default function MicrosoftCopilotPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-8">
              {SECURITY_FEATURES.map((feature) => (
-              <Card key={feature.title} className="p-6 text-center">
+              <Card key={feature.title} className="p-6 text-center bg-card">
                 <CardContent className="p-0 flex flex-col items-center gap-4">
                   <div className="bg-primary/10 rounded-full p-3">
                     <feature.icon className="w-8 h-8 text-primary" />
