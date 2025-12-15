@@ -139,7 +139,7 @@ export default function SystemOptimizationPage() {
                           {section.title.split(' ').map((word, i, arr) => (
                               <React.Fragment key={i}>
                                   {word}
-                                  {arr.length > 2 && i === Math.floor(arr.length / 2) -1 && <br />}
+                                  {arr.length > 1 && i === Math.floor(arr.length / 2) -1 && <br />}
                                   {i < arr.length - 1 && ' '}
                               </React.Fragment>
                           ))}
@@ -150,9 +150,9 @@ export default function SystemOptimizationPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-secondary">
+      <section className="py-12 md:py-16 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
-            <h2 className="text-xl font-semibold text-accent dark:text-white">Experiencing issues with a broken or failed implementation?</h2>
+            <h2 className="text-xl font-semibold text-white">Experiencing issues with a broken or failed implementation?</h2>
             <Button asChild className="mt-4">
                 <Link href="/quick-fix-packages">Quick-Fix Packages</Link>
             </Button>
