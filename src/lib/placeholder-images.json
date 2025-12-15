@@ -371,6 +371,42 @@
       "description": "Visual comparison between Dynamics AX and Dynamics 365 interfaces.",
       "imageUrl": "/ax2012-to-d365-upgrade-service.png",
       "imageHint": "ERP interface comparison"
+    },
+    {
+      "id": "optimization-post-go-live",
+      "description": "A man in a control room looking at multiple large screens with data and graphs.",
+      "imageUrl": "https://images.unsplash.com/photo-1610168032731-59911b3337a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb250cm9sJTIwcm9vbXxlbnwwfHx8fDE3MjE4OTc0MDl8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "control room"
+    },
+    {
+      "id": "optimization-assessment",
+      "description": "A person's hands on a laptop keyboard, with digital chart overlays.",
+      "imageUrl": "https://images.unsplash.com/photo-1641883651053-118d2d634125?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwY2hhcnR8ZW58MHx8fHwxNzIxODk3NDg1fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "digital chart"
+    },
+    {
+      "id": "optimization-performance-tuning",
+      "description": "A businessman in a suit holding out his hands, with a holographic checkmark icon floating between them.",
+      "imageUrl": "https://images.unsplash.com/photo-1634919739501-8e3f6568c0f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBob2xvZ3JhbXxlbnwwfHx8fDE3MjE4OTc1MzR8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "hands hologram"
+    },
+    {
+      "id": "optimization-data-cleanup",
+      "description": "A person's hands organizing files in a digital, abstract folder system.",
+      "imageUrl": "https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvcmdhbml6aW5nJTIwZmlsZXN8ZW58MHx8fHwxNzIxODk3NTY4fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "organizing files"
+    },
+    {
+      "id": "optimization-legacy-code",
+      "description": "A software developer looking at a computer screen with lines of code, holding a cup of coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-1428bc383569?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2RlJTIwZGV2ZWxvcGVyfGVufDB8fHx8fDE3MjE4OTc2MDd8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "code developer"
+    },
+    {
+      "id": "optimization-erp-adoption",
+      "description": "A group of professionals in a training session, listening to a speaker in front of a presentation screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRyYWluaW5nfGVufDB8fHx8fDE3MjE4OTc2NDN8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "business training"
     }
   ]
 }
