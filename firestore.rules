@@ -1,0 +1,98 @@
+/**
+ * @fileoverview Firestore Security Rules
+ * @author service-llm
+ *
+ * @description
+ * This ruleset governs access to the job postings and applications data for the ConsultFast application.
+ *
+ * @philosophy
+ * Core Philosophy: The security model prioritizes public visibility for job postings while ensuring the privacy and integrity of job application data. Job postings are publicly readable by anyone. Job applications, which contain sensitive Personal Identifiable Information (PII), follow a "write-once, read-never" pattern from the client-side. This means anyone can submit an application, but once submitted, it cannot be viewed, listed, or modified by any client, protecting applicant privacy. Management of job postings is currently disabled pending schema updates.
+ *
+ * @structure
+ * Data Structure: The data is organized around a top-level `jobPostings` collection. Each document in this collection represents a single job and contains a nested `jobApplications` subcollection to store all applications for that specific job.
+ *
+ * @decisions
+ * Key Security Decisions:
+ * 1. Public Job Postings: The `jobPostings` collection is publicly readable to allow any visitor to browse job opportunities.
+ * 2. Write-Restricted Postings: Creating, updating, or deleting job postings is disabled by default because the 'JobPosting' entity lacks an 'ownerId' field. This prevents unauthorized modifications. This functionality must be enabled by updating the schema and rules.
+ * 3. Secure Application Submissions: Anyone (including anonymous users) can create a document in the `jobApplications` subcollection, enabling a public application form.
+ * 4. Private Application Data: To protect sensitive applicant information (name, email, resume), all read and modification access (`get`, `list`, `update`, `delete`) to the `jobApplications` collection is strictly denied from the client-side. It is assumed this data is processed by a trusted server environment.
+ *
+ * @denormalization
+ * Denormalization for Authorization: This ruleset is simple and does not require complex denormalization. The hierarchical structure (`/jobPostings/{jobPostingId}/jobApplications/{...}`) inherently links an application to its posting, simplifying path-based security checks.
+ *
+ * @segregation
+ * Structural Segregation: The use of a nested subcollection for `jobApplications` naturally segregates private application data from the public job posting data, which is a secure and performant pattern.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper Functions
+    /**
+     * Returns true. Used for rules that grant public access.
+     */
+    function isPublic() {
+      return true;
+    }
+
+    /**
+     * Returns false. Used to explicitly deny permissions.
+     */
+    function isDenied() {
+      return false;
+    }
+
+    /**
+     * Checks if the jobPostingId in the document body matches the ID in the path.
+     * This ensures relational integrity when a new application is created.
+     */
+    function newApplicationIsValid(jobPostingId) {
+      return request.resource.data.jobPostingId == jobPostingId;
+    }
+
+    /**
+     * @description
+     * Rules for the `jobPostings` collection. This collection is public for reading
+     * but locked down for all write operations.
+     * @path
+     * /jobPostings/{jobPostingId}
+     * @allow
+     * (get) Any user, signed-in or anonymous, can read a specific job posting.
+     * @deny
+     * (create) A user attempts to create a new job posting. This is denied because there is no ownership model defined.
+     * @principle
+     * Implements a "Public Read, Restricted Write" pattern. Writes are disabled until an ownership field (e.g., 'ownerId') is added to the JobPosting schema to identify who is authorized to make changes.
+     */
+    match /jobPostings/{jobPostingId} {
+      allow get: if isPublic();
+      allow list: if isPublic();
+
+      // CRITICAL: Cannot implement owner-only writes. The 'JobPosting' entity is missing an 'ownerId' or 'authorId' field.
+      allow create: if isDenied(); // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow update: if isDenied(); // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow delete: if isDenied(); // TODO: Add owner validation once the schema is updated with an ownership field.
+    }
+
+    /**
+     * @description
+     * Rules for the `jobApplications` subcollection. Allows any user to submit
+     * an application but denies all other access to protect applicant PII.
+     * @path
+     * /jobPostings/{jobPostingId}/jobApplications/{jobApplicationId}
+     * @allow
+     * (create) Any user, signed-in or anonymous, can create a new job application for a posting.
+     * @deny
+     * (get) A user attempts to read a submitted job application. This is denied to protect applicant privacy.
+     * @principle
+     * Enforces a "write-once, read-never" policy for sensitive data submitted by the public. It validates that the application is linked to the correct parent job posting upon creation.
+     */
+    match /jobPostings/{jobPostingId}/jobApplications/{jobApplicationId} {
+      allow create: if newApplicationIsValid(jobPostingId);
+      allow get: if isDenied();
+      allow list: if isDenied();
+      allow update: if isDenied();
+      allow delete: if isDenied();
+    }
+  }
+}

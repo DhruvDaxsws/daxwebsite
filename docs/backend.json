@@ -1,0 +1,141 @@
+{
+  "entities": {
+    "JobPosting": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobPosting",
+      "type": "object",
+      "description": "Represents a job posting on the ConsultFast website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the job posting."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the job posting."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the job responsibilities and requirements."
+        },
+        "location": {
+          "type": "string",
+          "description": "Location where the job is based."
+        },
+        "postedDate": {
+          "type": "string",
+          "description": "Date when the job posting was created.",
+          "format": "date-time"
+        },
+        "applicationIds": {
+          "type": "array",
+          "description": "References to JobApplications. (Relationship: JobPosting 1:N JobApplication)",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "location",
+        "postedDate"
+      ]
+    },
+    "JobApplication": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobApplication",
+      "type": "object",
+      "description": "Represents a job application submitted for a job posting.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the job application."
+        },
+        "jobPostingId": {
+          "type": "string",
+          "description": "Reference to JobPosting. (Relationship: JobPosting 1:N JobApplication)"
+        },
+        "applicantName": {
+          "type": "string",
+          "description": "Name of the applicant."
+        },
+        "applicantEmail": {
+          "type": "string",
+          "description": "Email address of the applicant.",
+          "format": "email"
+        },
+        "resumeUrl": {
+          "type": "string",
+          "description": "URL to the applicant's resume.",
+          "format": "uri"
+        },
+        "coverLetter": {
+          "type": "string",
+          "description": "Cover letter submitted by the applicant."
+        },
+        "submissionDate": {
+          "type": "string",
+          "description": "Date when the application was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "jobPostingId",
+        "applicantName",
+        "applicantEmail",
+        "resumeUrl",
+        "submissionDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/jobPostings/{jobPostingId}",
+        "definition": {
+          "entityName": "JobPosting",
+          "schema": {
+            "$ref": "#/backend/entities/JobPosting"
+          },
+          "description": "Stores job posting data. The `jobPostingId` is the unique identifier for each job posting.",
+          "params": [
+            {
+              "name": "jobPostingId",
+              "description": "Unique identifier for the job posting."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/jobPostings/{jobPostingId}/jobApplications/{jobApplicationId}",
+        "definition": {
+          "entityName": "JobApplication",
+          "schema": {
+            "$ref": "#/backend/entities/JobApplication"
+          },
+          "description": "Stores job application data for a specific job posting. The `jobPostingId` links the application to the job, and `jobApplicationId` is the unique ID of the application.",
+          "params": [
+            {
+              "name": "jobPostingId",
+              "description": "The ID of the job posting this application belongs to."
+            },
+            {
+              "name": "jobApplicationId",
+              "description": "Unique identifier for the job application."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to manage job postings and applications. The top-level collection `jobPostings` stores the details of each job. Each job application is stored in a subcollection named `jobApplications` under its respective job posting. This design enforces Authorization Independence by keeping applications directly associated with their parent job postings and avoids the need for authorization `get()` calls. The `jobPostingId` field within `JobApplication` further strengthens this relationship. This structure supports efficient `list` operations (QAPs) since all applications associated with a job posting are easily accessible within the subcollection.  Path-based ownership is used to ensure that the applications can only exist within the scope of the parent job posting. No role-based access control is needed since the applications are all public and can be viewed by anyone."
+  }
+}
