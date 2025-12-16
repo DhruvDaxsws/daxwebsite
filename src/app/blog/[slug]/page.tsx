@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Calendar, User, Folder } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
 
 interface Post {
     id: number;
@@ -62,45 +63,49 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     });
 
   return (
-    <div className="bg-background">
+    <div className="bg-secondary/20">
         <main className="py-16 md:py-24">
             <div className="container mx-auto px-4 max-w-4xl">
-                <article>
-                    <header className="mb-12 text-center">
-                        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-headline mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                        <div className="flex justify-center flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                             <div className="flex items-center gap-2">
-                                <User className="h-4 w-4" />
-                                <span>{authorName}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Calendar className="h-4 w-4" />
-                                <span>{postDate}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Folder className="h-4 w-4" />
-                                <span>{categories}</span>
-                            </div>
-                        </div>
-                    </header>
+                <Card>
+                    <CardContent className="p-4 sm:p-8 md:p-12">
+                        <article>
+                            {imageUrl && (
+                                <div className="relative h-72 md:h-96 w-full mb-8">
+                                    <Image
+                                        src={imageUrl}
+                                        alt={imageAlt}
+                                        fill
+                                        priority
+                                        className="object-cover rounded-lg shadow-lg"
+                                    />
+                                </div>
+                            )}
 
-                    {imageUrl && (
-                        <div className="relative h-72 md:h-96 w-full mb-12">
-                            <Image
-                                src={imageUrl}
-                                alt={imageAlt}
-                                fill
-                                priority
-                                className="object-cover rounded-lg shadow-lg"
+                            <header className="mb-8">
+                                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline mb-4" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                                <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                                    <div className="flex items-center gap-2">
+                                        <User className="h-4 w-4" />
+                                        <span>{authorName}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <Calendar className="h-4 w-4" />
+                                        <span>{postDate}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <Folder className="h-4 w-4" />
+                                        <span>{categories}</span>
+                                    </div>
+                                </div>
+                            </header>
+
+                            <div 
+                                className="prose dark:prose-invert max-w-none prose-lg prose-headings:font-headline prose-a:text-primary hover:prose-a:text-primary/80" 
+                                dangerouslySetInnerHTML={{ __html: post.content.rendered }} 
                             />
-                        </div>
-                    )}
-
-                    <div 
-                        className="prose dark:prose-invert max-w-none prose-lg prose-headings:font-headline prose-a:text-primary hover:prose-a:text-primary/80" 
-                        dangerouslySetInnerHTML={{ __html: post.content.rendered }} 
-                    />
-                </article>
+                        </article>
+                    </CardContent>
+                </Card>
             </div>
         </main>
     </div>
