@@ -9,7 +9,7 @@ export default function CareerDetailPage() {
     return (
         <div className="bg-background">
             <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto">
                     <div className="max-w-3xl mx-auto">
                         <Button variant="ghost" asChild className="mb-8">
                            <Link href="/careers"><ArrowLeft className="mr-2 h-4 w-4" /> Back to all openings</Link>
