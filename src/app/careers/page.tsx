@@ -146,7 +146,7 @@ export default function CareersPage() {
                     <p className="text-muted-foreground">At DAX, growth is not just an individual pursuit; it's a shared adventure. We're committed to providing an environment that nurtures your professional development, offering opportunities for skill enhancement, career advancement, and continuous learning.</p>
                 </div>
                 <div className="relative h-72 w-full">
-                    <Image src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHBlb3BsZSUyMGxhcHRvcHxlbnwwfHx8fDE3MjE4MzY3MTB8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Team collaborating in an office" fill className="rounded-lg object-cover shadow-lg" data-ai-hint="team collaboration office" />
+                    <Image src="/career-img-1.jpg" alt="Team collaborating in an office" fill className="rounded-lg object-cover shadow-lg" data-ai-hint="team collaboration office" />
                 </div>
             </div>
              <div className="grid md:grid-cols-2 gap-12 items-center">
