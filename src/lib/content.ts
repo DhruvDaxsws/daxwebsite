@@ -190,3 +190,55 @@ export const METRICS = [
     { icon: Award, value: '6+', label: 'Certifications on average per employee' },
     { icon: Briefcase, value: '20+', label: 'Years of Experience of our Senior Architects' }
 ];
+
+export const OPENINGS = [
+    {
+        title: 'Warehouse Management Consultant',
+        slug: 'warehouse-management-consultant',
+        description: "We're looking for a mid-level Warehouse Management Consultant to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+    {
+        title: 'Functional Consultant (Manufacturing and Warehouse Management)',
+        slug: 'functional-consultant-manufacturing-warehouse',
+        description: "We're looking for a mid-level Functional Consultant to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+    {
+        title: 'Technical Architect',
+        slug: 'technical-architect',
+        description: "We're looking for a Technical Architect to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+    {
+        title: 'Technical Consultant',
+        slug: 'technical-consultant',
+        description: "We're looking for a Technical Consultant to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+    {
+        title: 'Applications Consultant',
+        slug: 'applications-consultant',
+        description: "We're looking for a Applications Consultant to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+    {
+        title: 'Business Software Analyst',
+        slug: 'business-software-analyst',
+        description: "We're looking for a Business Software Analyst to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+    {
+        title: 'Senior ERP Developer',
+        slug: 'senior-erp-developer',
+        description: "We're looking for a Senior ERP Developer to join our team.",
+        location: 'Woodland Hills, CA',
+        type: 'Full-time',
+    },
+];

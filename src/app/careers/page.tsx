@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { OPENINGS } from '@/lib/content';
 
 const METRICS = [
   { value: 330, suffix: '+', label: 'Active Clients' },
@@ -48,51 +49,6 @@ const BENEFITS = [
     description:
       'DAX values your contributions, providing clear paths for career advancement.',
   },
-];
-
-const OPENINGS = [
-    {
-        title: 'Warehouse Management Consultant',
-        description: "We're looking for a mid-level Warehouse Management Consultant to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
-    {
-        title: 'Functional Consultant (Manufacturing and Warehouse Management)',
-        description: "We're looking for a mid-level Functional Consultant to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
-    {
-        title: 'Technical Architect',
-        description: "We're looking for a Technical Architect to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
-    {
-        title: 'Technical Consultant',
-        description: "We're looking for a Technical Consultant to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
-    {
-        title: 'Applications Consultant',
-        description: "We're looking for a Applications Consultant to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
-    {
-        title: 'Business Software Analyst',
-        description: "We're looking for a Business Software Analyst to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
-    {
-        title: 'Senior ERP Developer',
-        description: "We're looking for a Senior ERP Developer to join our team.",
-        location: 'Woodland Hills, CA',
-        type: 'Full-time',
-    },
 ];
 
 const scrollToOpenings = () => {
@@ -197,7 +153,9 @@ export default function CareersPage() {
                         <CardContent className="p-6">
                             <div className="grid md:grid-cols-4 gap-4 items-center">
                                 <div className="md:col-span-3">
-                                    <h3 className="text-xl font-bold font-headline text-primary">{opening.title}</h3>
+                                    <h3 className="text-xl font-bold font-headline text-primary">
+                                        <Link href={`/careers/${opening.slug}`} className="hover:underline">{opening.title}</Link>
+                                    </h3>
                                     <p className="text-muted-foreground mt-1 mb-4">{opening.description}</p>
                                     <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
                                         <div className="flex items-center gap-2">
@@ -212,7 +170,7 @@ export default function CareersPage() {
                                 </div>
                                 <div className="md:text-right">
                                     <Button asChild>
-                                        <Link href="/contact-us">Apply</Link>
+                                        <Link href={`/careers/${opening.slug}`}>View Details</Link>
                                     </Button>
                                 </div>
                             </div>
