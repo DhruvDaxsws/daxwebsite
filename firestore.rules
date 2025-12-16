@@ -44,12 +44,13 @@ service cloud.firestore {
     }
 
     /**
-     * Checks if the jobPostingId in the document body matches the ID in the path.
-     * This ensures relational integrity when a new application is created.
+     * Checks if the incoming job application data is valid.
+     * This ensures relational integrity and that all required fields are present and correctly formatted.
      */
     function newApplicationIsValid(jobPostingId) {
       let incomingData = request.resource.data;
       return incomingData.jobPostingId == jobPostingId &&
+             incomingData.jobTitle is string && incomingData.jobTitle.size() > 0 &&
              incomingData.applicantName is string && incomingData.applicantName.size() > 0 &&
              incomingData.applicantEmail is string && incomingData.applicantEmail.matches('.+@.+\..+') &&
              incomingData.resumeUrl is string && incomingData.resumeUrl.size() > 0 &&
