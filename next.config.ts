@@ -29,11 +29,17 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https' ,
         hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'forestgreen-squid-903456.hostingersite.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
