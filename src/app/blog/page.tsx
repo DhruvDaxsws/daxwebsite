@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Folder } from 'lucide-react';
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, PaginationEllipsis } from '@/components/ui/pagination';
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, PaginationEllipsis, PaginationFirst, PaginationLast } from '@/components/ui/pagination';
 import { notFound } from "next/navigation";
 
 interface Post {
@@ -57,7 +57,7 @@ function renderPagination(currentPage: number, totalPages: number) {
             );
         }
     } else {
-        // Show first page
+        // Show first page number
         pages.push(
             <PaginationItem key={1}>
                 <PaginationLink href={`/blog?page=1`} isActive={1 === currentPage}>1</PaginationLink>
@@ -91,7 +91,7 @@ function renderPagination(currentPage: number, totalPages: number) {
             pages.push(<PaginationItem key="end-ellipsis"><PaginationEllipsis /></PaginationItem>);
         }
 
-        // Show last page
+        // Show last page number
         pages.push(
             <PaginationItem key={totalPages}>
                 <PaginationLink href={`/blog?page=${totalPages}`} isActive={totalPages === currentPage}>{totalPages}</PaginationLink>
@@ -104,15 +104,25 @@ function renderPagination(currentPage: number, totalPages: number) {
         <Pagination>
             <PaginationContent>
                 {currentPage > 1 && (
-                    <PaginationItem>
-                        <PaginationPrevious href={`/blog?page=${currentPage - 1}`} />
-                    </PaginationItem>
+                    <>
+                        <PaginationItem>
+                            <PaginationFirst href={`/blog?page=1`} />
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationPrevious href={`/blog?page=${currentPage - 1}`} />
+                        </PaginationItem>
+                    </>
                 )}
                 {pages}
                 {currentPage < totalPages && (
-                    <PaginationItem>
-                        <PaginationNext href={`/blog?page=${currentPage + 1}`} />
-                    </PaginationItem>
+                    <>
+                        <PaginationItem>
+                            <PaginationNext href={`/blog?page=${currentPage + 1}`} />
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationLast href={`/blog?page=${totalPages}`} />
+                        </PaginationItem>
+                    </>
                 )}
             </PaginationContent>
         </Pagination>
