@@ -181,12 +181,12 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
                                         <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
                                     </h2>
                                     <div className="flex flex-col text-sm text-muted-foreground mb-4 space-y-2">
-                                        <div className="flex items-center gap-2">
-                                            <Calendar className="h-4 w-4" />
+                                        <div className="flex items-start gap-2">
+                                            <Calendar className="h-4 w-4 mt-1" />
                                             <span>{postDate}</span>
                                         </div>
-                                        <div className="flex items-center gap-2">
-                                            <Folder className="h-4 w-4" />
+                                        <div className="flex items-start gap-2">
+                                            <Folder className="h-4 w-4 mt-1" />
                                             <span>{categories}</span>
                                         </div>
                                     </div>
