@@ -106,7 +106,7 @@ export default function CareersPage() {
                 </div>
             </div>
              <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-                 <div className="space-y-4 md:order-last">
+                 <div className="space-y-4 md:order-first">
                     <h2 className="text-3xl font-bold font-headline text-accent">We don't just want Dax to be a fantastic place for you to work.</h2>
                     <p className="text-muted-foreground">While our goal is to create an environment where your skills are valued, your contributions are recognized, and your career finds purpose. Here, you're not just an employee; you're an integral part of a collaborative and innovative team.</p>
                 </div>
