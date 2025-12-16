@@ -1,31 +1,22 @@
 'use server';
 import { initializeApp, getApps, getApp, AppOptions } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
-import { getStorage } from 'firebase-admin/storage';
-import { firebaseConfig } from './config';
 
 function getFirebaseAdmin() {
+  let app;
   if (getApps().length > 0) {
-    const app = getApp();
-    return {
-      firebaseApp: app,
-      firestore: getFirestore(app),
-      storage: getStorage(app),
-    };
+    app = getApp();
+  } else {
+    // This will use the GOOGLE_APPLICATION_CREDENTIALS environment variable
+    // for authentication, which is the standard practice in a server environment.
+    app = initializeApp();
   }
 
-  // When running on Google Cloud, credentials are automatically discovered.
-  // The storageBucket must be provided to use Firebase Storage on the server.
-  const appOptions: AppOptions = {
-    storageBucket: firebaseConfig.storageBucket,
-  };
-
-  const app = initializeApp(appOptions);
-
+  const firestore = getFirestore(app);
+  
   return {
     firebaseApp: app,
-    firestore: getFirestore(app),
-    storage: getStorage(app),
+    firestore: firestore,
   };
 }
 

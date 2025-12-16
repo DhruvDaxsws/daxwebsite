@@ -2,8 +2,9 @@
 
 import { suggestConsultingServices } from '@/ai/flows/suggest-consulting-services';
 import { z } from 'zod';
-import { getFirebaseAdmin } from '@/firebase/admin';
 import { v4 as uuidv4 } from 'uuid';
+import { getFirebaseAdmin } from '@/firebase/admin';
+import { uploadToImageKit } from '@/lib/imagekit';
 
 // AI Suggester Action
 const aiFormSchema = z.object({
@@ -142,24 +143,14 @@ export async function submitJobApplication(prevState: JobApplicationState, formD
         };
     }
     
-    const { firestore, storage } = getFirebaseAdmin();
+    const { firestore } = getFirebaseAdmin();
     const { jobPostingId, jobTitle, applicantName, applicantEmail, coverLetter, resume } = validatedFields.data;
 
     try {
-        const fileExtension = resume.name.split('.').pop();
-        const resumeFileName = `${jobPostingId}/${uuidv4()}.${fileExtension}`;
-        const bucket = storage.bucket();
-        const file = bucket.file(`resumes/${resumeFileName}`);
-        
         const fileBuffer = await resume.arrayBuffer();
+        const buffer = Buffer.from(fileBuffer);
 
-        await file.save(Buffer.from(fileBuffer), {
-            metadata: {
-                contentType: resume.type,
-            },
-        });
-        
-        const resumeUrl = file.publicUrl();
+        const uploadResult = await uploadToImageKit(buffer, resume.name);
 
         const applicationData = {
             id: uuidv4(),
@@ -168,7 +159,7 @@ export async function submitJobApplication(prevState: JobApplicationState, formD
             applicantName,
             applicantEmail,
             coverLetter: coverLetter || '',
-            resumeUrl,
+            resumeUrl: uploadResult.url,
             submissionDate: new Date().toISOString(),
         };
         
