@@ -162,6 +162,7 @@ export async function submitJobApplication(prevState: JobApplicationState, formD
         const resumeUrl = await getDownloadURL(storageRef);
 
         const applicationData = {
+            id: uuidv4(),
             jobPostingId,
             jobTitle,
             applicantName,
