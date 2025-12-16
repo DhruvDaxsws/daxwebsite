@@ -198,6 +198,34 @@ export const OPENINGS = [
         description: "We're looking for a mid-level Warehouse Management Consultant to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p><strong>Job Duties:</strong></p>
+<ul>
+    <li>Experienced D365 Advanced Warehouse Consultant with Supply chain to join our team for an overseas project. The ideal candidate will have a deep understanding of the Dynamics 365 Supply Chain Management suite, including Advanced Warehouse Management and Inventory Management.</li>
+    <li>Provide ongoing solutions to DAX customers to support their Dynamics 365 Supply Chain and Warehouse Management implementations.</li>
+    <li>Identify and analyze client requirements and recommend solutions that align with their business objectives.</li>
+    <li>Configure and customize Dynamics 365 Supply Chain and Warehouse Management modules to meet client requirements.</li>
+    <li>Develop and implement warehouse processes and workflows to optimize efficiency and accuracy.</li>
+    <li>Train clients on the use of Dynamics 365 Supply Chain and Warehouse Management applications.</li>
+    <li>Provide ongoing support and maintenance services to ensure the stability and performance of client implementations.</li>
+    <li>Strong understanding of advanced warehouse management concepts, including pick/pack/ship processes, barcoding, and RFID.</li>
+    <li>Proven experience in customizing and configuring Dynamics 365 Warehouse Management modules.</li>
+    <li>Lead and be part of project implementation team on need basis and provide support for different projects.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul>
+    <li>Educational Requirement: Bachelor’s degree in computer science, Computer Engineering, Business Management, or a related field.</li>
+    <li>Experience in Dynamics 365 Supply Chain and Warehouse Management implementations.</li>
+    <li>Strong understanding of advanced warehouse management concepts, including pick/pack/ship processes, barcoding, and RFID.</li>
+    <li>Proven experience in customizing and configuring Dynamics 365 Supply Chain and Warehouse Management modules.</li>
+    <li>D365 certification in Supply Chain Management or related areas.</li>
+    <li>Excellent problem-solving skills and ability to analyze complex business requirements.</li>
+    <li>Excellent communication and interpersonal skills.</li>
+    <li>Ability to travel as required to support client implementations.</li>
+    <li>Certifications in Dynamics 365 Warehouse</li>
+</ul>
+<p><strong>Salary:</strong> $130,000.00 per year</p>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:contact@daxsws.com">contact@daxsws.com</a> or apply here</p>`
     },
     {
         title: 'Functional Consultant (Manufacturing and Warehouse Management)',
@@ -205,6 +233,37 @@ export const OPENINGS = [
         description: "We're looking for a mid-level Functional Consultant to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p><strong>Job Duties:</strong></p>
+<ul>
+    <li>Facilitate workshops to develop business requirements; create demonstrations to provide proof of concept; plan and assist the team in drafting statements of work to include estimation of effort/cost.</li>
+    <li>Be part of projects through the requirements definition and solution design phase. Ensure the overall solution design meets business requirements, fulfils user stories, and leading a team of resources through the build, test, and deployment phases.</li>
+    <li>Facilitate customers decision-making process and document business processes and prepare functional design document that will drive the development process.</li>
+    <li>Perform fit-gap analysis and Prototype and configure processes in Microsoft Dynamics 365 Finance and Operations (Production and Warehouse management Modules) to make sure the system works based on customer requirements.</li>
+    <li>Support testing of the proposed system/solution and train users.</li>
+    <li>Participates in providing structured support to DAX Software customers, including support for managed service customers and implementation customers.</li>
+    <li>Troubleshoot support requests, proactively managing and governing assigned support cases according to SLA.</li>
+    <li>Dynamics 365 Supply Chain and Warehouse Management implementations.</li>
+    <li>Strong understanding of advanced warehouse management concepts, including pick/pack/ship processes, barcoding, and RFID.</li>
+    <li>Proven experience in customizing and configuring Dynamics 365 Warehouse Management modules.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul>
+    <li>Master’s degree in Computer Science, Computer Engineering, or a related field and four years of experience in the job offered or a related IT position designing and developing Microsoft Dynamics AX solutions. This may be substituted with a Bachelor’s degree in Computer Science, Computer Engineering, or a related field and six years of experience in the job offered or a related IT position designing and implementing Microsoft Dynamics AX solutions.</li>
+    <li>Minimum of 5 plus years Dynamics AX/D365 Finance implementation experience.</li>
+    <li>Proven and verifiable implementations of 2 full lifecycle Dynamics AX (from analysis to deployment)</li>
+    <li>Minimum 10 years of industry and/or consulting experience.</li>
+    <li>Extensive experience working in core Manufacturing Procurement, Warehouse and Inventory Management.</li>
+    <li>Knowledge and/or experience servicing or designing solutions for Manufacturing vertical industries.</li>
+    <li>Experience working with and/or implementing complimentary third party solutions to D365/AX.</li>
+    <li>D365 F&O certification in manufacturing and Warehouse and/or related areas.</li>
+    <li>Extensive Experience with the Microsoft Dynamics 365 Manufacturing module.</li>
+    <li>Lean Manufacturing Module experience is good to have.</li>
+    <li>Understands the key activities and deliverables for the client engagement and internal projects, reuses all standard templates and project artifacts and improves quality of DAX Software documentation assets.</li>
+    <li>Know-how on tools like Jira, Confluence & methodologies like ITIL based processes, Agile Methodology.</li>
+</ul>
+<p><strong>Salary:</strong> $122,000.00 per year</p>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:contact@daxsws.com">contact@daxsws.com</a> or apply here</p>`
     },
     {
         title: 'Technical Architect',
@@ -212,6 +271,26 @@ export const OPENINGS = [
         description: "We're looking for a Technical Architect to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p><strong>Job Duties:</strong></p>
+<ul>
+    <li>Analyze clients’ business requirements and design, develop, and implement Microsoft Dynamics 365/AX and Enterprise Resource Planning (ERP) software solutions to meet customer needs. Meet with clients to understand their business processes and organizational structure and determine the issues affecting their current IT architecture, specifically pertaining to their supply chain processes.</li>
+    <li>Develop project requirements based on operational needs and infrastructure capabilities and design ERP solutions that meet business requirements.</li>
+    <li>Review all technical information with clients to ensure that the newly developed architecture aligns with specific business processes and plan the software development process in coordination with Lead Solutions Architects.</li>
+    <li>Work with the project team on all aspects of the application development process including coding, source control management, continuous integration, building processes, testing, and operations.</li>
+    <li>Write comprehensive code to achieve user requirements, streamline the back-end operations, and increase overall company efficiency.</li>
+    <li>Migrate the company’s Trade and Logistics, HR, and Financial Management data to the ERP system upon conclusion of development.</li>
+    <li>Test the functionality and responsiveness of the ERP system and create reports regarding application performance, processing speeds, application memory and database, and network updates.</li>
+    <li>Provide technical support to all application users and develop new solutions and functionalities as needed to improve productivity.</li>
+    <li>Stay abreast of the latest technological advances and industry trends in ERP to ensure optimal performance and effective software development.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul>
+    <li>The position requires a Master’s degree in Computer Science, Computer Engineering, or a related field and two years of experience in the job offered or a related position. The requirement may be substituted with a Bachelor’s degree in Computer Science, Computer Engineering, or a related field and five years of experience in the job offered or a related position.</li>
+    <li>The position requires skills and knowledge in Microsoft Dynamics 365/AX, SQL, C#, and PowerBI.</li>
+</ul>
+<p><strong>Working hours:</strong> 40 hours/week</p>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:apply@daxsws.com">apply@daxsws.com</a> or apply here</p>`
     },
     {
         title: 'Technical Consultant',
@@ -219,6 +298,35 @@ export const OPENINGS = [
         description: "We're looking for a Technical Consultant to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p><strong>Job Duties:</strong></p>
+<ul>
+    <li>Work with Lead Solutions Architect and Financial Consultants to provide Microsoft Dynamics AX/ Finance and Operations Enterprise Resource Planning (ERP) consulting services.</li>
+    <li>Lead the requirement gathering process by meeting with business process leaders to determine business requirements.</li>
+    <li>Work with Customers on Implementation and Managed service side of business.</li>
+    <li>Help junior resources during solution process with understanding the problem and towards right resources to research, solutions based on customer needs.</li>
+    <li>Write the code in D365 F&O/Dynamics AX to achieve the user requirements.</li>
+    <li>Worked in writing interfaces to integrate D365 F&O/Dynamics AX with different third-party systems.</li>
+    <li>Utilizing Manufacturing, Supply Chain, Warehouse, Finance modules process knowledge to understand the new system’s impact on Trade and Logistics, HR and Finance management.</li>
+    <li>Perform Gap analysis between AX functionality and end user requirement.</li>
+    <li>Train/Write design documentation and corresponding technical specifications.</li>
+    <li>Train/Write test scenarios and cases and perform unit testing.</li>
+    <li>Perform production migration using data sets.</li>
+    <li>Train end users on their customized AX solutions.</li>
+    <li>Work with different partners/solution providers and deliver timely solutions to clients.</li>
+    <li>Troubleshooting different performance issues for optimizations and suggesting performance tuning solutions.</li>
+    <li>Help setup go-live checklist and ensure support to customers as well as help with issue debugging and resolution.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul>
+    <li>Specify job requirements (experience, technologies, certificates, etc).</li>
+    <li>Bachelor’s degree in Computer Science, Computer Engineering, or a related field and minimum two years of experience in the job offered or a related IT position designing and developing Microsoft Dynamics AX solutions. The position requires the ability to use Microsoft Dynamics AX, SQL Server, Visual Studio, X++, C#, .Net, PowerBI, Azure, ASP.Net, Trace Parser, SQL Profiler, API developer, and Interface development.</li>
+    <li>Hands-on experience on Microsoft’s Dynamics AX/D365 F&O ERP suite.</li>
+    <li>Extensive programming experience in different MS programming languages.</li>
+    <li>Certifications in Dynamics AX/D365 Finance and Operations.</li>
+    <li>In-depth experience integrating with 3rd party applications.</li>
+</ul>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:contact@daxsws.com">contact@daxsws.com</a> or apply here</p>`
     },
     {
         title: 'Applications Consultant',
@@ -226,6 +334,50 @@ export const OPENINGS = [
         description: "We're looking for a Applications Consultant to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p>DAX Software Solutions, Inc. is seeking a Software Developers with BFSI, Supply Chain domain experience, Legacy Data Migration and ETL tools knowledge. Dynamics 365 F&O, Integration, Technical Architect, Code migration, go live management, AX2012 R3, D365 F&O, SSRS, and the upgrade, data management.</p>
+<p>The position will primarily be responsible interface with key stakeholders and apply your technical proficiency across different stages of the Software Development Life Cycle including Data Migration & Requirements Elicitation, Application Architecture definition and Design. You will play an important role in creating the high-level design artifacts. You will also deliver high quality code deliverables for a module, lead validation for all types of testing and support activities related to implementation, transition, and warranty. You will be part of a learning culture, where teamwork and collaboration are encouraged, excellence is rewarded, and diversity is respected and valued.</p>
+<p><strong>Key Responsibilities (Essential Duties and Functions)</strong></p>
+<ul>
+    <li>Collaborate with clients to gather and analyze business requirements for their migration to Dynamics 365.</li>
+    <li>Participate and contribute to the requirements elicitation process and create requirements documentation.</li>
+    <li>Participate in creating application architecture document to provide deliverables in line with architectural requirements.</li>
+    <li>Assist in the Design and implement system configurations, customizations, and extensions using C# and X++ / JavaScript programming languages.</li>
+    <li>Create design artifacts and support prototyping through creation of POCs.</li>
+    <li>Access the legacy ERP systems to: 1. Understand the data structure 2. Define the migration scope 3. Select appropriate ETL (extract – transform – load) tools 4. Develop a strategy to import relevant and updated data from historical records. Then, drive the data migration process from legacy ERP systems to Microsoft D365 F&O</li>
+    <li>Develops Informatica Cloud IDMC/IICS mappings and mapping tasks using ODBC and API based data integration and design task flows.</li>
+    <li>Deliver high quality code deliverables and support peers in quality checks such that design requirements are met. Create user documentation for the assigned modules, Lead validation activities for the assigned modules for all types of testing e.g., Functional, Integration, System, User Experience etc.</li>
+    <li>Support the creation of “Go Live” plan (change management request) and manage assigned activities in the plan.</li>
+    <li>Perform root-cause analysis of any issues that arise post-implementation and work on appropriate solutions.</li>
+    <li>Participate in Knowledge Transfer sessions, prepare system appreciation documents and support the transition process.</li>
+    <li>Conduct impact analysis of issues logged, prioritize, and ensure that production support is provided as per committed SLAs.</li>
+</ul>
+<p><strong>Qualifications/Education/Experience</strong></p>
+<ul>
+    <li>Bachelor’s degree in engineering/computer-related discipline, or equivalent experience required.</li>
+    <li>At least 2 years of experience in end-to-end implementation of projects in data migrations, Integration using etl tools -Informatica.</li>
+    <li>Dynamics 365 F&O ERP knowledge.</li>
+    <li>2+ years of Cloud (AWS / Azure) experience.</li>
+    <li>Leadership/Management skill.</li>
+    <li>Excellent communication skills – will be working with Sr Leadership and entire implementation team.</li>
+</ul>
+<p><strong>Knowledge/Skill Requirement</strong></p>
+<ul>
+    <li>Good understanding of data architecture, data integration, data quality and data architecture.</li>
+    <li>Experience in Relational Modeling, Dimensional Modeling and Modeling of Unstructured Data.</li>
+    <li>Proven experience as a Dynamics AX or D365 Consultant, with a focus on migration and upgrade projects.</li>
+    <li>Strong expertise in Informatica PowerCenter and Informatica Cloud IDMC/IICS, specifically pertaining on API data integration and Cloud-Based ODBC data integration.</li>
+    <li>Strong expertise in designing and developing data integration / migration solutions.</li>
+    <li>Experience working with data in multiple ERP and data movement technologies.</li>
+    <li>Advanced knowledge of SQL databases and queries.</li>
+    <li>Advanced knowledge of CDC (Change Data Capture) & CT (Change Tracking) inner workings.</li>
+    <li>Experience with normalizing and de-normalizing data.</li>
+    <li>Work experience in Cloud technologies and DevOps is preferred.</li>
+    <li>Excellent analytical and problem-solving skills with the ability to translate business requirements into technical solutions.</li>
+    <li>Ability to work in teams in a diverse, multi-stakeholder environment comprising of Business and Technology teams.</li>
+    <li>Microsoft certifications in Dynamics 365 or related technologies are a plus.</li>
+</ul>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:contact@daxsws.com">contact@daxsws.com</a> or apply here</p>`
     },
     {
         title: 'Business Software Analyst',
@@ -233,6 +385,41 @@ export const OPENINGS = [
         description: "We're looking for a Business Software Analyst to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p><strong>Job Summary:</strong></p>
+<p>The Business Software Analyst is responsible for evaluating, designing, and implementing software solutions that align with business objectives. This role involves working closely with stakeholders, gathering requirements, analyzing business processes, and translating them into functional software specifications. The Business Software Analyst ensures that the software solutions meet business needs, are scalable, and improve operational efficiency.</p>
+<p><strong>Key Responsibilities:</strong></p>
+<ul>
+    <li><strong>Requirements Gathering:</strong> Collaborate with stakeholders, including business users, managers, and IT teams, to gather and document detailed business requirements.</li>
+    <li><strong>Business Process Analysis:</strong> Analyze current business processes, identify gaps, and propose software solutions to enhance efficiency and productivity.</li>
+    <li><strong>Software Evaluation:</strong> Evaluate existing software systems and recommend improvements or new software solutions that align with business goals.</li>
+    <li><strong>Functional Specifications:</strong> Translate business requirements into functional specifications, user stories, or use cases that guide software development teams.</li>
+    <li><strong>Project Management:</strong> Work with project managers to develop project plans, timelines, and resource requirements for software development projects.</li>
+    <li><strong>Testing and Validation:</strong> Develop and execute test plans to ensure software solutions meet the defined requirements and are free of defects.</li>
+    <li><strong>Training and Support:</strong> Provide training and support to end-users, ensuring they are proficient in using the software solutions.</li>
+    <li><strong>Continuous Improvement:</strong> Identify opportunities for continuous improvement in software systems and processes, and implement best practices.</li>
+    <li><strong>Stakeholder Communication:</strong> Communicate effectively with all stakeholders to ensure alignment and understanding of project objectives and progress.</li>
+    <li><strong>Data Visualization:</strong> Microsoft Azure Power BI, Tableau.</li>
+    <li><strong>D365:</strong> Lead the implementation of D365 F&O modules, ensuring alignment with business needs.</li>
+    <li><strong>Solution Design:</strong> Design and configure D365 F&O solutions to meet business requirements.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<p><strong>Qualifications</strong></p>
+<ul>
+    <li><strong>Education:</strong> Bachelor’s or Master’s degree in MIS, Information Technology, Business, Computer Science, or a related field.</li>
+    <li><strong>Experience:</strong> minimum of two years of experience in the job offered or related.</li>
+    <li><strong>Technical Skills:</strong> Proficiency in software analysis, design, and development methodologies.</li>
+    <li>Strong understanding of software development life cycles (SDLC).</li>
+    <li>Familiarity with business process modeling, data analysis, and requirements management tools.</li>
+    <li>Experience with software testing, quality assurance, and user acceptance testing (UAT).</li>
+    <li><strong>Soft Skills:</strong> Excellent analytical and problem-solving skills.</li>
+    <li>Strong communication and interpersonal skills.</li>
+    <li>Ability to work independently and as part of a team.</li>
+    <li>Detail-oriented with strong organizational skills.</li>
+    <li><strong>Certifications:</strong> Certification in Business Analysis (e.g., CBAP, CCBA) or relevant software analysis certifications are a plus.</li>
+</ul>
+<p><strong>Salary:</strong> $130,000.00 per year</p>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:contact@daxsws.com">contact@daxsws.com</a> or apply here</p>`
     },
     {
         title: 'Senior ERP Developer',
@@ -240,5 +427,30 @@ export const OPENINGS = [
         description: "We're looking for a Senior ERP Developer to join our team.",
         location: 'Woodland Hills, CA',
         type: 'Full-time',
+        fullDescription: `<p><strong>Job Duties:</strong></p>
+<ul>
+    <li>Analyze clients' IT solutions requirements and design, develop, and implement Enterprise Resource Planning (ERP) solutions for the company's clients. Meet with clients to understand their business processes and organizational structure and develop project requirements based on operational needs and infrastructure capabilities.</li>
+    <li>Create design documentation and corresponding technical specifications using technologies such as Microsoft Dynamics 365, SQL Server, Visual Studio, XX++, C#, .Net, PowerBI, Azure, ASP.Net, Trace Parser, SQL Profile, and API developer.</li>
+    <li>Develop the business process management software to automate workflow, increase productivity and customer retention, and decrease company production costs.</li>
+    <li>Design data analysis models for the supply chain process of the ERP software to provide the client with a competitive advantage over its competitors.</li>
+    <li>Lead the project team throughout ERP development, including coding, source control management, continuous integration, building processes, testing, and operations.</li>
+    <li>Analyze the quality and performance of ERP solutions and develop strategies to detect, diagnose, and resolve software and network issues.</li>
+    <li>Perform unit testing NUnit & supporting frameworks (moq, Microsoft Fakes) and integration testing of the new supply chain.</li>
+    <li>Determine performance and operational-based indicators to track inventory information and back-end processes.</li>
+    <li>Consult with clients on business optimization and reporting requirements best practices with the use of Power BI and Apps analytics.</li>
+    <li>Facilitate user success by writing D365 code, developing methods to integrate D365 with third party platforms, and performing gap analysis between AX/D365 F&O functionality and end user requirements.</li>
+    <li>Analyze the migration of the client's data to be utilized by the ERP post development.</li>
+    <li>Stay abreast of the latest technological advances and industry trends in ERP to ensure optimal performance and effective software development.</li>
+</ul>
+<p><strong>Requirements:</strong></p>
+<ul>
+    <li>The position requires a Master’s degree in Computer Science, Computer Engineering, or a related field and two years of experience in the job offered or a related position. This may be substituted with a Bachelor’s degree in Computer Science, Computer Engineering, or a related field and five years of experience in the job offered or a related position.</li>
+    <li>It requires skills and knowledge in Microsoft Dynamics AX, SQL Server, Visual Studio, X++, C#.Net, Azure, ASP.Net, Trace Parser, SQL Profiler, API development, and Interface development.</li>
+    <li>The position requires little travel -24 % of the work time several days but less than 60 days per year throughout the U.S.</li>
+</ul>
+<p><strong>Salary:</strong> $176,134.00 per year</p>
+<p><strong>Job Site:</strong> Woodland Hills, CA</p>
+<p><strong>Email Resume to:</strong> DAX Software Solutions, Inc. at <a href="mailto:apply@daxsws.com">apply@daxsws.com</a> or apply here</p>`
     },
 ];
+
