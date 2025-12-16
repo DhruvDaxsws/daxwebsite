@@ -14,9 +14,9 @@ function getFirebaseAdmin() {
     };
   }
 
+  // When running on Google Cloud, credentials are automatically discovered.
+  // The storageBucket must be provided to use Firebase Storage on the server.
   const appOptions: AppOptions = {
-    // When running on Google Cloud, credentials are automatically discovered.
-    // The storageBucket must be provided to use Firebase Storage on the server.
     storageBucket: firebaseConfig.storageBucket,
   };
 
