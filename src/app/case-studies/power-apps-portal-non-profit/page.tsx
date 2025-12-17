@@ -1,3 +1,4 @@
+
 'use client';
 
 import { notFound } from 'next/navigation';
@@ -9,10 +10,29 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import CaseStudyCTA from '@/components/case-study-cta';
+import { buildMetadata } from '@/app/seo';
+import type { Metadata } from 'next';
+
+const slug = 'power-apps-portal-non-profit';
+const study = CASE_STUDIES.find((cs) => cs.slug === slug);
+
+export function generateMetadata(): Metadata {
+  if (!study) {
+    return buildMetadata({
+        title: 'Case Study Not Found',
+        description: 'The case study you are looking for does not exist.',
+    });
+  }
+
+  return buildMetadata({
+    title: `${study.title} | Case Study`,
+    description: study.summary,
+    canonicalPath: `/case-studies/${study.slug}`,
+    ogType: 'article',
+  });
+}
 
 export default function CaseStudyPage() {
-  const slug = 'power-apps-portal-non-profit';
-  const study = CASE_STUDIES.find((cs) => cs.slug === slug);
 
   if (!study) {
     notFound();

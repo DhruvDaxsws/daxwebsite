@@ -6,6 +6,26 @@ import Image from 'next/image';
 import { CASE_STUDIES } from '@/lib/content';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import CaseStudyCTA from '@/components/case-study-cta';
+import { buildMetadata } from '@/app/seo';
+import type { Metadata } from 'next';
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const study = CASE_STUDIES.find((cs) => cs.slug === params.slug);
+
+  if (!study) {
+    return buildMetadata({
+        title: 'Case Study Not Found',
+        description: 'The case study you are looking for does not exist.',
+    });
+  }
+
+  return buildMetadata({
+    title: `${study.title} | Case Study`,
+    description: study.summary,
+    canonicalPath: `/case-studies/${study.slug}`,
+    ogType: 'article',
+  });
+}
 
 // This is a placeholder for a more sophisticated slug-to-component mapping if needed
 // For now, we will use a simple details string.
