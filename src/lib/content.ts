@@ -170,7 +170,7 @@ export const CASE_STUDIES = [
         title: 'CRM Implementation For A Leading Security System Management Company',
         slug: 'crm-implementation-security-management',
         summary: 'Specialized in crafting security solutions tailored to specific needs, serving government, education, and more.',
-        details: 'For a company specializing in security system management, we implemented a CRM solution to manage their client relationships, service contracts, and support tickets. This provided them with a centralized system to track customer interactions and service history, leading to more proactive support and higher client retention.',
+        details: 'The company delivers integrated security systems tailored to the needs of each client. They integrates custom security solutions for a wide range of industries including government, education, commercial facilities, healthcare, airports, seaports, oil, gas, and energy.',
         imageId: 'case-study-16'
     },
     {
