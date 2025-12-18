@@ -1,5 +1,4 @@
 
-'use client';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { CASE_STUDIES } from '@/lib/content';
@@ -61,3 +60,4 @@ export default function CaseStudyPage() {
     </div>
   );
 }
+
