@@ -6,6 +6,7 @@ import { Calendar, Folder } from 'lucide-react';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, PaginationEllipsis, PaginationFirst, PaginationLast } from '@/components/ui/pagination';
 import { notFound } from "next/navigation";
 import { buildMetadata } from "../seo";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export const metadata = buildMetadata({
     title: "Blog | DAX Software Solutions",
@@ -139,6 +140,7 @@ function renderPagination(currentPage: number, totalPages: number) {
 export default async function BlogPage({ searchParams }: { searchParams: { page?: string }}) {
     const currentPage = parseInt(searchParams.page || '1', 10);
     const { posts, totalPages } = await getPosts(currentPage);
+    const fallbackImage = PlaceHolderImages.find(img => img.id === 'blog-fallback');
 
     if (!posts || posts.length === 0 && currentPage > 1) {
         notFound();
@@ -162,7 +164,7 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
             {posts.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map(post => {
-                        const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || 'https://picsum.photos/seed/1/600/400';
+                        const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || fallbackImage?.imageUrl || '';
                         const imageAlt = post._embedded?.['wp:featuredmedia']?.[0]?.alt_text || post.title.rendered;
                         const categories = post._embedded?.['wp:term']?.[0]?.map(cat => cat.name).join(', ') || 'Uncategorized';
                         const postDate = new Date(post.date).toLocaleDateString('en-US', {
@@ -219,3 +221,5 @@ export default async function BlogPage({ searchParams }: { searchParams: { page?
     </div>
   );
 }
+
+    

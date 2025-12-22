@@ -2,7 +2,7 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Two businessmen looking at a laptop screen with a positive expression.",
+      "description": "Business people collaborating around a laptop in a modern office.",
       "imageUrl": "/home/business-people-laptop.jpeg",
       "imageHint": "business people laptop"
     },
@@ -94,13 +94,13 @@
       "id": "case-study-15",
       "description": "An abstract representation of a streamlined PTO process for a security solutions provider.",
       "imageUrl": "/pto-case-study.jpg",
-      "imageHint": "PTO process"
+      "imageHint": "streamlined process"
     },
     {
       "id": "case-study-16",
       "description": "Security systems being monitored in a control room.",
       "imageUrl": "/case-studies/crm-for-a-leading-security-system-management-company.jpg",
-      "imageHint": "security system"
+      "imageHint": "security control room"
     },
     {
       "id": "case-study-19",
@@ -437,6 +437,12 @@
       "description": "Two professionals analyzing performance dashboards on a large screen in a modern office.",
       "imageUrl": "/con-ech-6.jpg",
       "imageHint": "performance dashboard"
+    },
+    {
+      "id": "blog-fallback",
+      "description": "An abstract image of a blog post being written on a laptop.",
+      "imageUrl": "/blog-fallback.jpg",
+      "imageHint": "blog writing"
     }
   ]
 }

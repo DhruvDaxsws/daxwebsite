@@ -22,19 +22,22 @@ export default function Home() {
     image: PlaceHolderImages.find(img => img.id === cs.imageId)
   }));
   const featuredImage = PlaceHolderImages.find(img => img.id === 'featured-erp-cta');
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero');
 
   return (
     <div className="flex flex-col bg-background">
       {/* Hero Section */}
       <section className="relative w-full py-24 md:py-32 lg:py-48 bg-white dark:bg-card overflow-hidden">
         <div className="absolute inset-0">
-            <Image
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHBlb3BsZSUyMGxhcHRvcHxlbnwwfHx8fDE3MjE4MzY3MTB8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                alt="Business people with laptop"
-                fill
-                className="object-cover"
-                data-ai-hint="business people laptop"
-            />
+            {heroImage && (
+              <Image
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
+                  data-ai-hint={heroImage.imageHint}
+                  fill
+                  className="object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 md:px-6 relative">
@@ -142,3 +145,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
