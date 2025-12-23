@@ -34,7 +34,7 @@ async function getPosts(page: number = 1): Promise<{ posts: Post[], totalPages: 
     const perPage = 6;
     try {
         const res = await fetch(`https://blog.daxsws.com/wp-json/wp/v2/posts?per_page=${perPage}&page=${page}&orderby=date&order=desc&status=publish&_embed=1`, {
-            cache: 'no-store'
+            next: { revalidate: 600 }
         });
 
         if (!res.ok) {
