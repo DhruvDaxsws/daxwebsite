@@ -220,7 +220,7 @@ export default function GovernmentClientPage() {
         </div>
       </section>
 
-      <div className="sticky top-[108px] z-40 bg-card shadow-md">
+      <div className="sticky top-[108px] z-40 bg-card">
         <div className="container mx-auto px-4 md:px-6">
             <div className="flex justify-center border-b">
                 {Object.entries(SECTIONS).map(([key, value]) => (
