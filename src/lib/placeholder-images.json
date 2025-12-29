@@ -195,7 +195,7 @@
     {
       "id": "power-apps-integration",
       "description": "Power Apps logo on a digital background.",
-      "imageUrl": "/power-apps.jpg?v=3",
+      "imageUrl": "/power-apps.jpg?v=4",
       "imageHint": "Power Apps logo"
     },
     {
@@ -211,10 +211,10 @@
       "imageHint": "microservices architecture"
     },
     {
-      "id": "dell-boomi-case-study",
-      "description": "Abstract image representing data integration and networks.",
-      "imageUrl": "https://images.unsplash.com/photo-1633355444131-2900f6890d23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwaW50ZWdyYXRpb24lMjBuZXR3b3JrfGVufDB8fHx8MTc2NTM4MTU3OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data integration network"
+      "id": "dell-boomi-integration",
+      "description": "Dell Boomi logo on a digital background.",
+      "imageUrl": "/dell-boomi.jpg?v=4",
+      "imageHint": "Dell Boomi logo"
     },
     {
       "id": "government-overview",
@@ -417,31 +417,31 @@
     {
       "id": "implementation-empathetic",
       "description": "Illustration of a diverse team collaborating on a project with empathy.",
-      "imageUrl": "/imp-sup-1.jpg?v=3",
+      "imageUrl": "/imp-sup-1.jpg?v=4",
       "imageHint": "team collaboration"
     },
     {
       "id": "implementation-greenfield",
       "description": "A fresh, green field with a digital overlay representing a new beginning.",
-      "imageUrl": "/imp-sup-2.jpg?v=3",
+      "imageUrl": "/imp-sup-2.jpg?v=4",
       "imageHint": "green field"
     },
     {
       "id": "implementation-rescue",
       "description": "A team of experts working together to fix a complex digital problem.",
-      "imageUrl": "/imp-sup-3.jpg?v=3",
+      "imageUrl": "/imp-sup-3.jpg?v=4",
       "imageHint": "problem solving"
     },
     {
       "id": "implementation-rollouts",
       "description": "A world map with connected nodes, showing a global rollout.",
-      "imageUrl": "/imp-sup-4.jpg?v=3",
+      "imageUrl": "/imp-sup-4.jpg?v=4",
       "imageHint": "global network"
     },
     {
       "id": "implementation-upgrades",
       "description": "An abstract image of a system being upgraded, with arrows pointing upwards.",
-      "imageUrl": "/imp-sup-5.jpg?v=3",
+      "imageUrl": "/imp-sup-5.jpg?v=4",
       "imageHint": "system upgrade"
     }
   ]
