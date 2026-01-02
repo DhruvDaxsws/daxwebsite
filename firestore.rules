@@ -9,7 +9,7 @@
  * Core Philosophy: The security model prioritizes public visibility for job postings while ensuring the privacy and integrity of submitted data like job applications and M365 inquiries. Job postings are publicly readable. Submissions from the public (applications, inquiries) follow a "write-once, read-never" pattern from the client-side. This means anyone can submit data, but once submitted, it cannot be viewed, listed, or modified by any client, protecting submitter privacy. Management of job postings is currently disabled pending schema updates.
  *
  * @structure
- * Data Structure: The data is organized around top-level collections. `jobPostings` holds job details, with nested `jobApplications` for applications. `m365Inquiries` is a separate collection for M365 licensing contact submissions.
+ * Data Structure: The data is organized around top-level collections. `jobPostings` holds job details, with nested `jobApplications` for applications. `m365Inquiries` is a separate top-level collection for M365 licensing contact submissions.
  *
  * @decisions
  * Key Security Decisions:
