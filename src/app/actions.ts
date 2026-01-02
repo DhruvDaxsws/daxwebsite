@@ -62,6 +62,7 @@ type M365State = {
         phone?: string[];
         company?: string[];
         requirements?: string[];
+        form?: string[];
     }
 }
 
@@ -82,10 +83,25 @@ export async function getM365LicensingInquiry(prevState: M365State, formData: Fo
         };
     }
     
-    console.log('New M365 Licensing Inquiry:');
-    console.log(validatedFields.data);
-    
-    return { message: 'Thank you for your inquiry! We will get back to you shortly.', errors: {} };
+    try {
+        const { firestore } = getFirebaseAdmin();
+        const inquiryData = {
+            id: uuidv4(),
+            ...validatedFields.data,
+            submissionDate: new Date().toISOString(),
+        };
+
+        await firestore.collection('m365Inquiries').add(inquiryData);
+
+        return { message: 'Thank you for your inquiry! We will get back to you shortly.', errors: {} };
+
+    } catch (error: any) {
+        console.error('Error submitting M365 inquiry:', error);
+        return {
+            message: 'An unexpected error occurred while submitting your inquiry. Please try again later.',
+            errors: { form: ['An unexpected error occurred.'] },
+        };
+    }
 }
 
 
