@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useRef, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
@@ -13,6 +14,8 @@ import { useFirestore } from '@/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 import { z } from 'zod';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError } from '@/firebase/errors';
 
 const PLANS = [
   {
@@ -204,7 +207,7 @@ const FAQS = [
     },
     {
         question: "What are the differences between monthly and annual payment options?",
-        answer: `Discover the flexibility in payment plans that match your needs:<br/><br/>
+        answer: `<br/><br/>
         <ul class="list-disc pl-5">
             <li class="mb-2"><strong>Monthly payment option:</strong> Pay on a month-to-month basis with the freedom to cancel anytime.</li>
             <li><strong>Annual commitment payment:</strong> Opt for a discounted rate with a one-year commitment. Easily switch from monthly to annual billing through the Microsoft 365 admin center after your initial purchase.</li>
@@ -229,7 +232,7 @@ const FAQS = [
     },
     {
         question: "How many participants can join online meetings and video calls on Microsoft Teams?",
-        answer: `Experience seamless collaboration with Microsoft Teams: <br/><br/>
+        answer: `<br/><br/>
         <ul class="list-disc pl-5">
             <li class="mb-2">For Microsoft 365 Business Basic, Business Standard, and Business Premium subscriptions that include Microsoft Teams licenses, meetings and video calls can host up to 300 participants.</li>
             <li>Subscriptions such as Microsoft 365 E3 and E5, A3 and A5, or Government G3 and G5 expand this capacity, allowing meetings to accommodate up to 1,000 participants.</li>
@@ -273,7 +276,7 @@ export default function Microsoft365ClientPage() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsPending(true);
-    setState({ isSuccess: false });
+    setState({ isSuccess: false, errors: {}, message: null });
     
     const formData = new FormData(event.currentTarget);
     const validatedFields = m365FormSchema.safeParse({
@@ -295,37 +298,47 @@ export default function Microsoft365ClientPage() {
         return;
     }
 
-    try {
-        const inquiryData = {
-            id: uuidv4(),
-            ...validatedFields.data,
-            submissionDate: new Date().toISOString(),
-        };
-
-        if (firestore) {
-          const inquiriesCollection = collection(firestore, 'm365Inquiries');
-          await addDoc(inquiriesCollection, inquiryData);
-          
-          setState({
-            message: 'Thank you for your inquiry! We will get back to you shortly.',
-            isSuccess: true,
-            errors: {}
-          });
-          formRef.current?.reset();
-        } else {
-            throw new Error("Firestore is not available.");
-        }
-
-    } catch (error: any) {
-        console.error('Error submitting M365 inquiry:', error);
-        setState({
-            message: 'An unexpected error occurred while submitting your inquiry. Please try again later.',
-            isSuccess: false,
-            errors: { form: ['An unexpected error occurred.'] },
-        });
-    } finally {
+    if (!firestore) {
+        setState({ message: 'Database service is not available. Please try again later.', isSuccess: false });
         setIsPending(false);
+        return;
     }
+
+    const inquiryData = {
+        id: uuidv4(),
+        ...validatedFields.data,
+        submissionDate: new Date().toISOString(),
+    };
+    
+    const inquiriesCollection = collection(firestore, 'm365Inquiries');
+
+    // Non-blocking write with contextual error handling
+    addDoc(inquiriesCollection, inquiryData)
+        .then(() => {
+            setState({
+                message: 'Thank you for your inquiry! We will get back to you shortly.',
+                isSuccess: true,
+                errors: {}
+            });
+            formRef.current?.reset();
+        })
+        .catch(async (serverError) => {
+            const permissionError = new FirestorePermissionError({
+                path: inquiriesCollection.path,
+                operation: 'create',
+                requestResourceData: inquiryData,
+            });
+            errorEmitter.emit('permission-error', permissionError);
+
+            // Also update local state to show a generic error message
+            setState({
+                message: 'A permission error occurred. Please check the console for details.',
+                isSuccess: false,
+            });
+        })
+        .finally(() => {
+            setIsPending(false);
+        });
   };
 
 
@@ -544,7 +557,7 @@ export default function Microsoft365ClientPage() {
                 <div className="text-xs text-muted-foreground space-y-2 mt-8">
                     <p>[1] <strong>Cancellation Policy:</strong> Once you commence your paid subscription, cancellation policies vary based on whether you are a new customer and your specific product and domain selections on Microsoft. For detailed information, please refer to our terms. You can initiate cancellation of your Microsoft 365 subscription at any time through the Microsoft 365 admin center. Upon cancellation, all associated data will be removed. Learn more about data retention, deletion, and destruction practices within Microsoft 365.</p>
                     <p>[2] <strong>Availability of Copilot for Microsoft 365:</strong> Copilot for Microsoft 365 may not be accessible in all markets and languages. Customers must possess a qualifying enterprise or business plan to make a purchase.</p>
-                    <p>[3] <strong><a href="https://www.microsoft.com/en-us/worklab/work-trend-index/copilots-earliest-users-teach-us-about-generative-ai-at-work" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Work Trend Index Special Report | Microsoft</a></strong> <em>Limited period Offer</em></p>
+                    <p>[3] <strong><a href="https://www.microsoft.com/en-us/worklab/work-trend-index/copilots-earliest-users-teach-us-about-generative-ai-at-work" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Work Trend Index Special Report | Microsoft</a></strong> <em>Limited period Offer</em></p>
                 </div>
             </div>
         </section>
@@ -559,3 +572,5 @@ export default function Microsoft365ClientPage() {
     </div>
   );
 }
+
+    
