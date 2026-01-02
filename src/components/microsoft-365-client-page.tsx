@@ -1,17 +1,18 @@
-
 'use client';
-import { useActionState, useEffect, useRef } from 'react';
-import { useFormStatus } from 'react-dom';
+import { useState, useRef, FormEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { getM365LicensingInquiry } from '@/app/actions';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Check, MailCheck, HardHat, Rocket, Zap, HeartHandshake, Bot, BarChart } from 'lucide-react';
+import { Check, MailCheck, HardHat, Rocket, Zap, HeartHandshake, Bot, BarChart, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { useFirestore } from '@/firebase';
+import { collection, addDoc } from 'firebase/firestore';
+import { v4 as uuidv4 } from 'uuid';
+import { z } from 'zod';
 
 const PLANS = [
   {
@@ -240,32 +241,92 @@ const FAQS = [
     }
 ];
 
-const initialState = {
-  message: null,
-  errors: {},
-};
+const m365FormSchema = z.object({
+    fname: z.string().min(1, 'First name is required.'),
+    lname: z.string().min(1, 'Last name is required.'),
+    email: z.string().email('Please enter a valid email.'),
+    phone: z.string().min(1, 'Phone number is required.'),
+    company: z.string().min(1, 'Company name is required.'),
+    requirements: z.string().min(10, 'Please describe your requirements in at least 10 characters.'),
+});
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full">
-      {pending ? 'Submitting...' : 'Let\'s Connect'}
-    </Button>
-  );
+type M365State = {
+    message?: string | null;
+    isSuccess: boolean;
+    errors?: {
+        fname?: string[];
+        lname?: string[];
+        email?: string[];
+        phone?: string[];
+        company?: string[];
+        requirements?: string[];
+        form?: string[];
+    }
 }
 
 export default function Microsoft365ClientPage() {
-  const [state, formAction] = useActionState(
-    getM365LicensingInquiry,
-    initialState
-  );
+  const [state, setState] = useState<M365State>({ isSuccess: false });
+  const [isPending, setIsPending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const firestore = useFirestore();
 
-  useEffect(() => {
-    if (state?.message && Object.keys(state.errors ?? {}).length === 0) {
-      formRef.current?.reset();
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsPending(true);
+    setState({ isSuccess: false });
+    
+    const formData = new FormData(event.currentTarget);
+    const validatedFields = m365FormSchema.safeParse({
+        fname: formData.get('fname'),
+        lname: formData.get('lname'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        company: formData.get('company'),
+        requirements: formData.get('requirements'),
+    });
+
+    if (!validatedFields.success) {
+        setState({
+            errors: validatedFields.error.flatten().fieldErrors,
+            message: 'Please correct the errors and try again.',
+            isSuccess: false,
+        });
+        setIsPending(false);
+        return;
     }
-  }, [state]);
+
+    try {
+        const inquiryData = {
+            id: uuidv4(),
+            ...validatedFields.data,
+            submissionDate: new Date().toISOString(),
+        };
+
+        if (firestore) {
+          const inquiriesCollection = collection(firestore, 'm365Inquiries');
+          await addDoc(inquiriesCollection, inquiryData);
+          
+          setState({
+            message: 'Thank you for your inquiry! We will get back to you shortly.',
+            isSuccess: true,
+            errors: {}
+          });
+          formRef.current?.reset();
+        } else {
+            throw new Error("Firestore is not available.");
+        }
+
+    } catch (error: any) {
+        console.error('Error submitting M365 inquiry:', error);
+        setState({
+            message: 'An unexpected error occurred while submitting your inquiry. Please try again later.',
+            isSuccess: false,
+            errors: { form: ['An unexpected error occurred.'] },
+        });
+    } finally {
+        setIsPending(false);
+    }
+  };
 
 
   return (
@@ -290,7 +351,7 @@ export default function Microsoft365ClientPage() {
               <Card className="p-8 shadow-2xl bg-card text-card-foreground">
                 <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
-                  <form action={formAction} ref={formRef} className="space-y-4">
+                  <form onSubmit={handleSubmit} ref={formRef} className="space-y-4">
                     <div>
                       <Label htmlFor="fname">First Name</Label>
                       <Input id="fname" name="fname" required />
@@ -321,11 +382,13 @@ export default function Microsoft365ClientPage() {
                       <Textarea id="requirements" name="requirements" required />
                       {state?.errors?.requirements && <p className="text-destructive text-sm mt-1">{state.errors.requirements}</p>}
                     </div>
-                    <SubmitButton />
+                    <Button type="submit" disabled={isPending} className="w-full">
+                      {isPending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Let's Connect"}
+                    </Button>
                      {state?.message && (
-                        <Alert variant={Object.keys(state.errors ?? {}).length > 0 ? 'destructive' : 'default'} className="mt-4">
+                        <Alert variant={!state.isSuccess ? 'destructive' : 'default'} className="mt-4">
                             <MailCheck className="h-4 w-4" />
-                            <AlertTitle>{Object.keys(state.errors ?? {}).length > 0 ? 'Error' : 'Success'}</AlertTitle>
+                            <AlertTitle>{!state.isSuccess ? 'Error' : 'Success'}</AlertTitle>
                             <AlertDescription>
                                 {state.message}
                             </AlertDescription>
