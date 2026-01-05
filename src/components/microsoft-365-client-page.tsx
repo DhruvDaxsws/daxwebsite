@@ -302,7 +302,7 @@ export default function Microsoft365ClientPage() {
       </section>
 
       <section id="form-section" className="py-16 md:py-24 bg-secondary/30">
-        <div className="container">
+        <div className="container flex justify-center">
           <Card className="p-8 shadow-2xl bg-card text-card-foreground">
               <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
