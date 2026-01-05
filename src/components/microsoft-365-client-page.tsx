@@ -236,6 +236,15 @@ const FAQS = [
     }
 ];
 
+const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+        const yOffset = -120;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+};
+
 export default function Microsoft365ClientPage() {
     const [isFormLoading, setIsFormLoading] = useState(true);
 
@@ -243,38 +252,42 @@ export default function Microsoft365ClientPage() {
         const scriptId = 'dynamics-form-loader';
         let script = document.getElementById(scriptId) as HTMLScriptElement | null;
     
-        const loadForm = () => {
+        const setupFormListener = () => {
            // @ts-ignore
           if (window.MsCrmMkt && typeof window.MsCrmMkt.MsCrmFormLoader === 'object') {
              // @ts-ignore
             window.MsCrmMkt.MsCrmFormLoader.on('afterFormLoad', () => {
               setIsFormLoading(false);
             });
+            // If the form is already loaded by the time this runs, set loading to false.
+            // @ts-ignore
+            if (window.MsCrmMkt.MsCrmFormLoader.isFormLoaded(formId)) {
+                setIsFormLoading(false);
+            }
+          } else {
+            // If the script object isn't ready, retry after a short delay
+            setTimeout(setupFormListener, 100);
           }
         };
+
+        const formId = '2dda0781-9fc6-f011-bbd3-6045bd020834';
     
         if (!script) {
           script = document.createElement('script');
           script.id = scriptId;
           script.src = 'https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/usa/FormLoader/FormLoader.bundle.js';
           script.async = true;
-          script.onload = loadForm;
+          script.defer = true;
+          script.onload = setupFormListener;
           document.body.appendChild(script);
         } else {
-            loadForm();
+            setupFormListener();
         }
         
-        return () => {};
+        return () => {
+            // Optional: clean up script if component unmounts, though often not necessary for scripts like this
+        };
       }, []);
-
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            const yOffset = -120;
-            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-    };
 
   return (
     <div className="bg-background">
