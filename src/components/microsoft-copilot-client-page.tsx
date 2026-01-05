@@ -229,7 +229,7 @@ export default function MicrosoftCopilotClientPage() {
       
       <section id="form-section" className="py-16 md:py-24 bg-secondary/50">
         <div className="flex justify-center">
-          <Card className="p-8 shadow-2xl bg-card text-card-foreground w-full">
+          <Card className="p-8 shadow-2xl bg-card text-card-foreground w-full container">
             <CardContent className="p-0">
               <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
                  {isFormLoading && (
