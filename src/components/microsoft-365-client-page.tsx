@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Image from 'next/image';
-import { Bot, BarChart, BrainCircuit, Eye, HandHelping, Handshake, HardHat, HeartHandshake, Rocket, Sparkles, Target, Wand2, Zap } from 'lucide-react';
+import { Bot, BarChart, BrainCircuit, Check, Eye, HandHelping, Handshake, HardHat, HeartHandshake, Rocket, Sparkles, Target, Wand2, Zap } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 import Link from 'next/link';
 
