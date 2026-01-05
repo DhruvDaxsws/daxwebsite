@@ -1,21 +1,13 @@
 
 'use client';
-import { useState, useRef, FormEvent, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Check, MailCheck, HardHat, Rocket, Zap, HeartHandshake, Bot, BarChart, Loader2 } from 'lucide-react';
+import { Check, MailCheck, HardHat, Rocket, Zap, HeartHandshake, Bot, BarChart } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { useFirestore } from '@/firebase';
-import { collection, addDoc } from 'firebase/firestore';
-import { v4 as uuidv4 } from 'uuid';
-import { z } from 'zod';
-import { errorEmitter } from '@/firebase/error-emitter';
-import { FirestorePermissionError } from '@/firebase/errors';
+import { Skeleton } from '@/components/ui/skeleton';
+
 
 const PLANS = [
   {
@@ -224,7 +216,7 @@ const FAQS = [
     },
     {
         question: "How can I find more answers to frequent queries?",
-        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
+        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
     },
     {
         question: "What benefits does Microsoft Defender for Business provide?",
@@ -240,11 +232,13 @@ const FAQS = [
     },
     {
         question: "Frequent questions about Copilot for Microsoft 365",
-        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">here</a>.`
+        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>.`
     }
 ];
 
 export default function Microsoft365ClientPage() {
+    const [isFormLoading, setIsFormLoading] = useState(true);
+
     useEffect(() => {
         const scriptId = 'dynamics-form-loader';
         let script = document.getElementById(scriptId) as HTMLScriptElement | null;
@@ -254,7 +248,7 @@ export default function Microsoft365ClientPage() {
           if (window.MsCrmMkt && typeof window.MsCrmMkt.MsCrmFormLoader === 'object') {
              // @ts-ignore
             window.MsCrmMkt.MsCrmFormLoader.on('afterFormLoad', () => {
-              // Form is loaded
+              setIsFormLoading(false);
             });
           }
         };
@@ -270,7 +264,6 @@ export default function Microsoft365ClientPage() {
             loadForm();
         }
         
-        // The cleanup function is now intentionally left empty to prevent script removal
         return () => {};
       }, []);
 
@@ -306,11 +299,21 @@ export default function Microsoft365ClientPage() {
           <Card className="p-8 shadow-2xl bg-card text-card-foreground">
               <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
-                  <div
-                      data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
-                      data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
-                      data-cached-form-url='https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2dda0781-9fc6-f011-bbd3-6045bd020834'
-                  ></div>
+                  {isFormLoading && (
+                    <div className="space-y-4">
+                        <Skeleton className="h-10 w-full" />
+                        <Skeleton className="h-10 w-full" />
+                        <Skeleton className="h-20 w-full" />
+                        <Skeleton className="h-10 w-24" />
+                    </div>
+                  )}
+                  <div style={{ display: isFormLoading ? 'none' : 'block' }}>
+                    <div
+                        data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
+                        data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
+                        data-cached-form-url='https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2dda0781-9fc6-f011-bbd3-6045bd020834'
+                    ></div>
+                  </div>
               </CardContent>
           </Card>
         </div>
