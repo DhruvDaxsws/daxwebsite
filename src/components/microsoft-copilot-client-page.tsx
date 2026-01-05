@@ -168,21 +168,8 @@ export default function MicrosoftCopilotClientPage() {
     <div className="bg-background">
       <section id="form-section" className="bg-accent text-accent-foreground py-16 md:py-24">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
-                Microsoft 365 Copilot License
-              </h1>
-              <p className="mt-6 text-lg text-gray-300 max-w-lg">
-                Harness the power of Microsoft 365 Copilot to revolutionize your business with integrated AI, optimizing workflows and focusing on strategic priorities.
-              </p>
-              <div className="mt-8">
-                <Button variant="primary-outline" size="lg" onClick={() => scrollToSection('pricing')}>
-                  View Pricing
-                </Button>
-              </div>
-            </div>
-            <div>
+          <div className="flex justify-center items-center">
+            <div className="w-full max-w-lg">
               <Card className="p-8 shadow-2xl bg-card text-card-foreground">
                 <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
