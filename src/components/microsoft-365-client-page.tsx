@@ -224,7 +224,7 @@ const FAQS = [
     },
     {
         question: "How can I find more answers to frequent queries?",
-        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
+        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
     },
     {
         question: "What benefits does Microsoft Defender for Business provide?",
@@ -240,7 +240,7 @@ const FAQS = [
     },
     {
         question: "Frequent questions about Copilot for Microsoft 365",
-        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">here</a>.`
+        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>.`
     }
 ];
 
@@ -274,6 +274,15 @@ export default function Microsoft365ClientPage() {
         return () => {};
       }, []);
 
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const yOffset = -120;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
   return (
     <div className="bg-background">
       <section className="relative bg-accent text-accent-foreground py-16 md:py-24">
@@ -285,7 +294,7 @@ export default function Microsoft365ClientPage() {
               Discover the ideal Microsoft 365 subscription suited for your business needs with competitive pricing from DAX.
             </p>
             <div className="mt-8">
-              <Button variant="primary-outline" size="lg" onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
+              <Button variant="primary-outline" size="lg" onClick={() => scrollToSection('plans')}>
                 Compare plans and pricing
               </Button>
             </div>
@@ -294,16 +303,16 @@ export default function Microsoft365ClientPage() {
 
       <section id="form-section" className="py-16 md:py-24 bg-secondary/30">
         <div className="container">
-            <Card className="p-8 shadow-2xl bg-card text-card-foreground">
-                <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
-                    <div
-                        data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
-                        data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
-                        data-cached-form-url='https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2dda0781-9fc6-f011-bbd3-6045bd020834'
-                    ></div>
-                </CardContent>
-            </Card>
+          <Card className="p-8 shadow-2xl bg-card text-card-foreground">
+              <CardContent className="p-0">
+                  <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
+                  <div
+                      data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
+                      data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
+                      data-cached-form-url='https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2dda0781-9fc6-f011-bbd3-6045bd020834'
+                  ></div>
+              </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -319,7 +328,7 @@ export default function Microsoft365ClientPage() {
                   <p className="text-5xl font-bold text-center text-primary mt-4">{plan.price}</p>
                   <p className="text-center text-sm text-muted-foreground">User/Month</p>
                   <p className="text-center text-xs text-muted-foreground mt-1 mb-4 h-10">(Annual subscription–auto renews)<sup>1</sup></p>
-                  <Button onClick={() => document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth' })} className="w-full mb-6">Buy Now</Button>
+                  <Button onClick={() => scrollToSection('form-section')} className="w-full mb-6">Buy Now</Button>
                   <p className="text-sm mb-4">{plan.features[0]}</p>
                   <ul className="space-y-3 text-sm text-muted-foreground flex-grow">
                     {plan.features.slice(1).map((feature, i) => (
@@ -374,7 +383,7 @@ export default function Microsoft365ClientPage() {
       <section className="py-12 bg-secondary">
         <div className="container mx-auto text-center">
             <h4 className="text-xl font-bold font-headline">Discover the right plan for your business and connect with our Microsoft Experts to transform the way you work.</h4>
-            <Button onClick={() => document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth' })} className="mt-6">Let's Connect</Button>
+            <Button onClick={() => scrollToSection('form-section')} className="mt-6">Let's Connect</Button>
         </div>
       </section>
       
@@ -457,7 +466,7 @@ export default function Microsoft365ClientPage() {
          <section className="py-12 bg-accent text-accent-foreground">
             <div className="container mx-auto text-center">
                 <h4 className="text-xl font-bold font-headline">Ready to buy Microsoft 365 subscription?</h4>
-                <Button variant="primary-outline" onClick={() => document.getElementById('form-section')?.scrollIntoView({ behavior: 'smooth' })} className="mt-6">Let's Connect</Button>
+                <Button variant="primary-outline" onClick={() => scrollToSection('form-section')} className="mt-6">Let's Connect</Button>
             </div>
         </section>
 
