@@ -237,6 +237,77 @@ export default function MicrosoftCopilotClientPage() {
         </div>
       </section>
 
+      <section id="form-section-copy" className="bg-accent text-accent-foreground py-16 md:py-24">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
+                Microsoft 365 Copilot License
+              </h1>
+              <p className="mt-6 text-lg text-gray-300 max-w-lg">
+                Harness the power of Microsoft 365 Copilot to revolutionize your business with integrated AI, optimizing workflows and focusing on strategic priorities.
+              </p>
+              <div className="mt-8">
+                <Button variant="primary-outline" size="lg" onClick={() => scrollToSection('pricing')}>
+                  View Pricing
+                </Button>
+              </div>
+            </div>
+            <div>
+              <Card className="p-8 shadow-2xl bg-card text-card-foreground">
+                <CardContent className="p-0">
+                  <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
+                  <form action={formAction} ref={formRef} className="space-y-4">
+                     <div className="grid grid-cols-2 gap-4">
+                        <div>
+                        <Label htmlFor="fname-2">First Name</Label>
+                        <Input id="fname-2" name="fname" required />
+                        {state?.errors?.fname && <p className="text-destructive text-sm mt-1">{state.errors.fname}</p>}
+                        </div>
+                        <div>
+                        <Label htmlFor="lname-2">Last Name</Label>
+                        <Input id="lname-2" name="lname" required />
+                        {state?.errors?.lname && <p className="text-destructive text-sm mt-1">{state.errors.lname}</p>}
+                        </div>
+                    </div>
+                    <div>
+                      <Label htmlFor="email-2">Email</Label>
+                      <Input id="email-2" name="email" type="email" required />
+                       {state?.errors?.email && <p className="text-destructive text-sm mt-1">{state.errors.email}</p>}
+                    </div>
+                     <div>
+                        <Label htmlFor="phone-2">Phone</Label>
+                        <Input id="phone-2" name="phone" required />
+                        {state?.errors?.phone && <p className="text-destructive text-sm mt-1">{state.errors.phone}</p>}
+                    </div>
+                    <div>
+                        <Label htmlFor="company-2">Company</Label>
+                        <Input id="company-2" name="company" required />
+                        {state?.errors?.company && <p className="text-destructive text-sm mt-1">{state.errors.company}</p>}
+                    </div>
+                    <div>
+                      <Label htmlFor="requirements-2">Describe your requirements</Label>
+                      <Textarea id="requirements-2" name="requirements" required />
+                      {state?.errors?.requirements && <p className="text-destructive text-sm mt-1">{state.errors.requirements}</p>}
+                    </div>
+                    <SubmitButton />
+                     {state?.message && (
+                        <Alert variant={Object.keys(state.errors ?? {}).length > 0 ? 'destructive' : 'default'} className="mt-4">
+                            <MailCheck className="h-4 w-4" />
+                            <AlertTitle>{Object.keys(state.errors ?? {}).length > 0 ? 'Error' : 'Success'}</AlertTitle>
+                            <AlertDescription>
+                                {state.message}
+                            </AlertDescription>
+                        </Alert>
+                    )}
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24">
         <div className="container mx-auto">
           <h2 className="text-center text-3xl font-bold font-headline mb-12">AI-Powered Support at Your Fingertips</h2>
