@@ -224,7 +224,7 @@ const FAQS = [
     },
     {
         question: "How can I find more answers to frequent queries?",
-        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
+        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
     },
     {
         question: "What benefits does Microsoft Defender for Business provide?",
@@ -240,7 +240,7 @@ const FAQS = [
     },
     {
         question: "Frequent questions about Copilot for Microsoft 365",
-        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>.`
+        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">here</a>.`
     }
 ];
 
@@ -302,7 +302,7 @@ export default function Microsoft365ClientPage() {
       </section>
 
       <section id="form-section" className="py-16 md:py-24 bg-secondary/30">
-        <div className="container flex justify-center">
+        <div className="flex justify-center">
           <Card className="p-8 shadow-2xl bg-card text-card-foreground">
               <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
