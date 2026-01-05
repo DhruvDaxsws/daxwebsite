@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check, MailCheck, HardHat, Rocket, Zap, HeartHandshake, Bot, BarChart } from 'lucide-react';
-import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import Image from 'next/image';
+import { Bot, BarChart, BrainCircuit, Eye, HandHelping, Handshake, HardHat, HeartHandshake, Rocket, Sparkles, Target, Wand2, Zap } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
-
+import Link from 'next/link';
 
 const PLANS = [
   {
@@ -115,79 +115,6 @@ const PLANS = [
   },
 ];
 
-const AI_JOURNEY_STEPS = [
-    {
-        step: 1,
-        title: "Map out Your AI Journey",
-        description: "Unleash and harness the potential of AI with our expert advisory services to transform your processes using Microsoft AI. Begin by crafting a strategic AI journey plan focused on key Microsoft Copilot tasks that align with your business goals. Identify the personas who will benefit the most from AI and create a detailed implementation roadmap. Together, we'll design a clear path for seamless AI adoption across your organization.",
-        colSpan: 'lg:col-span-12'
-    },
-    {
-        step: 2,
-        title: "Ready Your Tech Environment",
-        description: "Prepare your technology landscape for a smooth Copilot deployment within Microsoft 365. We'll conduct a thorough readiness evaluation to identify and address any tech gaps. Build stakeholder confidence by establishing a solid operating and governance model from the start. Enhance security by configuring policies in your Microsoft 365 environment to protect data privacy.",
-        colSpan: 'lg:col-span-7'
-    },
-    {
-        step: 3,
-        title: "Fine-Tune for Your Unique Needs",
-        description: "Ensure Copilot for Microsoft 365 meets your organization's specific needs through essential customization. Identify effective use cases, key personas, and extensibility options. We'll customize and deploy Copilot experiences to seamlessly integrate and enhance your operations.",
-        colSpan: 'lg:col-span-5'
-    },
-    {
-        step: 4,
-        title: "Empower Your Team for AI Mastery",
-        description: "Empower your team to fully leverage AI by investing in change management. Our dedicated team provides continuous support, training, and updates to ensure smooth adoption. We help transition processes and foster new behaviors, maximizing the impact of your AI investments.",
-        colSpan: 'lg:col-span-5'
-    },
-    {
-        step: 5,
-        title: "Elevate Your Microsoft AI Experience",
-        description: "Take Copilot for Microsoft 365 to new heights by integrating it with your existing systems. Harness custom plugins and Graph connectors to draw intelligence from external services, apps, and data. Take its functionality and personalization a step further to achieve extraordinary outcomes that propel your business forward.",
-        colSpan: 'lg:col-span-7'
-    }
-];
-
-const COPILOT_BENEFITS = [
-    {
-        icon: Rocket,
-        title: "Achieve Peak Executive Productivity with Advanced AI Support",
-        description: "Navigate busy schedules effortlessly with Copilot, your AI-powered executive assistant. Seamlessly manage tasks and optimize productivity, ensuring executives make the most of every moment between meetings."
-    },
-    {
-        icon: HardHat,
-        title: "Revolutionize Recruitment Dynamics",
-        description: "Transform hiring into a strategic advantage with Copilot for Microsoft 365. Harness AI to streamline candidate selection, enhancing efficiency and precision while reducing recruitment costs."
-    },
-    {
-        icon: Zap,
-        title: "Resolve Operational Hick-ups Swiftly",
-        description: "Keep operations running smoothly with Copilot for Microsoft 365. Identify and resolve issues promptly to minimize downtime, ensuring continuous productivity and operational excellence."
-    },
-    {
-        icon: HeartHandshake,
-        title: "Empower Sales Teams to Excel",
-        description: "Liberate sales teams from administrative burdens with Copilot for Microsoft 365. Focus on cultivating relationships and closing deals, delivering personalized customer experiences that drive growth."
-    },
-    {
-        icon: Bot,
-        title: "Accelerate Marketing Innovation",
-        description: "Fuel creativity and speed to market with Copilot for Microsoft 365. From ideation to execution, streamline collaboration and content creation for impactful marketing campaigns that resonate with your audience."
-    },
-    {
-        icon: BarChart,
-        title: "Elevate Financial Strategy with Enhanced Decision-making",
-        description: "Drive strategic insights with Copilot for Microsoft 365. Optimize financial analysis, forecasting, and communication to stakeholders, enabling informed decisions and maximizing business performance."
-    }
-];
-
-const RESEARCH_FINDINGS = [
-    { value: '70%', description: 'Said they were more productive', icon: '/productivity.svg' },
-    { value: '4x', description: 'Nearly 4x faster catching up on a missed meeting', icon: '/speed.svg' },
-    { value: '29%', description: 'Faster overall in a series of tasks (searching, writing, and summarizing)', icon: '/fast-task.svg' },
-    { value: '77%', description: 'Said they didn’t want to give it up', icon: '/utilization.svg' }
-];
-
 const FAQS = [
     {
         question: "What is Microsoft 365?",
@@ -216,7 +143,7 @@ const FAQS = [
     },
     {
         question: "How can I find more answers to frequent queries?",
-        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
+        answer: `For more FAQs, visit the <a href="https://www.microsoft.com/en-in/microsoft-365/business/microsoft-365-frequently-asked-questions" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">FAQ page of Microsoft 365 for business</a>.`
     },
     {
         question: "What benefits does Microsoft Defender for Business provide?",
@@ -232,7 +159,7 @@ const FAQS = [
     },
     {
         question: "Frequent questions about Copilot for Microsoft 365",
-        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">here</a>.`
+        answer: `Explore more FAQs about Copilot for Microsoft 365 <a href="https://www.microsoft.com/en-in/microsoft-365/business/copilot-for-microsoft-365#faqs" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">here</a>.`
     }
 ];
 
@@ -249,43 +176,52 @@ export default function Microsoft365ClientPage() {
     const [isFormLoading, setIsFormLoading] = useState(true);
 
     useEffect(() => {
-        const scriptId = 'dynamics-form-loader';
-        let script = document.getElementById(scriptId) as HTMLScriptElement | null;
-    
-        const setupFormListener = () => {
-           // @ts-ignore
-          if (window.MsCrmMkt && typeof window.MsCrmMkt.MsCrmFormLoader === 'object') {
-             // @ts-ignore
-            window.MsCrmMkt.MsCrmFormLoader.on('afterFormLoad', () => {
-              setIsFormLoading(false);
-            });
-            // If the form is already loaded by the time this runs, set loading to false.
-            // @ts-ignore
-            if (window.MsCrmMkt.MsCrmFormLoader.isFormLoaded(formId)) {
-                setIsFormLoading(false);
-            }
-          } else {
-            // If the script object isn't ready, retry after a short delay
-            setTimeout(setupFormListener, 100);
-          }
-        };
-
         const formId = '2dda0781-9fc6-f011-bbd3-6045bd020834';
+        const scriptId = 'dynamics-form-loader';
+        
+        // Function to setup the listener for the form
+        const setupFormListener = () => {
+            const msCrm = (window as any).MsCrmMkt;
+            if (msCrm && typeof msCrm.MsCrmFormLoader === 'object') {
+                const formLoader = msCrm.MsCrmFormLoader;
+                
+                // If form is already loaded, no need to set up listener again.
+                if (formLoader.isFormLoaded(formId)) {
+                    setIsFormLoading(false);
+                    return;
+                }
+
+                // Attach the listener.
+                formLoader.on('afterFormLoad', () => {
+                    setIsFormLoading(false);
+                });
+            } else {
+                // If the MsCrmMkt object isn't ready, poll until it is.
+                setTimeout(setupFormListener, 100);
+            }
+        };
     
-        if (!script) {
-          script = document.createElement('script');
-          script.id = scriptId;
-          script.src = 'https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/usa/FormLoader/FormLoader.bundle.js';
-          script.async = true;
-          script.defer = true;
-          script.onload = setupFormListener;
-          document.body.appendChild(script);
+        // Load the script if it doesn't exist
+        if (!document.getElementById(scriptId)) {
+            const script = document.createElement('script');
+            script.id = scriptId;
+            script.src = 'https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/usa/FormLoader/FormLoader.bundle.js';
+            script.async = true;
+            script.defer = true;
+            script.onload = setupFormListener;
+            document.body.appendChild(script);
         } else {
+            // If script tag already exists, just set up the listener.
             setupFormListener();
         }
-        
+
+        // Safety timeout to prevent skeleton from showing forever
+        const safetyTimeout = setTimeout(() => {
+          setIsFormLoading(false);
+        }, 8000); // 8 seconds, should be plenty of time
+
         return () => {
-            // Optional: clean up script if component unmounts, though often not necessary for scripts like this
+            clearTimeout(safetyTimeout);
         };
       }, []);
 
@@ -309,26 +245,28 @@ export default function Microsoft365ClientPage() {
 
       <section id="form-section" className="py-16 md:py-24 bg-secondary/30">
         <div className="flex justify-center">
-          <Card className="p-8 shadow-2xl bg-card text-card-foreground">
-              <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
-                  {isFormLoading && (
-                    <div className="space-y-4">
-                        <Skeleton className="h-10 w-full" />
-                        <Skeleton className="h-10 w-full" />
-                        <Skeleton className="h-20 w-full" />
-                        <Skeleton className="h-10 w-24" />
+          <div className="container">
+            <Card className="p-8 shadow-2xl bg-card text-card-foreground">
+                <CardContent className="p-0">
+                    <h3 className="text-2xl font-bold text-center mb-4 font-headline">Want to Buy Subscription? Contact Us!</h3>
+                    {isFormLoading && (
+                      <div className="space-y-4">
+                          <Skeleton className="h-10 w-full" />
+                          <Skeleton className="h-10 w-full" />
+                          <Skeleton className="h-20 w-full" />
+                          <Skeleton className="h-10 w-24" />
+                      </div>
+                    )}
+                    <div style={{ display: isFormLoading ? 'none' : 'block' }}>
+                      <div
+                          data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
+                          data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
+                          data-cached-form-url='https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2dda0781-9fc6-f011-bbd3-6045bd020834'
+                      ></div>
                     </div>
-                  )}
-                  <div style={{ display: isFormLoading ? 'none' : 'block' }}>
-                    <div
-                        data-form-id='2dda0781-9fc6-f011-bbd3-6045bd020834'
-                        data-form-api-url='https://public-usa.mkt.dynamics.com/api/v1.0/orgs/0f5b728c-83ca-ed11-aece-000d3a323719/landingpageforms'
-                        data-cached-form-url='https://assets1-usa.mkt.dynamics.com/0f5b728c-83ca-ed11-aece-000d3a323719/digitalassets/forms/2dda0781-9fc6-f011-bbd3-6045bd020834'
-                    ></div>
-                  </div>
-              </CardContent>
-          </Card>
+                </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -402,61 +340,6 @@ export default function Microsoft365ClientPage() {
             <Button onClick={() => scrollToSection('form-section')} className="mt-6">Let's Connect</Button>
         </div>
       </section>
-      
-       <section className="py-16 md:py-24">
-            <div className="container mx-auto">
-                <h3 className="text-center text-3xl font-bold font-headline">Navigate Your AI Path with Unmatched Expertise</h3>
-                <p className="text-center text-muted-foreground mt-2 mb-12">Elevate Your Business with Microsoft 365 Copilot and Expert Guidance</p>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                    {AI_JOURNEY_STEPS.map(step => (
-                        <div key={step.step} className={step.colSpan}>
-                            <Card className="p-8 h-full">
-                                <CardContent className="p-0">
-                                <h4 className="text-xl font-bold font-headline mb-2">Step {step.step}: {step.title}</h4>
-                                <p className="text-muted-foreground">{step.description}</p>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-        <section className="py-16 md:py-24 bg-secondary/30">
-            <div className="container mx-auto">
-                <h3 className="text-center text-3xl font-bold font-headline mb-12">Unlock the Potential of Copilot Across Your Organization</h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {COPILOT_BENEFITS.map(benefit => (
-                        <Card key={benefit.title} className="p-6">
-                            <CardContent className="p-0">
-                                <benefit.icon className="w-12 h-12 text-primary mb-4" />
-                                <h4 className="text-lg font-bold font-headline">{benefit.title}</h4>
-                                <p className="text-muted-foreground mt-2 text-sm">{benefit.description}</p>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-         <section className="py-16 md:py-24">
-            <div className="container mx-auto">
-                <h3 className="text-center text-3xl font-bold font-headline mb-12">Research findings from early Copilot users <sup>3</sup></h3>
-                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                     {RESEARCH_FINDINGS.map(finding => (
-                        <Card key={finding.description} className="p-6 text-center">
-                            <CardContent className="p-0 flex flex-col items-center gap-4">
-                                <Image src={finding.icon} alt="" width={60} height={60} />
-                                <div>
-                                    <p className="text-4xl font-bold font-headline text-primary">{finding.value}</p>
-                                    <p className="text-muted-foreground mt-1">{finding.description}</p>
-                                </div>
-                            </CardContent>
-                        </Card>
-                     ))}
-                </div>
-            </div>
-        </section>
 
         <section className="py-16 md:py-24 bg-secondary/30">
             <div className="container mx-auto max-w-4xl">
