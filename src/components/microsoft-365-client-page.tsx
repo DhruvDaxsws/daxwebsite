@@ -343,22 +343,19 @@ export default function Microsoft365ClientPage() {
   return (
     <div className="bg-background">
       <section className="relative bg-accent text-accent-foreground py-16 md:py-24">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
-                Microsoft 365 Subscription
-              </h1>
-              <p className="mt-6 text-lg text-gray-300">
-                Discover the ideal Microsoft 365 subscription suited for your business needs with competitive pricing from DAX.
-              </p>
-              <div className="mt-8">
-                <Button variant="primary-outline" size="lg" onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
-                  Compare plans and pricing
-                </Button>
-              </div>
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl font-headline">
+              Microsoft 365 Subscription
+            </h1>
+            <p className="mt-6 text-lg text-gray-300">
+              Discover the ideal Microsoft 365 subscription suited for your business needs with competitive pricing from DAX.
+            </p>
+            <div className="mt-8">
+              <Button variant="primary-outline" size="lg" onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
+                Compare plans and pricing
+              </Button>
             </div>
-            {/* The form has been moved to its own section below */}
           </div>
         </div>
       </section>
